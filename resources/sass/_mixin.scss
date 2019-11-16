@@ -1,0 +1,15 @@
+@mixin color ($name, $color) {
+  .w3-#{$name},.w3-hover-#{$name}:hover{
+    @if lightness($color) > 50{
+      color: black !important;
+    }
+    @else {
+      color: white !important;
+    }
+    background-color:$color;
+  }
+  .w3-text-#{$name},.w3-hover-text-#{$name}:hover{color:$color !important;}
+  .w3-fill-#{$name},.w3-hover-fill-#{$name}:hover{fill:$color !important;}
+  .w3-border-#{$name},.w3-hover-border-#{$name}:hover{border-color:$color !important;}
+  .w3-underline-#{$name}{text-decoration: underline; text-decoration-color: $color !important;}
+}

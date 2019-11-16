@@ -1,0 +1,28 @@
+$w3-theme-l5: #f4faf4;
+$w3-theme-l4: #dbefdc;
+$w3-theme-l3: #b7dfb8;
+$w3-theme-l2: #93cf95;
+$w3-theme-l1: #6ec071;
+$w3-theme-d1: #459c48;
+$w3-theme-d2: #3d8b40;
+$w3-theme-d3: #357a38;
+$w3-theme-d4: #2e6830;
+$w3-theme-d5: #265728;
+
+$w3-theme-light: #f4faf4;
+$w3-theme: #4caf50;
+$w3-theme-dark: #265728;
+
+@include color('theme-l5', $w3-theme-l5);
+@include color('theme-l4', $w3-theme-l4);
+@include color('theme-l3', $w3-theme-l3);
+@include color('theme-l2', $w3-theme-l2);
+@include color('theme-l1', $w3-theme-l1);
+@include color('theme-d1', $w3-theme-d1);
+@include color('theme-d2', $w3-theme-d2);
+@include color('theme-d3', $w3-theme-d3);
+@include color('theme-d4', $w3-theme-d4);
+@include color('theme-d5', $w3-theme-d5);
+@include color('theme-light', $w3-theme-light);
+@include color('theme', $w3-theme);
+@include color('theme-dark', $w3-theme-dark);

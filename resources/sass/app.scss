@@ -1,0 +1,63 @@
+@import "~@fortawesome/fontawesome-free/css/fontawesome.css";
+@import "~@fortawesome/fontawesome-free/css/solid.css";
+@import "~@fortawesome/fontawesome-free/css/brands.css";
+
+@import "mixin";
+@import 'w3';
+@import "w3-theme-green";
+@import "header";
+
+html, body, #swup{
+  height: 100%;
+}
+
+.transition-fade {
+  transition: 0.3s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
+.fond1, .fond2, .fond3{
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+
+.no-webp{
+  .fond1{
+    background-image: url("images/fonds/fond1.jpg");
+    height: 100%;
+  }
+
+  .fond2{
+    background-image: url("images/fonds/fond2.jpg");
+  }
+
+  .fond3{
+    background-image: url("images/fonds/fond3.jpg");
+  }
+}
+
+.webp{
+  .fond1{
+    background-image: url("images/fonds/fond1.webp");
+    height: 100%;
+  }
+
+  .fond2{
+    background-image: url("images/fonds/fond2.webp");
+  }
+
+  .fond3{
+    background-image: url("images/fonds/fond3.webp");
+  }
+}
+
+.width100{
+  width: 100%;
+}
