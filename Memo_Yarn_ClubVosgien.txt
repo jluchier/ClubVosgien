@@ -1,0 +1,11 @@
+mémo JJ about Yarn
+
+https://yarnpkg.com/en/docs/install#debian-stable
+
+pour lancer le site en mode dev / consultation
+
+Depuis le répertoire du site clubVosgien 
+
+utiliser la commande => yarn run watch
+
+	
