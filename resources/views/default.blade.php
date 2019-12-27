@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
-    <title>Template</title>
+    <title>Club vosgien</title>
 </head>
 
 <body class="w3-theme-light">
@@ -17,6 +17,9 @@
         <a href="{{ route("page1") }}" class="w3-bar-item w3-button navItem @yield('page1')"><i class="fas fa-image"></i>&nbsp;Galerie</a>
         <a href="#" class="w3-bar-item w3-button w3-disabled navItem">Page2</a>
         <a href="#" class="w3-bar-item w3-button w3-disabled navItem">Page3</a>
+
+        <a href="#" class="w3-bar-item w3-button navItem w3-right"><i class="fas fa-unlock-alt"></i>&nbsp;Admin</a>
+        <a href="#" class="w3-bar-item w3-button navItem w3-right"><i class="fas fa-unlock-alt"></i>&nbsp;serser</a>
     </div>
 </nav>
 

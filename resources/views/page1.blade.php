@@ -11,7 +11,7 @@
         <div class="w3-row-padding w3-section w3-stretch">
             <div class="w3-third">
                 <div class="w3-card">
-                    <img src="images/common/oboe.jpg" alt="Oboe" class="width100">
+                    <img src="/images/common/oboe.jpg" alt="Oboe" class="width100">
                     <div class="w3-container">
                         <h4>Oboe</h4>
                     </div>
@@ -19,7 +19,7 @@
             </div>
             <div class="w3-third">
                 <div class="w3-card">
-                    <img src="images/common/flute.jpg" alt="Flute" class="width100">
+                    <img src="/images/common/flute.jpg" alt="Flute" class="width100">
                     <div class="w3-container">
                         <h4>Flute</h4>
                     </div>
@@ -27,7 +27,7 @@
             </div>
             <div class="w3-third">
                 <div class="w3-card">
-                    <img src="images/common/saxophone.jpg" alt="Soxo" class="width100">
+                    <img src="/images/common/saxophone.jpg" alt="Soxo" class="width100">
                     <div class="w3-container">
                         <h4>Saxophone</h4>
                     </div>
