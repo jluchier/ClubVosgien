@@ -7259,7 +7259,7 @@ html.is-animating .transition-fade {
 }
 
 .no-webp .fond1 {
-  background-image: url(/images/fond1.jpg?c4709c0d52fb2d47c0a672475fa5afb5);
+  background-image: url("/images/fonds/Medium/medium1_009.jpg");
   height: 100%;
 }
 
@@ -7272,12 +7272,12 @@ html.is-animating .transition-fade {
 }
 
 .webp .fond1 {
-  background-image: url(/images/fond1.webp?2fbda8f326c5700ee5c540be069c734f);
+  background-image: url(/images/medium1_009.jpg?4de1de83cdb315b95f1553ae4fa16126);
   height: 100%;
 }
 
 .webp .fond2 {
-  background-image: url(/images/fond2.webp?76bb148df2992cd42dee77716528a885);
+  background-image: url(/images/medium1_008.jpg?1f1e607f17341085892c174a95501b1b);
 }
 
 .webp .fond3 {

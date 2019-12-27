@@ -13,24 +13,16 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-})->name("home");
-
-Route::get('page1', function () {
-    return view('page1');
-})->name("page1");
+Route::get('/', "GuestController@Index")->name("actu");
+Route::get('page1', "GuestController@Page1")->name("page1");
 
 Route::middleware("auth.validated")->group(function (){
 
-    Route::get("compteRendu", function () {
-        return view('home');
-    })->name("compte");
+    Route::get("compteRendu", "GuestController@Index")->name("compte");
 
     Route::prefix("admin")->middleware("auth.admin")->group(function () {
-        Route::get("compteRendu", function () {
-            return view('page1');
-        })->name("admin");
+        Route::get("/", "AdminController@Index")->name("admin");
+        Route::resource('articles', "ArticleController");
     });
 
 });

@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -23,6 +25,14 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->enum("privilege", ["Admin", "Inscrit", "A valider"])->default("A valider");
         });
+
+        DB::table("users")->insert([
+            "name" => "jj",
+            "email" => "jluchier@free.fr",
+            "password" => Hash::make("LeSuperMdp"),
+            "email_verified_at" => now(),
+            "privilege" => "Admin"
+        ]);
     }
 
     /**

@@ -8,6 +8,10 @@
         <div class="w3-display-middle w3-padding w3-theme w3-round">
             <h2>Bienvenue sur le site du club vosgien RVF</h2>
         </div>
+
+        <div class="w3-display-bottommiddle w3-text-white w3-xxlarge">
+            <i class="fas fa-chevron-circle-down"></i>
+        </div>
     </div>
 
     <div class="w3-container w3-auto w3-justify">
