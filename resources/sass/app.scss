@@ -54,10 +54,16 @@ html.is-animating .transition-fade {
   }
 
   .fond3{
-    background-image: url("images/fonds/fond3.webp");
+    background-image: url("images/fonds/Medium/medium1_007.jpg");
   }
 }
 
 .width100{
   width: 100%;
+}
+.menuFixe{
+    position:fixed;
+    z-index: 100;
+    top: 60px;
+    left: 10px;
 }

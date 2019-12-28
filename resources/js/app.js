@@ -5,7 +5,7 @@ const swup = new Swup({
     containers: ['#nav', '#swup'],
     plugins: [
         new SwupScrollPlugin({
-            animateScroll: false
+            animateScroll: true
         }),
     ],
 });

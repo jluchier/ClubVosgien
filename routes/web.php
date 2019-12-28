@@ -11,6 +11,7 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', "GuestController@Index")->name("actu");
@@ -28,5 +29,3 @@ Route::middleware("auth.validated")->group(function (){
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

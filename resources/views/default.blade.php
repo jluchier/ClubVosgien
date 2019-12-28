@@ -3,10 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
-    <title>Club vosgien</title>
 </head>
 
 <body class="w3-theme-light">
@@ -19,8 +20,8 @@
         <a href="#" class="w3-bar-item w3-button w3-disabled navItem">Page3</a>
 
         @Auth
-            {{ Form::open(["route" => "logout", "method" => "post", "class" => "w3-bar-item w3-button w3-right"]) }}
-            {{ Form::button("Deconnexion", ["type" => "submit"]) }}
+            {{ Form::open(["route" => "logout", "method" => "post", "class" => "w3-right navItem"]) }}
+            {{ Form::submit("Deconnexion", ["class" => "w3-button w3-theme-dark navBtnlogout"]) }}
             {{ Form::close() }}
 
             @if(Auth::user()->IsAdmin())
@@ -33,7 +34,7 @@
     </div>
 </nav>
 
-<div id="swup" class="transition-fade">
+<div id="swup" class="transition-fade" style="padding-top: 40px">
 
     @yield('content')
 

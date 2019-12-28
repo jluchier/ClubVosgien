@@ -4,52 +4,99 @@
 
 @section('content')
 
+    <div class="w3-card-4 w3-red menuFixe w3-bar-block">
+        <a href="#actu" class="w3-bar-item w3-button">Les actualités</a>
+        <a href="#agenda" class="w3-bar-item w3-button">Agenda</a>
+        <a href="#activites" class="w3-bar-item w3-button">Activités</a>
+        <a href="#orga" class="w3-bar-item w3-button">Organigramme</a>
+    </div>
+
     <div class="fond1 w3-display-container">
-        <div class="w3-display-middle w3-padding w3-theme w3-round">
+        <div class="w3-display-topmiddle">
             <h2>Bienvenue sur le site du club vosgien RVF</h2>
         </div>
-
         <div class="w3-display-bottommiddle w3-text-white w3-xxlarge">
             <i class="fas fa-chevron-circle-down"></i>
         </div>
     </div>
-
-    <div class="w3-container w3-auto w3-justify">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi dolorem dolores maiores nam
-            quidem sed. Amet autem dignissimos eaque eligendi illum, ipsam itaque iure laborum libero nobis, quas
-            quod!</p>
-    </div>
-
-    <div class="fond2 w3-display-container">
+    <div id="actu" class="fond2 w3-display-container">
         <div class="w3-display-middle w3-padding w3-theme w3-round">
             <h1>Les actualités</h1>
         </div>
     </div>
-
     <div class="w3-container w3-auto w3-justify">
-        <p>Dolores esse ex obcaecati, optio similique totam. A ab ad alias assumenda autem cumque distinctio eius
+        <p>Les actualités commencent ici ..... Dolores esse ex obcaecati, optio similique totam. A ab ad alias assumenda autem cumque distinctio eius
             eveniet itaque iure nisi nobis optio, perspiciatis repellat repudiandae sit soluta ullam unde
-            voluptatum.</p>
-        <p>Culpa doloribus dolorum iste laborum laudantium modi voluptatum. Ad aperiam architecto blanditiis
-            delectus est facere perferendis quasi vel veritatis vitae. Illo necessitatibus recusandae velit! Aut
-            debitis deserunt dolores quia veritatis?</p>
-        <p>Commodi enim eos eveniet facere illo? Adipisci animi asperiores aut cupiditate ipsam officia perferendis
-            quia repellendus rerum voluptate? Commodi cumque debitis doloremque earum fugit id reiciendis repellat
-            vel voluptate voluptatem!</p>
-        <p>A architecto dolore eaque eligendi esse expedita ipsum iusto, laboriosam nostrum odio odit, officia
-            pariatur placeat porro quisquam quod ratione recusandae, sint voluptas voluptatum. Beatae dolorem iusto
-            quasi repellendus similique.</p>
-        <p>A ab blanditiis maxime repudiandae voluptate. Cupiditate error est eum eveniet, facilis fugit incidunt
-            ipsa modi odit pariatur perferendis, praesentium quaerat qui quo reiciendis repellat tenetur ullam velit
-            vitae voluptatum.</p>
-        <p>Accusamus accusantium beatae cumque eos error odio ratione voluptatum. Atque consequuntur debitis
-            deleniti distinctio facere illum ipsam odit repudiandae tempora voluptatum. Aspernatur distinctio
-            explicabo harum iste maxime similique, vel voluptate!</p>
-        <p>Adipisci consequuntur culpa dolorem, dolorum eaque esse excepturi, hic iure obcaecati, optio repellat
-            voluptatibus! At consectetur dolores, ea illo inventore itaque porro veritatis. Atque consequuntur in
-            odit perspiciatis quaerat repudiandae.</p>
-        <p>Aliquid commodi delectus facilis fugiat harum impedit, incidunt maiores neque pariatur rem saepe sapiente
-            sequi suscipit unde vero voluptatem voluptatum. Aliquam consectetur obcaecati optio pariatur
-            repudiandae, saepe sapiente tempora tempore!</p>
+            voluptatum.
+        </p>
+        @foreach($articles as $article)
+            @if($article->category->name == 'Actualité')
+                <div class="w3-card-4 w3-red ">
+                    <div class="w3-container w3-theme-dark">
+                        <h3>{{ $article->title }}</h3>
+                    </div>
+                    <div class="w3-section ">
+                        {{ $article->content }}
+                    </div>
+                </div>
+            @endif
+        @endforeach
+    </div>
+    <div id="agenda" class="fond3 w3-display-container">
+        <div class="w3-display-middle w3-padding w3-theme w3-round">
+            <h1>l'agenda</h1>
+        </div>
+    </div>
+    <div class="w3-container w3-auto w3-justify">
+        <p>L'AGENDA commence ici ..... Dolores esse ex obcaecati, optio similique totam. A ab ad alias assumenda autem cumque distinctio eius
+            eveniet itaque iure nisi nobis optio, perspiciatis repellat repudiandae sit soluta ullam unde
+            voluptatum.
+        </p>
+        @foreach($articles as $article)
+            @if($article->category->name == 'Agenda')
+                <div class="w3-card-4 w3-red ">
+                    <div class="w3-container w3-theme-dark">
+                        <h3>{{ $article->title }}</h3>
+                    </div>
+                    <div class="w3-section ">
+                        {{ $article->content }}
+                    </div>
+                </div>
+            @endif
+        @endforeach
+    </div>
+    <div id="activites" class="fond2 w3-display-container">
+        <div class="w3-display-middle w3-padding w3-theme w3-round">
+            <h1>Les activités</h1>
+        </div>
+    </div>
+    <div class="w3-container w3-auto w3-justify">
+        <p>Les ACTIVITES commencent ici ..... Dolores esse ex obcaecati, optio similique totam. A ab ad alias assumenda autem cumque distinctio eius
+            eveniet itaque iure nisi nobis optio, perspiciatis repellat repudiandae sit soluta ullam unde
+            voluptatum.
+        </p>
+        @foreach($articles as $article)
+            @if($article->category->name == 'Activité')
+                <div class="w3-card-4 w3-red ">
+                    <div class="w3-container w3-theme-dark">
+                        <h3>{{ $article->title }}</h3>
+                    </div>
+                    <div class="w3-section ">
+                        {{ $article->content }}
+                    </div>
+                </div>
+            @endif
+        @endforeach
+    </div>
+
+    <div id="orga" class="fond2 w3-display-container">
+        <div class="w3-display-middle w3-padding w3-theme w3-round">
+            <h1>Notre organigramme</h1>
+        </div>
+    </div>
+    <div class="w3-container w3-auto w3-justify">
+        ... ORGANIGRAMME Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid asperiores autem, consequuntur
+        cupiditate, dolor ea fuga ipsam laboriosam non numquam odit provident qui quod reprehenderit sit soluta
+        tenetur, voluptates.
     </div>
 @endsection

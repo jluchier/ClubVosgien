@@ -1,73 +1,36 @@
 @extends('layouts.app')
+@section('login', "navActive")
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
-                </div>
+    <div class="w3-display-container" style="height: 100%">
+        <div class="w3-display-topmiddle w3-card-4">
+            <div class="w3-container w3-theme-dark">
+                <h1>{{ __('auth.login') }}</h1>
             </div>
+
+            <div class="w3-container">
+                {{ Form::open(['route' => 'login', 'method'=>'post' ]) }}
+
+                <div class="w3-section">
+                    {{ Form::label('email', __('auth.email')) }}
+                    {{ Form::email('email', null, ["class" => "w3-input w3-border w3-round w3-border-green", "required" => true]) }}
+                </div>
+
+                <div class="w3-section">
+                    {{ Form::label('password', __('auth.password')) }}
+                    {{ Form::password('password', ["class" => "w3-input w3-border w3-round w3-border-green", "required" => true]) }}
+                    <a href="{{ route('password.request') }}">{{ __('auth.pwd_Request') }}</a>
+                </div>
+
+                <div class="w3-section">
+                    {{ Form::label('remember', __('auth.remember')) }}
+                    {{ Form::checkbox('remember', true, ["class" => "w3-check", "type" => 'checkbox']) }}
+                    {{ Form::submit(__('auth.send'), ["class" => "w3-input w3-button w3-theme-dark w3-round"]) }}
+                </div>
+
+                {{ Form::close() }}
+            </div>
+
         </div>
     </div>
-</div>
 @endsection

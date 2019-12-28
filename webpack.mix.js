@@ -21,13 +21,13 @@ mix.browserSync({
 
 if (mix.inProduction()) {
     mix.version();
-    mix.options({
-        purifyCss: {
-            purifyOptions: {
-                whitelist: ["is-animating", "webp", "no-webp"]
-            }
-        }
-    });
+    // mix.options({
+    //     purifyCss: {
+    //         purifyOptions: {
+    //             whitelist: ["is-animating", "webp", "no-webp"]
+    //         }
+    //     }
+    // });
 }
 
 mix.disableNotifications();

@@ -10,11 +10,11 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        $articles = Article::select(["id", "title"])
-            ->orderBy("updated_at")
+        $articles = Article::with('category')
+            ->orderBy("category_id")
             ->get();
 
-        return view('Admin.Articles.index', compact(["articles"]));
+        return view('Admin.Articles.index', compact(["articles", "categories"]));
     }
 
     public function create()
