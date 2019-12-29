@@ -13,14 +13,14 @@
 
 <nav id="nav" class="w3-top w3-theme-dark">
     <div class="w3-bar w3-large">
-        <a href="{{ route("actu") }}" class="w3-bar-item w3-button navItem">Site</a>
         <a href="{{ route("articles.index") }}" class="w3-bar-item w3-button navItem @yield('articles')">Articles</a>
         <a href="#" class="w3-bar-item w3-button navItem @yield('inscriptions')">Inscriptions</a>
         <a href="#" class="w3-bar-item w3-button navItem @yield('photos')">Photos</a>
         <a href="#" class="w3-bar-item w3-button navItem @yield('agenda')">Agenda</a>
         <a href="#" class="w3-bar-item w3-button navItem @yield('sentiers')">Sentiers</a>
+        <a href="#" class="w3-bar-item w3-button navItem @yield('compte')">Compte rendu</a>
 
-        <a href="#" class="w3-bar-item w3-button navItem @yield('compte') w3-right">Compte rendu</a>
+        <a href="{{ route("actu") }}" class="w3-bar-item w3-button navItem w3-right">Retour au site</a>
     </div>
 </nav>
 

@@ -15,9 +15,10 @@
 <nav id="nav" class="w3-top w3-theme-dark">
     <div class="w3-bar w3-large">
         <a href="{{ route("actu") }}" class="w3-bar-item w3-button navItem @yield('home')"><i class="fas fa-home"></i>&nbsp;Accueil</a>
-        <a href="{{ route("page1") }}" class="w3-bar-item w3-button navItem @yield('page1')"><i class="fas fa-image"></i>&nbsp;Galerie</a>
-        <a href="#" class="w3-bar-item w3-button w3-disabled navItem">Page2</a>
-        <a href="#" class="w3-bar-item w3-button w3-disabled navItem">Page3</a>
+        <a href="{{ route("activity") }}" class="w3-bar-item w3-button navItem @yield('activity')"><i class="fas fa-image"></i>&nbsp;Activités</a>
+        <a href="{{ route("sentiers") }}" class="w3-bar-item w3-button navItem @yield('sentiers')"><i class="fas fa-image"></i>&nbsp;Sentiers</a>
+        <a href="{{ route("chalets") }}" class="w3-bar-item w3-button navItem @yield('chalets')"><i class="fas fa-image"></i>&nbsp;Chalets</a>
+        <a href="{{ route("galery") }}" class="w3-bar-item w3-button navItem @yield('galery')"><i class="fas fa-image"></i>&nbsp;Galerie</a>
 
         @Auth
             {{ Form::open(["route" => "logout", "method" => "post", "class" => "w3-right navItem"]) }}
@@ -25,7 +26,11 @@
             {{ Form::close() }}
 
             @if(Auth::user()->IsAdmin())
-                <a href="{{ route("articles.index") }}" class="w3-bar-item w3-button navItem w3-right">Admin</a>
+                <a href="{{ route("articles.index") }}" class="w3-bar-item w3-button navItem w3-right">Administration</a>
+            @endif
+
+            @if(Auth::user()->IsValidate())
+                <a href="{{ route("compteRendus") }}" class="w3-bar-item w3-button navItem w3-right">Compte rendus</a>
             @endif
 
         @else

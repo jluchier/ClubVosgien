@@ -25,6 +25,8 @@ class CreateCategoriesTable extends Migration
             ["name" => "Marche"],
             ["name" => "VTT"],
             ["name" => "Activité"],
+            ["name" => "Agenda"],
+            ["name" => "Infos fédération"],
         ]);
     }
 

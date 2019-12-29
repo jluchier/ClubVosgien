@@ -33,6 +33,13 @@ class CreateUsersTable extends Migration
             "email_verified_at" => now(),
             "privilege" => "Admin"
         ]);
+        DB::table("users")->insert([
+            "name" => "inscrit",
+            "email" => "inscrit@yopmail.com",
+            "password" => Hash::make("LeSuperMdp"),
+            "email_verified_at" => now(),
+            "privilege" => "Inscrit"
+        ]);
     }
 
     /**

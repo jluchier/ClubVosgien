@@ -19,6 +19,7 @@ class CreateArticlesTable extends Migration
             $table->string("title");
             $table->text("content");
             $table->unsignedInteger("category_id");
+            $table->string("image")->nullable();
 
             $table->foreign("category_id")->references("id")->on("categories");
         });

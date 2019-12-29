@@ -16,8 +16,21 @@ class GuestController extends Controller
         return view('home', compact(['articles']));
     }
 
-    public function Page1()
+    public function galery()
     {
-        return view("page1");
+        return view("galery");
+    }
+
+    public function activity(){
+        return view("activity");
+    }
+    public function sentiers(){
+        return view("sentiers");
+    }
+    public function chalets(){
+        return view("chalets");
+    }
+    public function compteRendus(){
+        return view("compteRendus");
     }
 }
