@@ -1861,7 +1861,7 @@ __webpack_require__.r(__webpack_exports__);
 var swup = new swup__WEBPACK_IMPORTED_MODULE_0___default.a({
   containers: ['#nav', '#swup'],
   plugins: [new _swup_scroll_plugin__WEBPACK_IMPORTED_MODULE_1___default.a({
-    animateScroll: false
+    animateScroll: true
   })]
 });
 

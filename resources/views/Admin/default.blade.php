@@ -15,7 +15,7 @@
     <div class="w3-bar w3-large">
         <a href="{{ route("articles.index") }}" class="w3-bar-item w3-button navItem @yield('articles')">Articles</a>
         <a href="#" class="w3-bar-item w3-button navItem @yield('inscriptions')">Inscriptions</a>
-        <a href="#" class="w3-bar-item w3-button navItem @yield('photos')">Photos</a>
+        <a href="{{ route("galeries.index") }}" class="w3-bar-item w3-button navItem @yield('photos')">Photos</a>
         <a href="#" class="w3-bar-item w3-button navItem @yield('agenda')">Agenda</a>
         <a href="#" class="w3-bar-item w3-button navItem @yield('sentiers')">Sentiers</a>
         <a href="#" class="w3-bar-item w3-button navItem @yield('compte')">Compte rendu</a>

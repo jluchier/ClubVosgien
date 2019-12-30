@@ -15,11 +15,12 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', "GuestController@Index")->name("actu");
-Route::get('galery', "GuestController@Galery")->name("galery");
+Route::get('galery', "GuestController@galery")->name("galery");
 Route::get('activity', "GuestController@Activity")->name("activity");
 Route::get('sentiers', "GuestController@sentiers")->name("sentiers");
 Route::get('chalets', "GuestController@chalets")->name("chalets");
 
+Route::resource('galeries','GaleryController');
 
 
 Route::middleware("auth.validated")->group(function (){

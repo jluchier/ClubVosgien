@@ -39,7 +39,7 @@ class ArticleController extends Controller
             "image" => $this->storeImage($request),
         ]);
 
-        return redirect(route("articles.index"))->with("success", "Article ajouté avec success");
+        return redirect(route("articles.index"))->with("success", "Article ajouté avec succès");
     }
 
     public function show(Article $article)
@@ -49,6 +49,7 @@ class ArticleController extends Controller
 
     public function edit(Article $article)
     {
+        dd($article);
         $url = route("articles.update", $article->id);
         $method = "put";
         $categories = Category::pluck("name", "id");
@@ -76,7 +77,7 @@ class ArticleController extends Controller
 
         $article->save();
 
-        return redirect(route("articles.index"))->with("success", "Article modifier avec succès");
+        return redirect(route("articles.index"))->with("success", "Article modifié avec succès");
     }
 
     public function destroy(Article $article)

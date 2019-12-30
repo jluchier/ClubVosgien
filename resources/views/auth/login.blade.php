@@ -24,7 +24,7 @@
 
                 <div class="w3-section">
                     {{ Form::label('remember', __('auth.remember')) }}
-                    {{ Form::checkbox('remember', true, ["class" => "w3-check", "type" => 'checkbox']) }}
+                    {{ Form::checkbox('remember', true, ["class" => "w3-check"]) }}
                     {{ Form::submit(__('auth.send'), ["class" => "w3-input w3-button w3-theme-dark w3-round"]) }}
                 </div>
 

@@ -3,6 +3,7 @@
 @section('articles', "navActive")
 
 @section('content')
+    @include('Admin.messages')
 
     @if ($errors->any())
         <div class="w3-pale-red w3-panel w3-leftbar w3-border-red">
