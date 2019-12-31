@@ -42,14 +42,8 @@ class ArticleController extends Controller
         return redirect(route("articles.index"))->with("success", "Article ajouté avec succès");
     }
 
-    public function show(Article $article)
-    {
-        //
-    }
-
     public function edit(Article $article)
     {
-        dd($article);
         $url = route("articles.update", $article->id);
         $method = "put";
         $categories = Category::pluck("name", "id");

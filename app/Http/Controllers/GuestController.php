@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\User;
 use Illuminate\Http\Request;
 
 class GuestController extends Controller
@@ -16,7 +17,7 @@ class GuestController extends Controller
         return view('home', compact(['articles']));
     }
 
-    public function galery()
+    public function gallery()
     {
         return view("galery");
     }
