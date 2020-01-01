@@ -19,6 +19,7 @@ Route::get('gallery', "GuestController@gallery")->name("gallery");
 Route::get('activity', "GuestController@Activity")->name("activity");
 Route::get('sentiers', "GuestController@sentiers")->name("sentiers");
 Route::get('chalets', "GuestController@chalets")->name("chalets");
+Route::get('construction',"GuestController@construction")->name("construction");
 
 Route::middleware("auth.validated")->group(function (){
 
@@ -28,7 +29,7 @@ Route::middleware("auth.validated")->group(function (){
     Route::prefix("admin")->middleware("auth.admin")->group(function () {
         Route::get("/", "AdminController@Index")->name("admin");
         Route::resource('articles', "ArticleController", ["except" => "show"]);
-        Route::get('inscriptions', "AdminController@editUsers")->name("inscriptions");
+        Route::get('inscriptions', 'AdminController@editUsers')->name("inscriptions");
         Route::resource('galleries','GalleryController', ["only" => "delete"]);
     });
 

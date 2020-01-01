@@ -16,8 +16,8 @@
     <div class="w3-bar w3-large">
         <a href="{{ route("actu") }}" class="w3-bar-item w3-button navItem @yield('home')"><i class="fas fa-home"></i>&nbsp;Accueil</a>
         <a href="{{ route("activity") }}" class="w3-bar-item w3-button navItem @yield('activity')"><i class="fas fa-image"></i>&nbsp;Activités</a>
-        <a href="{{ route("sentiers") }}" class="w3-bar-item w3-button navItem @yield('sentiers')"><i class="fas fa-image"></i>&nbsp;Sentiers</a>
-        <a href="{{ route("chalets") }}" class="w3-bar-item w3-button navItem @yield('chalets')"><i class="fas fa-image"></i>&nbsp;Chalets</a>
+        <a href="{{ route("construction") }}" class="w3-bar-item w3-button navItem @yield('sentiers')"><i class="fas fa-image"></i>&nbsp;Sentiers</a>
+        <a href="{{ route("construction") }}" class="w3-bar-item w3-button navItem @yield('chalets')"><i class="fas fa-image"></i>&nbsp;Chalets</a>
         <a href="{{ route("gallery") }}" class="w3-bar-item w3-button navItem @yield('gallery')"><i class="fas fa-image"></i>&nbsp;Galerie</a>
 
         @Auth

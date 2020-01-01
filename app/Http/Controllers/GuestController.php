@@ -34,4 +34,8 @@ class GuestController extends Controller
     public function compteRendus(){
         return view("compteRendus");
     }
+
+    public function construction(){
+        return view("construction");
+    }
 }
