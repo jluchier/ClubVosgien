@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e78b48ac-3cb9-48de-bd2b-fd2c3906239e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/inscriptions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/inscriptions.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +168,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/resources/sass/app.scss" />
   </component>
   <component name="RecentsManager">
@@ -265,6 +263,7 @@
       <workItem from="1577438688083" duration="13426000" />
       <workItem from="1577462133100" duration="19588000" />
       <workItem from="1577775833419" duration="14566000" />
+      <workItem from="1577891328522" duration="715000" />
     </task>
     <task id="LOCAL-00001" summary="Authentification starts">
       <created>1577465071879</created>
@@ -287,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577793392827</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Voici la galerie ... suite avec admin gallery">
+      <created>1577891451878</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577891451878</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -385,10 +391,10 @@
       <screen x="1280" y="0" width="1680" height="1050" />
     </state>
     <state x="1918" y="218" width="394" height="567" key="RollbackChangesDialog/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577462500469" />
-    <state x="1542" y="115" key="SettingsEditor" timestamp="1577413925771">
+    <state x="1542" y="115" key="SettingsEditor" timestamp="1577892052198">
       <screen x="1280" y="0" width="1680" height="1050" />
     </state>
-    <state x="1542" y="115" key="SettingsEditor/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577413925771" />
+    <state x="1542" y="115" key="SettingsEditor/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577892052198" />
     <state width="596" height="445" key="SwitcherDM" timestamp="1577482504936">
       <screen x="1280" y="0" width="1680" height="1050" />
     </state>
