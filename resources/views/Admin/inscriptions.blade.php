@@ -15,7 +15,6 @@
             <th>Nom</th>
             <th>Email / login</th>
             <th>Privilège</th>
-            <th class="w3-right">Administration</th>
         </tr>
         @foreach($users as $user)
             <tr>
