@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Article;
-use App\User;
 use Illuminate\Http\Request;
 
 class GuestController extends Controller
@@ -26,16 +25,20 @@ class GuestController extends Controller
         return view("activity");
     }
     public function sentiers(){
-        return view("sentiers");
+//        return view("sentiers");
+        return redirect(route("construction", ["page" => "sentiers"]));
     }
     public function chalets(){
-        return view("chalets");
+//        return view("chalets");
+        return redirect(route("construction", ["page" => "chalets"]));
     }
     public function compteRendus(){
-        return view("compteRendus");
+//        return view("compteRendus");
+        return redirect(route("construction", ["page" => "compteRendus"]));
     }
 
-    public function construction(){
-        return view("construction");
+    public function construction(Request $request){
+        $page = $request->get("page", "");
+        return view("construction", compact(["page"]));
     }
 }

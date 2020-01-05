@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class GalleryRequest extends FormRequest
+class CompteRendusRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,9 +25,8 @@ class GalleryRequest extends FormRequest
     {
         return [
             'title'=>'required|string|min:2',
-            'description'=>'string|min:2',
-            'private'=>'boolean',
-            "folder" => 'image|dimension:max 3000'
+            'abstract'=>'required|string',
+            'compteRendu' => 'file'
         ];
     }
 }

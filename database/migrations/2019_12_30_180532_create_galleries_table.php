@@ -19,10 +19,10 @@ class CreateGalleriesTable extends Migration
             $table->string('title');
             $table->boolean('private');
             $table->multiLineString('description')->nullable();
-            $table->string('folder')->unique();
+            $table->string("folder")->unique();
             $table->unsignedInteger("user_id");
 
-            $table->foreign("user_id")->references("users")->on("id");
+            $table->foreign("user_id")->references("id")->on("users");
         });
     }
 

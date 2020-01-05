@@ -1,9 +1,6 @@
 @extends('default')
 
-@section('sentiers', 'navActive')
-
-
-@section('chalets', 'navActive')
+@section($page, 'navActive')
 
 @section('content')
 <div class="corpusConstruction w3-display-container">

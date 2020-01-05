@@ -4,16 +4,16 @@
 
 @section('content')
 
-{{--    <div class="w3-card-4 w3-red menuFixe w3-bar-block">--}}
-{{--        <a href="#actu" class="w3-bar-item w3-button">Les actualités</a>--}}
-{{--        <a href="#agenda" class="w3-bar-item w3-button">Agenda</a>--}}
-{{--        <a href="#infosFede" class="w3-bar-item w3-button">Informations fédération</a>--}}
-{{--        <a href="#orga" class="w3-bar-item w3-button">Organigramme</a>--}}
-{{--    </div>--}}
+    <div class="w3-card-4 w3-red menuFixe w3-bar-block">
+        <a href="#actu" class="w3-bar-item w3-button">Les actualités</a>
+        <a href="#agenda" class="w3-bar-item w3-button">Agenda</a>
+        <a href="#infosFede" class="w3-bar-item w3-button">Informations fédération</a>
+        <a href="#orga" class="w3-bar-item w3-button">Organigramme</a>
+    </div>
 
     <div class="fond1 w3-display-container">
-        <div class="w3-display-topmiddle">
-            <h2>Bienvenue sur le site du club vosgien RVF</h2>
+        <div class="w3-display-topmiddle w3-text-orange " style="text-shadow:3px 1px 0 #444">
+            <h2 class="w3-xxxlarge">Bienvenue sur le site du club vosgien RVF</h2>
         </div>
         <div class="w3-display-bottommiddle w3-text-white w3-xxlarge">
             <i class="fas fa-chevron-circle-down"></i>

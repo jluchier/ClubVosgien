@@ -1,3 +1,4 @@
+
 @extends('Admin.default')
 
 @section('articles', "navActive")
@@ -14,16 +15,18 @@
         <tr>
             <th>Catégorie</th>
             <th>Titre</th>
+            <th>Image</th>
             <th class="w3-right">Administration</th>
         </tr>
-    @foreach($articles as $article)
+        @foreach($articles as $article)
             <tr>
                 <td>
                     {{ $article->category->name }}
                 </td>
                 <td>
-                {{ $article->title }}
+                    {{ $article->title }}
                 </td>
+                <td><img src="{{ Storage::url('images/thumb/' . $article->image)}}" alt="thumb"></td>
                 <td class="w3-right">
                     <div class="w3-bar">
                         <a href="{{ route("articles.edit", $article->id) }}" class="w3-button w3-white">Modifer</a>

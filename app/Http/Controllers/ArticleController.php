@@ -88,12 +88,10 @@ class ArticleController extends Controller
             if ($request->file('image')->isValid())
             {
                 $out = explode(".", $request->file("image")->hashName(), 2)[0].".jpg";
-
                 $this->resizeImage($request, 800, "images/small/".$out);
                 $this->resizeImage($request, 1280, "images/medium/".$out);
                 $this->resizeImage($request, 1920, "images/large/".$out);
                 $this->resizeImage($request, 128, "images/thumb/".$out, true);
-
                 return $out;
             }
         }

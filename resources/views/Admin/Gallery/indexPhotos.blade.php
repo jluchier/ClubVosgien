@@ -12,21 +12,25 @@
         <tr>
             <th>Titre</th>
             <th>Description</th>
+            <th>Galerie</th>
             <th class="w3-right">Administration</th>
         </tr>
-        @foreach($galeries as $galerie)
+        @foreach($galleries as $gallery)
             <tr>
                 <td>
-                    {{ $galerie->title}}
+                    {{$gallery->title}}
                 </td>
                 <td>
-                    {{ $galerie->description }}
+                    {{$gallery->description }}
+                </td>
+                <td>
+                    {{$gallery->folder }}
                 </td>
                 <td class="w3-right">
                     <div class="w3-bar">
-                        <a href="{{ route("galleries.edit", $galerie->id) }}" class="w3-button w3-white">Modifer</a>
+                        <a href="{{ route("galleries.edit",$gallery->id) }}" class="w3-button w3-white">Modifer</a>
 
-                        {{ Form::open(["route" => ["galleries.destroy", $galerie->id], "method" => "delete", "style" => "display: inline-block"]) }}
+                        {{ Form::open(["route" => ["galleries.destroy",$gallery->id], "method" => "delete", "style" => "display: inline-block"]) }}
                         {{ Form::submit("Supprimer", ["class" => "w3-button w3-red"]) }}
                         {{ Form::close() }}
                     </div>

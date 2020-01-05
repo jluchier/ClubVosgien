@@ -31,6 +31,7 @@ Route::middleware("auth.validated")->group(function (){
         Route::resource('articles', "ArticleController", ["except" => "show"]);
         Route::get('inscriptions', 'AdminController@editUsers')->name("inscriptions");
         Route::resource('galleries','GalleryController', ["only" => "delete"]);
+        Route::resource('compteRendus','CompteRendusController',[]);
     });
 
 });
