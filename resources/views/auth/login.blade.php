@@ -13,12 +13,12 @@
 
                 <div class="w3-section">
                     {{ Form::label('email', __('auth.email')) }}
-                    {{ Form::email('email', null, ["class" => "w3-input w3-border w3-round w3-border-green", "required" => true]) }}
+                    {{ Form::email('email', null, ["class" => "w3-input w3-border w3-round w3-border-green", "required" => true, "placeholder"=>'Saisissez ici votre courriel ']) }}
                 </div>
 
                 <div class="w3-section">
                     {{ Form::label('password', __('auth.password')) }}
-                    {{ Form::password('password', ["class" => "w3-input w3-border w3-round w3-border-green", "required" => true]) }}
+                    {{ Form::password('password', ["class" => "w3-input w3-border w3-round w3-border-green", "required" => true, "placeholder"=>'Saisissez ici votre mot de passe']) }}
                     <a href="{{ route('password.request') }}">{{ __('auth.pwd_Request') }}</a>
                 </div>
 

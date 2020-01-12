@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e78b48ac-3cb9-48de-bd2b-fd2c3906239e" name="Default Changelist" comment="Voici la galerie ... suite avec admin gallery" />
+    <list default="true" id="e78b48ac-3cb9-48de-bd2b-fd2c3906239e" name="Default Changelist" comment="Voici la galerie ... suite avec admin gallery">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/template.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,7 +139,6 @@
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
-      <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/vendor/psy/psysh" />
       <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
@@ -146,6 +166,9 @@
       <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
       <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/caouecs/laravel-lang" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark-ext-table" />
     </include_path>
   </component>
   <component name="ProjectId" id="1VXHFaW4NKIscTJp2NdRzBccQ8K" />
@@ -262,6 +285,9 @@
       <workItem from="1577462133100" duration="19588000" />
       <workItem from="1577775833419" duration="14566000" />
       <workItem from="1577891328522" duration="18433000" />
+      <workItem from="1578312139560" duration="1448000" />
+      <workItem from="1578342448997" duration="4287000" />
+      <workItem from="1578599081692" duration="1453000" />
     </task>
     <task id="LOCAL-00001" summary="Authentification starts">
       <created>1577465071879</created>
@@ -386,21 +412,25 @@
     </state>
     <state x="1747" y="94" width="724" height="853" key="FileChooserDialogImpl.inPresentationMode/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577412575524" />
     <state x="1903" y="262" width="424" height="479" key="FileChooserDialogImpl/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577461724765" />
-    <state width="1257" height="308" key="GridCell.Tab.0.bottom" timestamp="1577898153323">
-      <screen x="1280" y="0" width="1680" height="1050" />
+    <state width="1324" height="172" key="GridCell.Tab.0.bottom" timestamp="1578346736239">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1324" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578346736239" />
     <state width="1257" height="308" key="GridCell.Tab.0.bottom/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577898153323" />
-    <state width="1257" height="308" key="GridCell.Tab.0.center" timestamp="1577898153323">
-      <screen x="1280" y="0" width="1680" height="1050" />
+    <state width="1324" height="172" key="GridCell.Tab.0.center" timestamp="1578346736237">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1324" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1578346736237" />
     <state width="1257" height="308" key="GridCell.Tab.0.center/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577898153323" />
-    <state width="1257" height="308" key="GridCell.Tab.0.left" timestamp="1577898153323">
-      <screen x="1280" y="0" width="1680" height="1050" />
+    <state width="1324" height="172" key="GridCell.Tab.0.left" timestamp="1578346736237">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1324" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1578346736237" />
     <state width="1257" height="308" key="GridCell.Tab.0.left/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577898153323" />
-    <state width="1257" height="308" key="GridCell.Tab.0.right" timestamp="1577898153323">
-      <screen x="1280" y="0" width="1680" height="1050" />
+    <state width="1324" height="172" key="GridCell.Tab.0.right" timestamp="1578346736238">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1324" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1578346736238" />
     <state width="1257" height="308" key="GridCell.Tab.0.right/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577898153323" />
     <state x="1918" y="218" width="394" height="567" key="RollbackChangesDialog" timestamp="1577462500469">
       <screen x="1280" y="0" width="1680" height="1050" />
@@ -418,10 +448,11 @@
       <screen x="1280" y="0" width="1680" height="1050" />
     </state>
     <state x="1715" y="240" width="800" height="523" key="Vcs.Push.Dialog.v2/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577892458338" />
-    <state x="1908" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577468846854">
-      <screen x="1280" y="0" width="1680" height="1050" />
+    <state x="511" y="308" width="395" height="155" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578840767670">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1908" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.984/1280.0.1680.1050@1280.0.1680.1050" timestamp="1577390902108" />
+    <state x="511" y="308" width="395" height="155" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1578840767670" />
     <state x="1908" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577468846854" />
     <state x="1796" y="108" width="647" height="792" key="find.popup" timestamp="1577778222804">
       <screen x="1280" y="0" width="1680" height="1050" />
@@ -431,13 +462,14 @@
       <screen x="1280" y="0" width="1680" height="1050" />
     </state>
     <state x="1798" y="353" width="698" height="296" key="org.intellij.images.editor.actions.BackgroundImageDialog/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577413485992" />
-    <state x="1783" y="220" width="672" height="678" key="search.everywhere.popup" timestamp="1577914211904">
-      <screen x="1280" y="0" width="1680" height="1050" />
+    <state x="409" y="153" width="672" height="471" key="search.everywhere.popup" timestamp="1578345575687">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1529" y="0" width="1177" height="1046" key="search.everywhere.popup.inPresentationMode" timestamp="1577412265023">
       <screen x="1280" y="0" width="1680" height="1050" />
     </state>
     <state x="1529" y="0" width="1177" height="1046" key="search.everywhere.popup.inPresentationMode/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577412265023" />
+    <state x="409" y="153" width="672" height="471" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1578345575687" />
     <state x="1783" y="220" width="672" height="678" key="search.everywhere.popup/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577914211904" />
   </component>
 </project>
