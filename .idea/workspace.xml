@@ -3,6 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="e78b48ac-3cb9-48de-bd2b-fd2c3906239e" name="Default Changelist" comment="Correctifs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GalleryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GalleryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GuestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GuestController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/GalleryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/GalleryRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/fr/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/fr/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -370,10 +390,10 @@
       <screen x="1280" y="0" width="1680" height="1050" />
     </state>
     <state x="1860" y="106" width="552" height="785" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577776242193" />
-    <state x="1853" y="262" width="524" height="479" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1577781379461">
+    <state x="1853" y="262" width="524" height="479" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578860208659">
       <screen x="1280" y="0" width="1680" height="1050" />
     </state>
-    <state x="1853" y="262" width="524" height="479" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577781379461" />
+    <state x="1853" y="262" width="524" height="479" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1578860208659" />
     <state x="1882" y="385" width="466" height="233" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1" timestamp="1577776589437">
       <screen x="1280" y="0" width="1680" height="1050" />
     </state>
@@ -403,26 +423,26 @@
     </state>
     <state x="1747" y="94" width="724" height="853" key="FileChooserDialogImpl.inPresentationMode/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577412575524" />
     <state x="1903" y="262" width="424" height="479" key="FileChooserDialogImpl/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577461724765" />
-    <state width="1324" height="172" key="GridCell.Tab.0.bottom" timestamp="1578346736239">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1230" height="308" key="GridCell.Tab.0.bottom" timestamp="1578860082133">
+      <screen x="1280" y="0" width="1680" height="1050" />
     </state>
     <state width="1324" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578346736239" />
-    <state width="1257" height="308" key="GridCell.Tab.0.bottom/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577898153323" />
-    <state width="1324" height="172" key="GridCell.Tab.0.center" timestamp="1578346736237">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1230" height="308" key="GridCell.Tab.0.bottom/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1578860082133" />
+    <state width="1230" height="308" key="GridCell.Tab.0.center" timestamp="1578860082133">
+      <screen x="1280" y="0" width="1680" height="1050" />
     </state>
     <state width="1324" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1578346736237" />
-    <state width="1257" height="308" key="GridCell.Tab.0.center/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577898153323" />
-    <state width="1324" height="172" key="GridCell.Tab.0.left" timestamp="1578346736237">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1230" height="308" key="GridCell.Tab.0.center/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1578860082133" />
+    <state width="1230" height="308" key="GridCell.Tab.0.left" timestamp="1578860082132">
+      <screen x="1280" y="0" width="1680" height="1050" />
     </state>
     <state width="1324" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1578346736237" />
-    <state width="1257" height="308" key="GridCell.Tab.0.left/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577898153323" />
-    <state width="1324" height="172" key="GridCell.Tab.0.right" timestamp="1578346736238">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1230" height="308" key="GridCell.Tab.0.left/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1578860082132" />
+    <state width="1230" height="308" key="GridCell.Tab.0.right" timestamp="1578860082133">
+      <screen x="1280" y="0" width="1680" height="1050" />
     </state>
     <state width="1324" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1578346736238" />
-    <state width="1257" height="308" key="GridCell.Tab.0.right/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577898153323" />
+    <state width="1230" height="308" key="GridCell.Tab.0.right/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1578860082133" />
     <state x="1918" y="218" width="394" height="567" key="RollbackChangesDialog" timestamp="1577462500469">
       <screen x="1280" y="0" width="1680" height="1050" />
     </state>
@@ -439,12 +459,12 @@
       <screen x="1280" y="0" width="1680" height="1050" />
     </state>
     <state x="1715" y="240" width="800" height="523" key="Vcs.Push.Dialog.v2/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577892458338" />
-    <state x="511" y="308" width="395" height="155" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578840767670">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1908" y="444" width="395" height="155" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578940424610">
+      <screen x="1280" y="0" width="1680" height="1050" />
     </state>
     <state x="1908" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.984/1280.0.1680.1050@1280.0.1680.1050" timestamp="1577390902108" />
     <state x="511" y="308" width="395" height="155" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1578840767670" />
-    <state x="1908" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577468846854" />
+    <state x="1908" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1578940424610" />
     <state x="1796" y="108" width="647" height="792" key="find.popup" timestamp="1577778222804">
       <screen x="1280" y="0" width="1680" height="1050" />
     </state>
@@ -453,14 +473,14 @@
       <screen x="1280" y="0" width="1680" height="1050" />
     </state>
     <state x="1798" y="353" width="698" height="296" key="org.intellij.images.editor.actions.BackgroundImageDialog/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577413485992" />
-    <state x="409" y="153" width="672" height="471" key="search.everywhere.popup" timestamp="1578345575687">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1783" y="220" width="672" height="678" key="search.everywhere.popup" timestamp="1578857036350">
+      <screen x="1280" y="0" width="1680" height="1050" />
     </state>
     <state x="1529" y="0" width="1177" height="1046" key="search.everywhere.popup.inPresentationMode" timestamp="1577412265023">
       <screen x="1280" y="0" width="1680" height="1050" />
     </state>
     <state x="1529" y="0" width="1177" height="1046" key="search.everywhere.popup.inPresentationMode/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577412265023" />
     <state x="409" y="153" width="672" height="471" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1578345575687" />
-    <state x="1783" y="220" width="672" height="678" key="search.everywhere.popup/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1577914211904" />
+    <state x="1783" y="220" width="672" height="678" key="search.everywhere.popup/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1578857036350" />
   </component>
 </project>

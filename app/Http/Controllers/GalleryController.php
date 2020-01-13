@@ -6,6 +6,7 @@ use App\Gallery;
 use Illuminate\Http\Request;
 use App\Http\Requests\GalleryRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 use Input;
 use Intervention\Image\Facades\Image;
@@ -34,8 +35,6 @@ class GalleryController extends Controller
 
     public function store(GalleryRequest $request)
     {
-        dd(Input::get('url'));
-
         Gallery::insert([
                 "title"=>$request->get('title'),
                 "description"=>$request->get('description'),

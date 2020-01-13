@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class GuestController extends Controller
 {
     public function Index()
     {
-        $articles = Article::with('category')
+        $articles = Article::with( 'category')
             ->orderBy("created_at", "desc")
             ->get();
 

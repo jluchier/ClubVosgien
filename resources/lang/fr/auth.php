@@ -21,5 +21,6 @@ return [
     'remember' => 'Se souvenir de moi',
     'send' => 'Envoyer',
     'password' => 'Mot de passe',
-    'pwd_Request' => 'Mot de passe oublié ?'
+    'pwd_Request' => 'Mot de passe oublié ?',
+    'pwd_Confirmation' => 'Confirmez le mot de passe',
 ];

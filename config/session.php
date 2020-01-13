@@ -1,4 +1,4 @@
-<?php
+  <?php
 
 use Illuminate\Support\Str;
 
@@ -126,7 +126,7 @@ return [
 
     'cookie' => env(
         'SESSION_COOKIE',
-        Str::slug(env('APP_NAME', 'CVRFV'), '_').'_session'
+        Str::slug(env('APP_NAME', 'CVRVF'), '_').'_session'
     ),
 
     /*
