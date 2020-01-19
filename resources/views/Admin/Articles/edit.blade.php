@@ -27,7 +27,7 @@
         <div class="w3-half">
             {{ Form::label("category_id", "Categorie") }}
             {{ Form::select("category_id", $categories, null, ["class" => "w3-input", "required" => true]) }}
-            {{ Form::file("image", ["class" => "w3-input"]) }}
+            {{ Form::file("image", ["class" => "w3-input", "accept" => "image/*"]) }}
         </div>
     </div>
 

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Gallery;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 class GuestController extends Controller
@@ -19,7 +21,13 @@ class GuestController extends Controller
 
     public function gallery()
     {
-        return view("galery");
+        $galleriePrivee = [];
+        $galleriePublic = Gallery::where("private",false)->get();
+
+        if (Auth::user()->IsValidate()) {
+            $galleriePrivee = Gallery::where("private", true)->get();
+        }
+        return view("gallery", compact(['galleriePrivee','galleriePublic']));
     }
 
     public function activity(){

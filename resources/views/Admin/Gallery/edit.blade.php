@@ -26,6 +26,9 @@
         </div>
         <div class="w3-half">
             <p>Sélectionnez un ou plusieurs fichiers</p>
+
+            {{--TODO pouvoir charger plusieurs photos--}}
+
             {{ Form::file("folder", ["class" => "w3-input",'multiple'=>'true'])}}
             <p>Est-ce une galerie privée ? Elle ne sera visible que par les membres inscrits.</p>
             {{ Form::label('private','Gallerie privée ? ') }}

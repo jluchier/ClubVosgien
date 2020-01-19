@@ -35,7 +35,7 @@ class GalleryController extends Controller
 
     public function store(GalleryRequest $request)
     {
-        Gallery::insert([
+         Gallery::insert([
                 "title"=>$request->get('title'),
                 "description"=>$request->get('description'),
                 "private"=>$request->get('private', false),
@@ -83,17 +83,20 @@ class GalleryController extends Controller
 
     private function storeImageGallery (Request $request)
     {
-        if ($request->hasFile("folder"))
+         if ($request->hasFile("folder"))
         {
             if ($request->file('folder')->isValid())
             {
                 $out = explode(".", $request->file("folder")->hashName(), 2)[0].".jpg";
-                /*$this->resizeImage($request, 800, "gallery/small/".$out);
-                $this->resizeImage($request, 1280, "gallery/medium/".$out);
-                $this->resizeImage($request, 1920, "gallery/large/".$out);
-                */
-                $this->resizeImage($request, 128, "gallery/thumb/".$out, true);
+                $this->resizeImage($request, 800);
+                $this->resizeImage($request, 1280);
+                $this->resizeImage($request, 1920);
+                $this->resizeImage($request, 128, true);
+
+                //Storage::disk('public')->makeDirectory($gallery->folder);
+
                 return $out;
+
             }
         }
         return null;
@@ -101,7 +104,7 @@ class GalleryController extends Controller
 //$gallery->folder = "Gallery/" . $request->get("title") . "_" . $gallery->id;
 
 
-    private function resizeImage(Request $request, $size, $out, $fit = false){
+    private function resizeImage(Request $request, $size, $fit = false){
         $img = Image::make($request->file('folder')->path())->orientate();
 
         if ($fit)
@@ -113,8 +116,8 @@ class GalleryController extends Controller
         }
 
         $img->interlace(true)->encode("jpg", 70);
-        Storage::disk("public")->put($out, $img);
+        //Storage::disk("public")->put($out, $img);
 
-        //Storage::disk('public')->makeDirectory($gallery->folder);
+
     }
 }
