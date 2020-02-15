@@ -767,8 +767,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 var _utils = __webpack_require__(/*! ../utils */ "./node_modules/swup/lib/utils/index.js");
 
 var getDataFromHtml = function getDataFromHtml(html, containers) {
-	var fakeDom = document.createElement('html');
-	fakeDom.innerHTML = html;
+	var content = html.replace('<body', '<div id="swupBody"').replace('</body>', '</div>');
+	var fakeDom = document.createElement('div');
+	fakeDom.innerHTML = content;
 	var blocks = [];
 
 	var _loop = function _loop(i) {
@@ -793,7 +794,7 @@ var getDataFromHtml = function getDataFromHtml(html, containers) {
 
 	var json = {
 		title: fakeDom.querySelector('title').innerText,
-		pageClass: fakeDom.querySelector('body').className,
+		pageClass: fakeDom.querySelector('#swupBody').className,
 		originalContent: html,
 		blocks: blocks
 	};
@@ -2449,9 +2450,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/jj/PhpstormProjects/ClubVosgien/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /home/jj/PhpstormProjects/ClubVosgien/resources/js/modernizr-custom.js */"./resources/js/modernizr-custom.js");
-module.exports = __webpack_require__(/*! /home/jj/PhpstormProjects/ClubVosgien/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/jj/Developpements/ClubVosgien/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /home/jj/Developpements/ClubVosgien/resources/js/modernizr-custom.js */"./resources/js/modernizr-custom.js");
+module.exports = __webpack_require__(/*! /home/jj/Developpements/ClubVosgien/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
