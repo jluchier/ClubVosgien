@@ -17,6 +17,7 @@ class ArticleController extends Controller
         $articles = Article::with('category')
             ->orderBy("category_id")
             ->get();
+        $categories = Category::pluck("name", "id");
 
         return view('Admin.Articles.index', compact(["articles", "categories"]));
     }

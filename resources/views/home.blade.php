@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="w3-card-4 w3-red menuFixe w3-bar-block">
-        <a href="#actu" class="w3-bar-item w3-button">Les actualités</a>
+        <a href="#actu" class="w3-bar-item w3-button scale_JJ">Les actualités</a>
         <a href="#agenda" class="w3-bar-item w3-button">Agenda</a>
         <a href="#infosFede" class="w3-bar-item w3-button">Informations fédération</a>
         <a href="#orga" class="w3-bar-item w3-button">Organigramme</a>
@@ -13,46 +13,48 @@
 
     <div class="fond1 w3-display-container">
         <div class="w3-display-topmiddle w3-text-orange " style="text-shadow:3px 1px 0 #444">
-            <h2 class="w3-xxxlarge">Bienvenue sur le site du club vosgien RVF</h2>
+            <h2 class="w3-xxxlarge w3-center" >Bienvenue sur le site du club vosgien RVF</h2>
         </div>
         <div class="w3-display-bottommiddle w3-text-white w3-xxlarge">
             <i class="fas fa-chevron-circle-down"></i>
         </div>
     </div>
 
-    <div class="fond2 w3-display-container" id="actu">
-        <button onclick="myFunction('actu1')" class="w3-btn w3-block w3-display-middle w3-padding w3-theme w3-round">Les actualités <i class="fas fa-caret-down w3-xlarge"></i></button>
-    </div>
+    <div id="actu" class="w3-display-container fond2 w3-margin-top">
 
-    <div id="actu1" class="w3-hide w3-animate-left">
-        <p>Les actualités commencent ici ..... Dolores esse ex obcaecati, optio similique totam. A ab ad alias assumenda autem cumque distinctio eius
-            eveniet itaque iure nisi nobis optio, perspiciatis repellat repudiandae sit soluta ullam unde
-            voluptatum.
-        </p>
+        <button onclick="myFunction('actu1')" class="w3-btn w3-block w3-padding w3-theme w3-round">Les actualités <i class="fas fa-caret-down w3-xlarge"></i></button>
 
-        <div class="w3-row-padding w3-stretch">
-            @foreach($articles as $article)
-                @if($article->category->name == 'Actualité')
-                    <div class="w3-card-4 w3-third">
-                        <div class="w3-container w3-theme-dark">
-                            <h3>{{ $article->title }}</h3>
+        <div id="actu1" class="w3-hide w3-animate-left w3-display-left">
+            <p>Les actualités commencent ici ..... Dolores esse ex obcaecati, optio similique totam. A ab ad alias assumenda autem cumque distinctio eius
+                eveniet itaque iure nisi nobis optio, perspiciatis repellat repudiandae sit soluta ullam unde
+                voluptatum.
+            </p>
+
+            <div class="w3-row-padding w3-stretch">
+                @foreach($articles as $article)
+                    @if($article->category->name == 'Actualité')
+                        <div class="w3-card-4 w3-third">
+                            <div class="w3-container w3-theme-dark">
+                                <h3>{{ $article->title }}</h3>
+                            </div>
+                            <div class="w3-section w3-red">
+                                <img style="width: 100%"
+                                     src="storage/images/small/{{ $article->image }}"
+                                     srcset="storage/images/small/{{ $article->image }} 800w, storage/images/medium/{{ $article->image }} 1280w, storage/images/large/{{ $article->image }} 1920w"
+                                     alt="image">
+                                {{ $article->content }}
+                            </div>
                         </div>
-                        <div class="w3-section w3-red">
-                            <img style="width: 100%"
-                                 src="storage/images/small/{{ $article->image }}"
-                                 srcset="storage/images/small/{{ $article->image }} 800w, storage/images/medium/{{ $article->image }} 1280w, storage/images/large/{{ $article->image }} 1920w"
-                                 alt="image">
-                            {{ $article->content }}
-                        </div>
-                    </div>
-                @endif
-            @endforeach
+                    @endif
+                @endforeach
+            </div>
         </div>
+
     </div>
 
-    <div id="agenda" class="w3-container">
+    <div id="agenda" class="w3-display-container w3-margin-top">
         <button onclick="myFunction('agenda1')" class="w3-btn w3-block w3-padding w3-theme w3-round">Agenda</button>
-        <div id="agenda1" class="fond3 w3-display-container w3-hide c">
+        <div id="agenda1" class="w3-hide ">
             <p>L'AGENDA commence ici ..... Dolores esse ex obcaecati, optio similique totam. A ab ad alias assumenda autem cumque distinctio eius
                 eveniet itaque iure nisi nobis optio, perspiciatis repellat repudiandae sit soluta ullam unde
                 voluptatum.

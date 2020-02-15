@@ -1,10 +1,11 @@
 <?php
 
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCompteRendusesTable extends Migration
+class AttachmentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +14,12 @@ class CreateCompteRendusesTable extends Migration
      */
     public function up()
     {
-        Schema::create('compte_renduses', function (Blueprint $table) {
+        Schema::create('attachements', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('attachage_type');
+            $table->integer('attachage_id')->unsigned();
             $table->timestamps();
-            $table->string("title");
-            $table->text("abstract");
-            $table->string("compteRendu");
         });
     }
 
@@ -29,6 +30,6 @@ class CreateCompteRendusesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('compte_renduses');
+        Schema::dropIfExists('attachements');
     }
 }
