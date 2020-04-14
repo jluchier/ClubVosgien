@@ -23,8 +23,7 @@ class GuestController extends Controller
     {
         $galleriePrivee = [];
         $galleriePublic = Gallery::where("private",false)->get();
-
-        if (Auth::user()->IsValidate()) {
+        if ((!is_null(Auth::user()))and(Auth::user()->IsValidate())){
             $galleriePrivee = Gallery::where("private", true)->get();
         }
         return view("gallery", compact(['galleriePrivee','galleriePublic']));

@@ -8,6 +8,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    {{-- <link rel="stylesheet" href="{{ mix('css/app-jj-CV.css') }}">--}}
+
 </head>
 
 <body class="w3-theme-light">
@@ -43,7 +45,7 @@
 
     @yield('content')
 
-    <footer class="w3-theme w3-center w3-container w3-padding-large">
+    <footer class="w3-theme w3-center w3-container w3-padding-large jj-footer">
         <i class="fab fa-2x w3-hover-opacity fa-facebook"></i>
         <i class="fab fa-2x w3-hover-opacity fa-instagram"></i>
         <i class="fab fa-2x  w3-hover-opacity fa-snapchat"></i>

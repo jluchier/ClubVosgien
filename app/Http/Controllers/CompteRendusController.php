@@ -2,90 +2,79 @@
 
 namespace App\Http\Controllers;
 
+use App\Attachment;
+use App\Compterendu;
+use App\Http\Requests\AttachmentsRequest;
+use App\Http\Requests\CompteRenduRequest;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use PhpParser\Node\Stmt\Return_;
+use function GuzzleHttp\Promise\all;
 
 class CompteRendusController extends Controller
 {
 
     public function index()
     {
-        /* $compteRendu = Compte::with('category')
-            ->orderBy("category_id")
-            ->get();
-        return view('Admin.Articles.index', compact(["articles", "categories"]));*/
-        return redirect(route("construction", ["page" => "compteRendus"]));
+        $compteRendus = Compterendu::orderBy("created_at", "desc")->get();
+        return view('Admin.CompteRendus.index', compact(['compteRendus']));
+
+     // return redirect(route("construction", ["page" => "compteRendus"]));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
+
     public function create()
     {
-        //
+        $CR = new Compterendu();
+        $url = route("compteRendus.store");
+        $method = "post";
+        //$Attachment = attachment::pluck("name", "id");
+
+        return view("Admin.CompteRendus.edit", compact(["CR", "url", "method"]));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param Request $request
-     * @return Response
-     */
-    public function store(Request $request)
+
+    public function store(Compterendu $request)
     {
-        //
+        Compterendu::insert([
+            "title" => $request->get("title"),
+            "content" => $request->get("content"),
+        ]);
+        dd($request);
+        return redirect(route("compteRendus.index"))->with("success", "Compte rendu  ajouté avec succès");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function show($id)
+
+    public function edit(Compterendu $CR)
     {
-        //
+        $url = route("compteRendus.update", $CR->id);
+        $method = "put";
+        return view('Admin.CompteRendus.edit', compact(["CR", "url", "method"]));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function edit($id)
+
+    public function update(CompteRenduRequest $request, Compterendu $CR)
     {
-        //
+        //$CR->update($request->all());
+        $CR->title = $request->get('title');
+        $CR->content = $request->get('content');
+
+        $CR->save();
+        return redirect()->route('CompteRendus.edit',['id' => $CR->id])->with('success', 'Compte rendu modifié');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param Request $request
-     * @param  int  $id
-     * @return Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function destroy($id)
+    public function destroy(Compterendu $CR)
     {
-        //
+        Compterendu::destroy($CR->id);
+
+        return redirect(route("compteRendus.index"))->with("success", "Compte rendu supprimé");
     }
-    public function compteRendus(){
-//    return view('compteRendus');
-        return redirect(route("construction", ["page" => "compteRendus"]));
-    }
+/*    public function compteRendus(){
+        return view('CompteRendus.edit');
+        //return redirect(route("construction", ["page" => "compteRendus"]));
+    }*/
 
 
 }
