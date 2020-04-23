@@ -1,6 +1,6 @@
 @extends('Admin.default')
 
-@section('compteRendus', "navActive")
+@section('compterendus', "navActive")
 
 @section('content')
     @include('Admin.messages')

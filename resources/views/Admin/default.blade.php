@@ -16,7 +16,7 @@
         <a href="{{ route("articles.index") }}" class="w3-bar-item w3-button navItem @yield('articles')">Articles</a>
         <a href="{{ route("galleries.index") }}" class="w3-bar-item w3-button navItem @yield('photos')">Photos</a>
         <a href="{{ route("inscriptions",["privilege" => "A valider"])}}" class="w3-bar-item w3-button navItem @yield('inscriptions')">Inscriptions</a>
-        <a href="{{ route("compteRendus.index") }}" class="w3-bar-item w3-button navItem @yield('compte')">Compte rendus</a>
+        <a href="{{ route("compterendus.index") }}" class="w3-bar-item w3-button navItem @yield('compterendus')">Compte rendus</a>
 
         <a href="{{ route("actu") }}" class="w3-bar-item w3-button navItem w3-right @yield('home')">Retour au site</a>
     </div>

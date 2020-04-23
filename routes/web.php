@@ -23,7 +23,7 @@ Route::get('construction',"GuestController@construction")->name("construction");
 
 Route::middleware("auth.validated")->group(function (){
 
-    Route::get("compteRendus", "GuestController@compteRendus")->name("compteRendus");
+    Route::get("compterendus", "GuestController@compterendus")->name("compterendus");
     Route::resource('galleries','GalleryController', ["except" => ["show", "delete"]]);
 
     Route::prefix("admin")->middleware("auth.admin")->group(function () {
@@ -31,7 +31,7 @@ Route::middleware("auth.validated")->group(function (){
         Route::resource('articles', "ArticleController", ["except" => "show"]);
         Route::get('inscriptions', 'AdminController@editUsers')->name("inscriptions");
         Route::resource('galleries','GalleryController', ["only" => "delete"]);
-        Route::resource('compteRendus','CompteRendusController');
+        Route::resource('compterendus','CompterendusController');
     });
 
 });
@@ -39,4 +39,3 @@ Route::middleware("auth.validated")->group(function (){
 Auth::routes();
 
 Route::post('/attachments','AttachmentController@store')->name('attachments.store');
-Route::resource('CompteRendus', 'CompteRendusController');

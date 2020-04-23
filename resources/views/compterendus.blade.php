@@ -1,6 +1,6 @@
 @extends('default')
 
-@section('compteRendus', 'navActive')
+@section('compterendus', 'navActive')
 
 @section('content')
     {{--TODO à faire le développement pour l'affichage des compte-rendus de la partie inscrits--}}

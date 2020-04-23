@@ -40,9 +40,9 @@ class GuestController extends Controller
 //        return view("chalets");
         return redirect(route("construction", ["page" => "chalets"]));
     }
-    public function compteRendus(){
-//        return view("compteRendus");
-        return redirect(route("construction", ["page" => "compteRendus"]));
+    public function compterendus(){
+//        return view("compterendus");
+        return redirect(route("construction", ["page" => "compterendus"]));
     }
 
     public function construction(Request $request){

@@ -29,7 +29,7 @@ class ArticleController extends Controller
         $method = "post";
         $categories = Category::pluck("name", "id");
 
-        return view("Admin.Articles.edit", compact(["article", "url", "method", "categories"]));
+        return view('Admin.Articles.edit', compact(["article", "url", "method", "categories"]));
     }
 
     public function store(ArticleRequest $request)

@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e78b48ac-3cb9-48de-bd2b-fd2c3906239e" name="Default Changelist" comment="Correctifs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Attachement.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Attachment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Compterendu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Compterendu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompteRendusController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CompteRendusController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompteRendusController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CompterendusController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GuestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GuestController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/AttachmentsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/AttachmentsRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CompteRenduRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CompterenduRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" afterDir="false" />
@@ -19,14 +21,12 @@
       <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/CompteRendus/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/CompteRendus/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Admin/CompteRendus/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/Compterendus/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Admin/CompteRendus/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/Compterendus/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Admin/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/default.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/compteRendus.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/compteRendus.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/compteRendus.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/compterendus.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/default.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,39 +38,6 @@
     <execution>
       <executable path="composer" />
     </execution>
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ClubVosgien" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ClubVosgien" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ClubVosgien" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="ClubVosgien: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-      </path>
-    </expand>
-    <select />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="ClubVosgien" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -210,7 +177,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -219,7 +185,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/CloudStation/Developpement_SitesWeb/Grafikart_Creation_Systeme_Fichiers_attaches" />
+    <property name="last_opened_file_path" value="$USER_HOME$/CloudStation/Developpement_SitesWeb/Tout_OnePage" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -287,28 +253,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Clubvosgien: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Clubvosgien: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@6fdf8f1b" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
   </component>
@@ -366,6 +310,14 @@
       <workItem from="1586594411815" duration="1863000" />
       <workItem from="1586600016028" duration="599000" />
       <workItem from="1586799753680" duration="5324000" />
+      <workItem from="1586860164723" duration="3187000" />
+      <workItem from="1586972909128" duration="374000" />
+      <workItem from="1586973319914" duration="4295000" />
+      <workItem from="1587060779058" duration="1288000" />
+      <workItem from="1587313125043" duration="1335000" />
+      <workItem from="1587408700533" duration="6203000" />
+      <workItem from="1587573589913" duration="6699000" />
+      <workItem from="1587638738291" duration="252000" />
     </task>
     <task id="LOCAL-00001" summary="Authentification starts">
       <created>1577465071879</created>
@@ -423,11 +375,18 @@
       <option name="project" value="LOCAL" />
       <updated>1578940469671</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Plus Comptes  Rendus">
+      <created>1586860328702</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1586860328702</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
@@ -440,13 +399,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -457,7 +415,8 @@
     <MESSAGE value="Voici la galerie" />
     <MESSAGE value="Voici la galerie ... suite avec admin gallery" />
     <MESSAGE value="Correctifs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correctifs" />
+    <MESSAGE value="Plus Comptes  Rendus" />
+    <option name="LAST_COMMIT_MESSAGE" value="Plus Comptes  Rendus" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1698" y="159" width="824" height="679" key="#CLI_Interpreters" timestamp="1579344181428">
@@ -477,63 +436,67 @@
     </state>
     <state x="1550" y="234" width="800" height="672" key="#com.intellij.execution.impl.EditConfigurationsDialog/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1579384812950" />
     <state x="2187" y="204" width="800" height="672" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1586800573084" />
-    <state x="2443" y="273" width="624" height="517" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584724395539">
+    <state x="2490" y="339" width="575" height="385" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587581469627">
       <screen x="1920" y="30" width="1680" height="1050" />
     </state>
-    <state x="2443" y="273" width="624" height="517" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1584724395539" />
-    <state x="2500" y="30" width="628" height="1010" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583575977208">
+    <state x="2490" y="339" width="575" height="385" key="#com.intellij.fileTypes.FileTypeChooser/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1587581469627" />
+    <state x="2443" y="273" width="624" height="517" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1586973211812">
+      <screen x="1920" y="30" width="1680" height="1050" />
+    </state>
+    <state x="2443" y="273" width="624" height="517" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1586973211812" />
+    <state x="2500" y="30" width="628" height="1010" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587411075164">
       <screen x="1920" y="30" width="1680" height="1050" />
     </state>
     <state x="472" y="0" width="510" height="723" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1581357630743" />
-    <state x="2500" y="30" width="628" height="1010" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1583575977208" />
+    <state x="2500" y="30" width="628" height="1010" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1587411075164" />
     <state x="2493" y="292" width="524" height="479" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586511886837">
       <screen x="1920" y="30" width="1680" height="1050" />
     </state>
-    <state x="1853" y="262" width="524" height="479" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1578860208659" />
     <state x="2493" y="292" width="524" height="479" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1586511886837" />
-    <state x="2423" y="30" width="972" height="1010" key="CommitChangelistDialog2" timestamp="1583575852649">
+    <state x="2423" y="30" width="972" height="1010" key="CommitChangelistDialog2" timestamp="1586860327786">
       <screen x="1920" y="30" width="1680" height="1050" />
     </state>
     <state x="409" y="5" width="790" height="723" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1581774735913" />
     <state x="1715" y="102" width="800" height="798" key="CommitChangelistDialog2/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1578940468725" />
-    <state x="2423" y="30" width="972" height="1010" key="CommitChangelistDialog2/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1583575852649" />
-    <state x="81" y="69" width="1204" height="562" key="DiffContextDialog" timestamp="1580335442381">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="2423" y="30" width="972" height="1010" key="CommitChangelistDialog2/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1586860327786" />
+    <state x="2020" y="130" width="1481" height="811" key="DiffContextDialog" timestamp="1587322392276">
+      <screen x="1920" y="30" width="1680" height="1050" />
     </state>
     <state x="81" y="69" width="1204" height="562" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1580335442381" />
+    <state x="2020" y="130" width="1481" height="811" key="DiffContextDialog/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1587322392276" />
     <state x="2362" y="315" width="785" height="470" key="EditFileWatcherDialog" timestamp="1584797203610">
       <screen x="1920" y="30" width="1680" height="1050" />
     </state>
     <state x="2362" y="315" width="785" height="470" key="EditFileWatcherDialog/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1584797203610" />
-    <state x="2736" y="191" width="424" height="479" key="FileChooserDialogImpl" timestamp="1586513711259">
+    <state x="2736" y="191" width="424" height="479" key="FileChooserDialogImpl" timestamp="1587062182874">
       <screen x="1920" y="30" width="1680" height="1050" />
     </state>
     <state x="507" y="182" width="424" height="506" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1580732934996" />
-    <state x="2736" y="191" width="424" height="479" key="FileChooserDialogImpl/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1586513711259" />
-    <state width="1182" height="307" key="GridCell.Tab.0.bottom" timestamp="1586808953915">
+    <state x="2736" y="191" width="424" height="479" key="FileChooserDialogImpl/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1587062182874" />
+    <state width="1130" height="307" key="GridCell.Tab.0.bottom" timestamp="1587583366244">
       <screen x="1920" y="30" width="1680" height="1050" />
     </state>
     <state width="1314" height="170" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581630267361" />
     <state width="1337" height="307" key="GridCell.Tab.0.bottom/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1579455399852" />
-    <state width="1182" height="307" key="GridCell.Tab.0.bottom/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1586808953915" />
-    <state width="1182" height="307" key="GridCell.Tab.0.center" timestamp="1586808953915">
+    <state width="1130" height="307" key="GridCell.Tab.0.bottom/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1587583366244" />
+    <state width="1130" height="307" key="GridCell.Tab.0.center" timestamp="1587583366244">
       <screen x="1920" y="30" width="1680" height="1050" />
     </state>
     <state width="1314" height="170" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1581630267361" />
     <state width="1337" height="307" key="GridCell.Tab.0.center/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1579455399851" />
-    <state width="1182" height="307" key="GridCell.Tab.0.center/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1586808953915" />
-    <state width="1182" height="307" key="GridCell.Tab.0.left" timestamp="1586808953915">
+    <state width="1130" height="307" key="GridCell.Tab.0.center/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1587583366244" />
+    <state width="1130" height="307" key="GridCell.Tab.0.left" timestamp="1587583366243">
       <screen x="1920" y="30" width="1680" height="1050" />
     </state>
     <state width="1314" height="170" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1581630267361" />
     <state width="1337" height="307" key="GridCell.Tab.0.left/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1579455399851" />
-    <state width="1182" height="307" key="GridCell.Tab.0.left/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1586808953915" />
-    <state width="1182" height="307" key="GridCell.Tab.0.right" timestamp="1586808953915">
+    <state width="1130" height="307" key="GridCell.Tab.0.left/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1587583366243" />
+    <state width="1130" height="307" key="GridCell.Tab.0.right" timestamp="1587583366244">
       <screen x="1920" y="30" width="1680" height="1050" />
     </state>
     <state width="1314" height="170" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1581630267361" />
     <state width="1337" height="307" key="GridCell.Tab.0.right/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1579455399852" />
-    <state width="1182" height="307" key="GridCell.Tab.0.right/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1586808953915" />
+    <state width="1130" height="307" key="GridCell.Tab.0.right/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1587583366244" />
     <state width="222" height="457" key="HiddenNamespacesPopup" timestamp="1579343009046">
       <screen x="1280" y="0" width="1680" height="1050" />
     </state>
@@ -562,10 +525,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="446" y="70" width="464" height="580" key="VCS.ChangeListViewerDialog/0.0.1366.728@0.0.1366.728" timestamp="1580335287023" />
-    <state x="1715" y="240" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1578940477752">
-      <screen x="1280" y="0" width="1680" height="1050" />
+    <state x="2355" y="270" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1586860342413">
+      <screen x="1920" y="30" width="1680" height="1050" />
     </state>
     <state x="1715" y="240" width="800" height="523" key="Vcs.Push.Dialog.v2/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1578940477752" />
+    <state x="2355" y="270" key="Vcs.Push.Dialog.v2/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1586860342413" />
     <state x="2603" y="406" width="327" height="223" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1583576417987">
       <screen x="1920" y="30" width="1680" height="1050" />
     </state>
@@ -579,22 +543,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="547" y="129" width="262" height="463" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1366.728@0.0.1366.728" timestamp="1580332861847" />
-    <state x="2548" y="474" width="395" height="155" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586860187127">
+    <state x="2548" y="474" width="395" height="161" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587573625685">
       <screen x="1920" y="30" width="1680" height="1050" />
     </state>
     <state x="511" y="308" width="405" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1581774641347" />
     <state x="1908" y="444" width="405" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1579454503348" />
-    <state x="2548" y="474" width="395" height="155" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1586860187127" />
+    <state x="2548" y="474" width="395" height="161" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1587573625685" />
     <state x="2350" y="212" width="800" height="672" key="scopes" timestamp="1584797183496">
       <screen x="1920" y="30" width="1680" height="1050" />
     </state>
     <state x="2350" y="212" width="800" height="672" key="scopes/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1584797183496" />
-    <state x="2449" y="351" width="827" height="680" key="search.everywhere.popup" timestamp="1586808249875">
+    <state x="2449" y="351" width="827" height="680" key="search.everywhere.popup" timestamp="1587412064821">
       <screen x="1920" y="30" width="1680" height="1050" />
     </state>
     <state x="409" y="153" width="672" height="471" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1581621181245" />
     <state x="1783" y="220" width="672" height="678" key="search.everywhere.popup/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1579455803494" />
-    <state x="2449" y="351" width="827" height="680" key="search.everywhere.popup/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1586808249875" />
+    <state x="2449" y="351" width="827" height="680" key="search.everywhere.popup/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1587412064821" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

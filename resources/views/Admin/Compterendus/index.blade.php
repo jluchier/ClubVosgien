@@ -1,6 +1,6 @@
 @extends('Admin.default')
 
-@section('compteRendus', "navActive")
+@section('compterendus', "navActive")
 
 @section('content')
     @include('Admin.messages')
@@ -16,16 +16,20 @@
     @endif
 
     <h1>Liste des compte rendus</h1>
+    <a href="{{ route('compterendus.create') }}" class="w3-button w3-theme-dark w3-round">Ajouter</a>
 
-    <a href="{{ route("CompteRendus.create") }}" class="w3-button w3-theme-dark w3-round">Ajouter</a>
     <table class="w3-table-all w3-margin-top">
         <tr>
+            <th>Id</th>
             <th>Titre</th>
             <th>Contenu</th>
             <th class="w3-right">Administration</th>
         </tr>
-        @foreach($compteRendus as $CR)
+        @foreach($compterendus as $CR)
             <tr>
+                <td>
+                    {{ $CR->id }}
+                </td>
                 <td>
                     {{ $CR->title }}
                 </td>
@@ -34,9 +38,9 @@
                 </td>
                 <td class="w3-right">
                     <div class="w3-bar">
-                        <a href="{{ route("compteRendus.edit", $CR->id) }}" class="w3-button w3-white">Modifer</a>
+                        <a href="{{ route("compterendus.edit", $CR) }}" class="w3-button w3-white">Modifer</a>
 
-                        {{ Form::open(["route" => ["compteRendus.destroy", $CR->id], "method" => "delete", "style" => "display: inline-block"]) }}
+                        {{ Form::open(["route" => ["compterendus.destroy", $CR->id], "method" => "delete", "style" => "display: inline-block","onsubmit" => 'return confirm("Voulez-vous vraiment supprimer ce compte rendu ?")']) }}
                         {{ Form::submit("Supprimer", ["class" => "w3-button w3-red"]) }}
                         {{ Form::close() }}
                     </div>

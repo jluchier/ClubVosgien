@@ -6,10 +6,10 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class AttachmentsRequest extends FormRequest
 {
-    public function expectsJson()
+/*    public function expectsJson()
     {
         return true;
-    }
+    }*/
 
 
     /**

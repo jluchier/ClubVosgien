@@ -32,7 +32,7 @@
             @endif
 
             @if(Auth::user()->IsValidate())
-                <a href="{{ route("compteRendus.index") }}" class="w3-bar-item w3-button navItem w3-right @yield('compteRendus')">Compte rendus</a>
+                <a href="{{ route("compterendus") }}" class="w3-bar-item w3-button navItem w3-right @yield('compterendus')">Compte rendus</a>
             @endif
 
         @else
