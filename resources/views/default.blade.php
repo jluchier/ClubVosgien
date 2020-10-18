@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    {{-- <title>{{ config('app.name', 'Laravel') }}</title>
- --}}
+    <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" href="{{ mix('css/app-jj-CV.css') }}">
     <title>CV Rupt Vecoux Ferdrupt</title>
@@ -15,10 +14,11 @@
 
 <body class="w3-theme-light">
 
-<nav id="nav" class="w3-top w3-theme-dark">
-    <div class="w3-center w3-large" style="text-shadow : 1px 1px 0 #d33"><b>Club Vosgien Rupt Vecoux Ferdrupt</b></div>
+<nav id="nav" class="w3-top w3-theme-dark CV-nav">
+    <div class="w3-center w3-large" style="text-shadow : 1px 1px 0 hsl(344, 88%, 56%)"><b>Club Vosgien Rupt Vecoux Ferdrupt</b></div>
     <div class="w3-bar w3-large">
         <a href="{{ route("actu") }}" class="w3-bar-item w3-button navItem @yield('home')"><i class="fas fa-home"></i>Accueil</a>
+        <a href="{{ route("sentiers") }}" class="w3-bar-item w3-button navItem @yield('sentiers')"><i class="fas fa-image"></i>La fédération</a>        
         <a href="{{ route("activity") }}" class="w3-bar-item w3-button navItem @yield('activity')"><i class="fas fa-image"></i>Activités</a>
         <a href="{{ route("sentiers") }}" class="w3-bar-item w3-button navItem @yield('sentiers')"><i class="fas fa-image"></i>Sentiers</a>
         <a href="{{ route("chalets") }}" class="w3-bar-item w3-button navItem @yield('chalets')"><i class="fas fa-image"></i>Chalets</a>
@@ -43,7 +43,7 @@
     </div>
 </nav>
 
-<div id="swup" class="transition-fade" style="padding-top: 70px">
+<div id="swup" class="transition-fade">
 
     @yield('content')
 

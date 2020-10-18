@@ -442,6 +442,7 @@ a {
 }
 
 .w3-ripple {
+  -webkit-transition: opacity 0s;
   transition: opacity 0s;
 }
 
@@ -531,6 +532,7 @@ a {
 
 .w3-main,
 #main {
+  -webkit-transition: margin-left 0.4s;
   transition: margin-left 0.4s;
 }
 
@@ -997,7 +999,8 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
 
@@ -1005,7 +1008,8 @@ a {
   position: absolute;
   top: 50%;
   left: 0%;
-  transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
   -ms-transform: translate(0%, -50%);
 }
 
@@ -1013,7 +1017,8 @@ a {
   position: absolute;
   top: 50%;
   right: 0%;
-  transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
   -ms-transform: translate(0%, -50%);
 }
 
@@ -1021,7 +1026,8 @@ a {
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
   -ms-transform: translate(-50%, 0%);
 }
 
@@ -1029,7 +1035,8 @@ a {
   position: absolute;
   left: 50%;
   bottom: 0;
-  transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
   -ms-transform: translate(-50%, 0%);
 }
 
@@ -1133,21 +1140,25 @@ a {
 
 @-webkit-keyframes w3-spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 
   100% {
-    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
   }
 }
 
 @keyframes w3-spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 
   100% {
-    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
   }
 }
 
@@ -1336,25 +1347,30 @@ a {
 
 @-webkit-keyframes animatezoom {
   from {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 
   to {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @keyframes animatezoom {
   from {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 
   to {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 .w3-animate-input {
+  -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
 
@@ -2758,14 +2774,18 @@ input[type=file] {
 }
 
 .files-container {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
   margin: 0 -5px;
 }
 
 .thumbContainer {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
   margin: -5px;

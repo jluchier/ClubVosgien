@@ -1,4 +1,18 @@
-.fond1,
+.CV-nav {
+  /*
+      background-color: hsl(163, 88%, 56%);*/
+  position: fixed;
+}
+
+/* la complementaire => hsl(344, 88%, 56%) => vu sur  https://colorpicker.me/ */
+
+.fond1 {
+  min-height: 200px;
+  max-height: 400px;
+  width: 100%;
+  background-position: center;
+}
+
 .fond2,
 .fond3,
 .fondVache1,
@@ -61,6 +75,7 @@
 }
 
 .CV-flex-container {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -85,7 +100,8 @@
 }
 
 .scale_CV:hover {
-  transform: scale(1.1) translateX(10px) rotate(-10deg);
+  -webkit-transform: scale(1.1) translateX(10px) rotate(-10deg);
+          transform: scale(1.1) translateX(10px) rotate(-10deg);
   background-color: #6b475e !important;
 }
 
@@ -99,12 +115,20 @@
 
 .CV-global {
   box-sizing: border-box;
+  width: 100%;
+  display: -webkit-box;
   display: flex;
   min-height: 100%;
 }
 
 .CV-container {
   padding: 0 10px;
+  display: -webkit-box;
+  display: flex;
+}
+
+.CV-fontColorRed {
+  color: #f22c61;
 }
 
 .CV-TopContainerHome {
@@ -113,8 +137,11 @@
 }
 
 .CV-flex-container {
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 .CV-flex-container h1 {
@@ -125,6 +152,7 @@
 }
 
 .tuile-flex-horizontal-HC {
+  display: -webkit-box;
   display: flex;
   justify-content: space-around;
   align-content: space-around;

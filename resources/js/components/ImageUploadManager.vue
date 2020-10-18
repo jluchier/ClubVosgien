@@ -13,7 +13,7 @@
 
         <slot name="bottom"></slot>
 
-        <button v-on:click.prevent="submitFiles()" class="w3-button w3-round w3-green" >Envoyer</button>
+        <button v-on:click.prevent="submitFiles()" class="w3-button w3-round w3-green" >Envoyez le msessage</button>
     </div>
 </template>
 

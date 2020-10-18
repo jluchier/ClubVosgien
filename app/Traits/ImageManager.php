@@ -1,4 +1,10 @@
-<?php namespace App\Traits;
+<?php 
+
+namespace App\Traits;
+use Illuminate\Support\Str;
+use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 
 trait ImageManager
 {
@@ -35,7 +41,7 @@ trait ImageManager
 
 	private function deleteImage($folder, $image){
 
-		if ($path != null && $image != null)
+		if ($folder != null && $image != null)
 		{
 			if (Storage::disk('public')->exists("{$folder}/small/{$image}"))
 			{

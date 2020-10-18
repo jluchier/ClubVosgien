@@ -6,7 +6,7 @@
 <div class="CV-global">
     <div class="w3-red w3-bar-block sidebar">
         <a href="#Rando" class="w3-bar-item w3-button">Randonnées</a>
-        <a href="#MarcheOrientation" class="w3-bar-item w3-button">Marche d'orientation</a>
+        <a href="#MarcheOrientation" class="w3-bar-item w3-button">Les sorties VTT</a>
         <a href="#MarcheNordique" class="w3-bar-item w3-button">Marche nordique</a>
         <a href="#Formations" class="w3-bar-item w3-button">Formations</a>
     </div>
@@ -22,10 +22,10 @@
         </div>
 
         <div id="MarcheOrientation" class="CV-flex-container">
-                <h1>Les marches d'orientation</h1>
+                <h1>Les sorties VTT</h1>
                 <div class="tuile-flex-horizontal-HC">
                     <p class="w3-card-4 w3-theme-dark">
-                        Les marches d'orientation commencent ici ..... Dolores esse ex obcaecati, optio similique totam. A ab ad alias assumenda autem cumque distinctio eius eveniet itaque iure nisi nobis optio, perspiciatis repellat repudiandae sit soluta ullam unde voluptatum.
+                        Lessorties VTT commencent ici ..... Dolores esse ex obcaecati, optio similique totam. A ab ad alias assumenda autem cumque distinctio eius eveniet itaque iure nisi nobis optio, perspiciatis repellat repudiandae sit soluta ullam unde voluptatum.
                     </p>        
                 </div>
         </div>

@@ -1,6 +1,6 @@
 <template>
     <div class="preview w3-display-container">
-        <img v-bind:ref="'image'" alt="uploadImage" style="width: 100%" src="/images/common/loading.webp"/>
+        <img v-bind:ref="'image'" alt="Chargement Image" style="width: 100%" src="/images/common/loading.webp"/>
         <div class="w3-display-bottomleft progress w3-text-pale-green w3-opacity-min" v-if="upload" :style="progressStyle">
             {{ progress }}%
         </div>

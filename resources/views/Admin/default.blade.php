@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" href="{{ mix('css/admin.css') }}">
     <title>Administration du site</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body class="w3-theme-light">
@@ -15,14 +16,14 @@
     <div class="w3-bar w3-large">
         <a href="{{ route("articles.index") }}" class="w3-bar-item w3-button navItem @yield('articles')">Articles</a>
         <a href="{{ route("galleries.index") }}" class="w3-bar-item w3-button navItem @yield('photos')">Photos</a>
-        <a href="{{ route("inscriptions",["privilege" => "A valider"])}}" class="w3-bar-item w3-button navItem @yield('inscriptions')">Inscriptions</a>
+        <a href="{{ route("inscriptions")}}" class="w3-bar-item w3-button navItem @yield('inscriptions')">Inscriptions</a>
         <a href="{{ route("compterendus.index") }}" class="w3-bar-item w3-button navItem @yield('compterendus')">Compte rendus</a>
 
         <a href="{{ route("actu") }}" class="w3-bar-item w3-button navItem w3-right @yield('home')">Retour au site</a>
     </div>
 </nav>
 
-<div id="swup" class="transition-fade w3-container" style="padding-top: 50px">
+<div id="swup" class="transition-fade">
 
     @yield('content')
 

@@ -5,13 +5,13 @@
 @section('content')
 
     <div class="w3-container marginTopMenu">
-        <h3>Gallerie Privée</h3>
+        <h3>Galerie Privée</h3>
         <div class="CV-flex-container">
             @foreach($galleriePrivee as $gallery)
                 @include('galleryShow')
             @endforeach
         </div>
-        <h3>Gallerie Public</h3>
+        <h3>Galerie Publique</h3>
         <div class="CV-flex-container">
             @foreach($galleriePublic as $gallery)
                 @include('galleryShow')

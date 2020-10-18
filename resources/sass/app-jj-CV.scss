@@ -1,5 +1,20 @@
+.CV-nav {
+/*
+    background-color: hsl(163, 88%, 56%);*/
+    position: fixed;
+}
 
-.fond1, .fond2, .fond3, .fondVache1, .fondSentier1{
+/* la complementaire => hsl(344, 88%, 56%) => vu sur  https://colorpicker.me/ */
+
+.fond1 {
+    min-height: 200px;
+    max-height: 400px;
+    width: 100%;
+    background-position: center;
+}
+
+
+.fond2, .fond3, .fondVache1, .fondSentier1{
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -79,6 +94,7 @@
     transform: scale(1.1) translateX(10px) rotate(-10deg);
     background-color: hsla(322,20%,35%) !important;
 }
+
 .marginTopContainerHome{
     margin-top: 10px;
 }
@@ -90,6 +106,7 @@
 
 .CV-global{
     box-sizing:border-box;
+    width:100%;
     display: flex; 
     min-height:100%; 
 }
@@ -100,6 +117,11 @@
 
 .CV-container{
     padding: 0 10px;
+    display: flex;
+}
+
+.CV-fontColorRed {
+    color: hsl(344, 88%, 56%);
 }
 
 .CV-TopContainerHome{
