@@ -1,0 +1,49 @@
+@import "mixin";
+@import 'w3';
+@import "variables";
+
+@import "w3-theme-green";
+
+input[type="file"]{
+    position: absolute;
+    top: -500px;
+}
+
+.files-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 -5px;
+}
+
+.thumbContainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+
+    a{
+        margin: 5px;
+        padding: 0;
+    }
+}
+
+.preview{
+    width: 200px;
+    margin: 5px;
+
+    button{
+        color: $w3-pale-red;
+    }
+
+    button:hover{
+        color: $w3-red !important;
+        background-color: transparent !important;
+    }
+}
+
+.progress{
+    padding: 8px 0;
+    text-align: center;
+    background-color: $w3-green;
+}

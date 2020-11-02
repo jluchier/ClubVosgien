@@ -1,0 +1,136 @@
+.fond1,
+.fond2,
+.fond3,
+.fondVache1,
+.fondSentier1 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.no-webp .fond1 {
+  background-image: url("/images/fonds/Medium/medium1_009.jpg");
+}
+
+.no-webp .fond2 {
+  background-image: url(/images/medium1_008.jpg?1f1e607f17341085892c174a95501b1b);
+}
+
+.no-webp .fond3 {
+  background-image: url(/images/medium1_007.jpg?160730726a7d2ca531f6871c993cab44);
+}
+
+.no-webp .fondVache1 {
+  background-image: url(/images/medium1_006.jpg?734de7f7820de1abcb1e3d9b667cf17f);
+}
+
+.no-webp .fondSentier1 {
+  background-image: url(/images/medium1_010.jpg?91d6f35e87653223e243607fa1d1e79f);
+}
+
+.webp .fond1 {
+  background-image: url(/images/medium1_009.jpg?4de1de83cdb315b95f1553ae4fa16126);
+}
+
+.webp .fond2 {
+  background-image: url(/images/medium1_008.jpg?1f1e607f17341085892c174a95501b1b);
+}
+
+.webp .fond3 {
+  background-image: url(/images/medium1_007.jpg?160730726a7d2ca531f6871c993cab44);
+}
+
+.webp .fondVache1 {
+  background-image: url(/images/medium1_006.jpg?734de7f7820de1abcb1e3d9b667cf17f);
+}
+
+.webp .fondSentier1 {
+  background-image: url(/images/medium1_010.jpg?91d6f35e87653223e243607fa1d1e79f);
+}
+
+.width100 {
+  width: 100%;
+}
+
+.menuFixe {
+  position: fixed;
+  z-index: 100;
+  top: 60px;
+  left: 10px;
+}
+
+.CV-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.CV-flex-gallery {
+  width: 300px;
+  height: 300px;
+  border: solid 2px black;
+  background-color: #87CEEB;
+}
+
+.marginTopMenu {
+  margin-top: 10px;
+}
+
+.corpusConstruction {
+  height: 90%;
+  background-image: url(/images/medium1_007.jpg?160730726a7d2ca531f6871c993cab44);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.scale_CV:hover {
+  transform: scale(1.1) translateX(10px) rotate(-10deg);
+  background-color: #6b475e !important;
+}
+
+.marginTopContainerHome {
+  margin-top: 10px;
+}
+
+.CV-footer {
+  margin-top: auto;
+}
+
+.CV-global {
+  box-sizing: border-box;
+  display: flex;
+  min-height: 100%;
+}
+
+.CV-container {
+  padding: 0 10px;
+}
+
+.CV-TopContainerHome {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.CV-flex-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.CV-flex-container h1 {
+  font-size: 40px;
+  background: rgba(48, 145, 65, 0.69) !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tuile-flex-horizontal-HC {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.tuile-flex-horizontal-HC div {
+  padding: 5px;
+}
+
