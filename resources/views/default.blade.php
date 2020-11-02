@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
+    {{-- <title>{{ config('app.name', 'Laravel') }}</title>
+ --}}
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    {{-- <link rel="stylesheet" href="{{ mix('css/app-jj-CV.css') }}">--}}
+    <link rel="stylesheet" href="{{ mix('css/app-jj-CV.css') }}">
+    <title>CV Rupt Vecoux Ferdrupt</title>
 
 </head>
 
 <body class="w3-theme-light">
 
 <nav id="nav" class="w3-top w3-theme-dark">
+    <div class="w3-center w3-large" style="text-shadow : 1px 1px 0 #d33"><b>Club Vosgien Rupt Vecoux Ferdrupt</b></div>
     <div class="w3-bar w3-large">
         <a href="{{ route("actu") }}" class="w3-bar-item w3-button navItem @yield('home')"><i class="fas fa-home"></i>Accueil</a>
         <a href="{{ route("activity") }}" class="w3-bar-item w3-button navItem @yield('activity')"><i class="fas fa-image"></i>Activités</a>
@@ -28,7 +30,7 @@
             {{ Form::close() }}
 
             @if(Auth::user()->IsAdmin())
-                <a href="{{ route("articles.index") }}" class="w3-bar-item w3-button navItem w3-right">Administration</a>
+                <a href="{{ route("galleries.index") }}" class="w3-bar-item w3-button navItem w3-right">Administration</a>
             @endif
 
             @if(Auth::user()->IsValidate())
@@ -41,11 +43,11 @@
     </div>
 </nav>
 
-<div id="swup" class="transition-fade" style="padding-top: 40px">
+<div id="swup" class="transition-fade" style="padding-top: 70px">
 
     @yield('content')
 
-    <footer class="w3-theme w3-center w3-container w3-padding-large jj-footer">
+    <footer class="w3-theme w3-center w3-padding-large CV-footer">
         <i class="fab fa-2x w3-hover-opacity fa-facebook"></i>
         <i class="fab fa-2x w3-hover-opacity fa-instagram"></i>
         <i class="fab fa-2x  w3-hover-opacity fa-snapchat"></i>

@@ -24,7 +24,7 @@
                     {{$gallery->description }}
                 </td>
                 <td>
-                    {{$gallery->folder }}
+                    <img src="{{ Storage::url('gallery/thumb/' . $gallery->folder)}}" alt="Pas d'image jointe">
                 </td>
                 <td class="w3-right">
                     <div class="w3-bar">

@@ -4,13 +4,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
 }
 
 .no-webp{
     .fond1{
         background-image: url("/images/fonds/Medium/medium1_009.jpg");
-        height: 100%;
     }
 
     .fond2{
@@ -22,7 +20,6 @@
     }
     .fondVache1{
         background-image: url("images/fonds/Medium/medium1_006.jpg");
-        height: 100%;
     }
     .fondSentier1{
         background-image: url("images/fonds/Medium/medium1_010.jpg");
@@ -32,7 +29,6 @@
 .webp{
     .fond1{
         background-image: url("images/fonds/Medium/medium1_009.jpg");
-        height: 100%;
     }
 
     .fond2{
@@ -44,7 +40,6 @@
     }
     .fondVache1{
         background-image: url("images/fonds/Medium/medium1_006.jpg");
-        height: 100%;
     }
     .fondSentier1{
         background-image: url("images/fonds/Medium/medium1_010.jpg");
@@ -60,12 +55,12 @@
     top: 60px;
     left: 10px;
 }
-.jj-flex-container{
+.CV-flex-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.jj-flex-gallery{
+.CV-flex-gallery{
     width:300px;
     height: 300px;
     border: solid 2px black;
@@ -80,17 +75,55 @@
     background-repeat: no-repeat;
     background-position: center;
 }
-.scale_JJ:hover{
+.scale_CV:hover{
     transform: scale(1.1) translateX(10px) rotate(-10deg);
     background-color: hsla(322,20%,35%) !important;
 }
 .marginTopContainerHome{
     margin-top: 10px;
 }
-.jj-flex-home-container{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
+
+
+.CV-footer{
+    margin-top: auto;
+}
+
+.CV-global{
+    box-sizing:border-box;
+    display: flex; 
+    min-height:100%; 
+}
+.sidebar{
+    
+  
+}
+
+.CV-container{
+    padding: 0 10px;
+}
+
+.CV-TopContainerHome{
+    margin-left:auto;
+    margin-right:auto;
+}
+.CV-flex-container{
+    flex-direction:column;
+    align-items:center;
+}
+    
+.CV-flex-container h1{
+    font-size: 40px;
+    background: hsla(130, 50%, 38%, 0.69) !important;
+    margin-left:auto;
+    margin-right:auto; 
+}
+
+.tuile-flex-horizontal-HC{
+    display:flex;
+    justify-content:space-around;
+    align-content:space-around;
+    
+}
+.tuile-flex-horizontal-HC div{
+    padding:5px;
 }

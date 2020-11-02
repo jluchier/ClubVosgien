@@ -25,9 +25,11 @@ class GalleryRequest extends FormRequest
     {
         return [
             'title'=>'required|string|min:2',
+            'dateSortie'=>'required|date', 
             'description'=>'string|min:2',
             'private'=>'boolean',
-            "folder" => 'image'
+            "folder" => 'array',
+            "folder.*" => "image"
         ];
     }
 }

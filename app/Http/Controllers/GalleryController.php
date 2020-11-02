@@ -15,8 +15,7 @@ use function GuzzleHttp\default_ca_bundle;
 class GalleryController extends Controller
 {
 
-
-    public function Index()
+    public function index()
     {
         $galleries = Gallery::orderBy("created_at", "desc")->get();
         return view('Admin.Gallery.indexPhotos', compact(['galleries']));
@@ -33,19 +32,7 @@ class GalleryController extends Controller
 
     }
 
-    public function store(GalleryRequest $request)
-    {
-         Gallery::insert([
-                "title"=>$request->get('title'),
-                "description"=>$request->get('description'),
-                "private"=>$request->get('private', false),
-                "folder"=>$this->storeImageGallery($request),
-                "user_id"=>Auth::id(),
-            ]
-        );
-        return redirect(route("galleries.index"))->with("success", "Galerie ajoutée avec succès");
-
-    }
+  
 
     public function edit(Gallery $gallery)
     {
@@ -58,66 +45,13 @@ class GalleryController extends Controller
 
     }
 
-    public function update(GalleryRequest $request, Gallery $gallery)
-    {
-        //$galerie = Gallery::find($id);
-
-        $gallery->title = $request->get("title");
-        $gallery->description = $request->get("description");
-        $gallery->private = $request->get("private", false);
-
-        $pathImage=$this->storeImageGallery($request);
-
-        $gallery->save();
-
-        return redirect(route("galleries.index"))->with("success", "Galerie modifiée avec succès");
-    }
+   
 
     public function destroy(Gallery $gallery)
     {
-        Storage::disk("public")->deleteDirectory($gallery->folder);
+        Storage::disk("public")->deleteDirectory("gallery\{$gallery->title}");
         Gallery::destroy($gallery->id);
 
         return redirect(route("galleries.index"))->with("success", "Galerie supprimée");
-    }
-
-    private function storeImageGallery (Request $request)
-    {
-         if ($request->hasFile("folder"))
-        {
-            if ($request->file('folder')->isValid())
-            {
-                $out = explode(".", $request->file("folder")->hashName(), 2)[0].".jpg";
-                $this->resizeImage($request, 800);
-                $this->resizeImage($request, 1280);
-                $this->resizeImage($request, 1920);
-                $this->resizeImage($request, 128, true);
-
-                //Storage::disk('public')->makeDirectory($gallery->folder);
-
-                return $out;
-
-            }
-        }
-        return null;
-    }
-//$gallery->folder = "Gallery/" . $request->get("title") . "_" . $gallery->id;
-
-
-    private function resizeImage(Request $request, $size, $fit = false){
-        $img = Image::make($request->file('folder')->path())->orientate();
-
-        if ($fit)
-        {
-            $img->fit($size);
-        }
-        else {
-            $img->widen($size);
-        }
-
-        $img->interlace(true)->encode("jpg", 70);
-        //Storage::disk("public")->put($out, $img);
-
-
     }
 }

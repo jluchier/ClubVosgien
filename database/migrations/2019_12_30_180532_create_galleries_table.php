@@ -16,10 +16,10 @@ class CreateGalleriesTable extends Migration
         Schema::create('galleries', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->string('title');
+            $table->string('title')->unique();
+            $table->date('dateSortie')->unique();
             $table->boolean('private');
-            $table->multiLineString('description')->nullable();
-            $table->string("folder")->unique();
+            $table->text('description')->nullable();
             $table->unsignedInteger("user_id");
 
             $table->foreign("user_id")->references("id")->on("users");

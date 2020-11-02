@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Session;
 
 class GuestController extends Controller
 {
-    public function Index()
+    public function index()
     {
         $articles = Article::with( 'category')
             ->orderBy("created_at", "desc")
@@ -21,11 +21,13 @@ class GuestController extends Controller
 
     public function gallery()
     {
+
         $galleriePrivee = [];
         $galleriePublic = Gallery::where("private",false)->get();
         if ((!is_null(Auth::user()))and(Auth::user()->IsValidate())){
             $galleriePrivee = Gallery::where("private", true)->get();
         }
+
         return view("gallery", compact(['galleriePrivee','galleriePublic']));
     }
 

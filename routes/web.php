@@ -24,13 +24,13 @@ Route::get('construction',"GuestController@construction")->name("construction");
 Route::middleware("auth.validated")->group(function (){
 
     Route::get("compterendus", "GuestController@compterendus")->name("compterendus");
-    Route::resource('galleries','GalleryController', ["except" => ["show", "delete"]]);
+    Route::resource('galleries','GalleryController', ["except" => ["update","delete","store"]]);
 
     Route::prefix("admin")->middleware("auth.admin")->group(function () {
         Route::get("/", "AdminController@Index")->name("admin");
         Route::resource('articles', "ArticleController", ["except" => "show"]);
         Route::get('inscriptions', 'AdminController@editUsers')->name("inscriptions");
-        Route::resource('galleries','GalleryController', ["only" => "delete"]);
+        Route::resource('galleries','GalleryController',["except"=> ["store","update"]]);
         Route::resource('compterendus','CompterendusController');
     });
 

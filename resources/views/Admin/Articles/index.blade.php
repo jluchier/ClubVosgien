@@ -26,7 +26,7 @@
                 <td>
                     {{ $article->title }}
                 </td>
-                <td><img src="{{ Storage::url('images/thumb/' . $article->image)}}" alt="thumb"></td>
+                <td><img src="{{ Storage::url('images/thumb/' . $article->image)}}" alt="Pas d'image"></td>
                 <td class="w3-right">
                     <div class="w3-bar">
                         <a href="{{ route("articles.edit", $article->id) }}" class="w3-button w3-white">Modifer</a>

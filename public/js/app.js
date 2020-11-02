@@ -767,8 +767,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 var _utils = __webpack_require__(/*! ../utils */ "./node_modules/swup/lib/utils/index.js");
 
 var getDataFromHtml = function getDataFromHtml(html, containers) {
-	var fakeDom = document.createElement('html');
-	fakeDom.innerHTML = html;
+	var content = html.replace('<body', '<div id="swupBody"').replace('</body>', '</div>');
+	var fakeDom = document.createElement('div');
+	fakeDom.innerHTML = content;
 	var blocks = [];
 
 	var _loop = function _loop(i) {
@@ -793,7 +794,7 @@ var getDataFromHtml = function getDataFromHtml(html, containers) {
 
 	var json = {
 		title: fakeDom.querySelector('title').innerText,
-		pageClass: fakeDom.querySelector('body').className,
+		pageClass: fakeDom.querySelector('#swupBody').className,
 		originalContent: html,
 		blocks: blocks
 	};
@@ -2029,7 +2030,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           } else {
             // cast to a Boolean, if not one already
             if (Modernizr[featureNameSplit[0]] && !(Modernizr[featureNameSplit[0]] instanceof Boolean)) {
-              Modernizr[featureNameSplit[0]] = Boolean(Modernizr[featureNameSplit[0]]);
+              Modernizr[featureNameSplit[0]] = new Boolean(Modernizr[featureNameSplit[0]]);
             }
 
             Modernizr[featureNameSplit[0]][featureNameSplit[1]] = result;
@@ -2306,7 +2307,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       } else {
         // cast to a Boolean, if not one already
         if (Modernizr[featureNameSplit[0]] && !(Modernizr[featureNameSplit[0]] instanceof Boolean)) {
-          Modernizr[featureNameSplit[0]] = Boolean(Modernizr[featureNameSplit[0]]);
+          Modernizr[featureNameSplit[0]] = new Boolean(Modernizr[featureNameSplit[0]]);
         }
 
         Modernizr[featureNameSplit[0]][featureNameSplit[1]] = test;
@@ -2354,14 +2355,14 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
   /* DOC
   Tests for lossy, non-alpha webp support.
-
+  
   Tests for all forms of webp support (lossless, lossy, alpha, and animated)..
-
+  
     Modernizr.webp              // Basic support (lossy)
     Modernizr.webp.lossless     // Lossless
     Modernizr.webp.alpha        // Alpha (both lossy and lossless)
     Modernizr.webp.animation    // Animated WebP
-
+  
   */
 
 
@@ -2391,7 +2392,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         var baseTest = name === 'webp'; // if it is the base test, and the result is false, just set a literal false
         // rather than use the Boolean contrsuctor
 
-        addTest(name, baseTest && result ? Boolean(result) : result);
+        addTest(name, baseTest && result ? new Boolean(result) : result);
 
         if (cb) {
           cb(event);
@@ -2426,8 +2427,30 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
 
   window.Modernizr = Modernizr;
-
+  ;
 })(window, document);
+
+/***/ }),
+
+/***/ "./resources/sass/admin.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/admin.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/app-jj-CV.scss":
+/*!***************************************!*\
+  !*** ./resources/sass/app-jj-CV.scss ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -2443,15 +2466,17 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 /***/ }),
 
 /***/ 0:
-/*!************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/js/modernizr-custom.js ./resources/sass/app.scss ***!
-  \************************************************************************************************/
+/*!************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/js/modernizr-custom.js ./resources/sass/app.scss ./resources/sass/app-jj-CV.scss ./resources/sass/admin.scss ***!
+  \************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/jj/PhpstormProjects/ClubVosgien/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /home/jj/PhpstormProjects/ClubVosgien/resources/js/modernizr-custom.js */"./resources/js/modernizr-custom.js");
-module.exports = __webpack_require__(/*! /home/jj/PhpstormProjects/ClubVosgien/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/jj/Developpements/ClubVosgien/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /home/jj/Developpements/ClubVosgien/resources/js/modernizr-custom.js */"./resources/js/modernizr-custom.js");
+__webpack_require__(/*! /home/jj/Developpements/ClubVosgien/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/jj/Developpements/ClubVosgien/resources/sass/app-jj-CV.scss */"./resources/sass/app-jj-CV.scss");
+module.exports = __webpack_require__(/*! /home/jj/Developpements/ClubVosgien/resources/sass/admin.scss */"./resources/sass/admin.scss");
 
 
 /***/ })

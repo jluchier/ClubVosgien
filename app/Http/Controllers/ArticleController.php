@@ -8,10 +8,14 @@ use App\Http\Requests\ArticleRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
+use App\Traits\ImageManager;
 
 class ArticleController extends Controller
 {
+    use ImageManager;
+
     public function index()
     {
         $articles = Article::with('category')
@@ -38,7 +42,7 @@ class ArticleController extends Controller
             "title" => $request->get("title"),
             "content" => $request->get("content"),
             "category_id" => $request->get("category_id"),
-            "image" => $this->storeImage($request),
+            "image" => $this->storeImage("images",$request->get("image")),
         ]);
 
         return redirect(route("articles.index"))->with("success", "Article ajouté avec succès");
@@ -59,60 +63,29 @@ class ArticleController extends Controller
         $article->content = $request->get("content");
         $article->category_id = $request->get("category_id");
 
-        $pathImage=$this->storeImage($request);
-        if ($pathImage != null)
+        if ($request->has("imageDelete")){
+           $this->deleteImage("images",$article->image);
+           $article->image = null;
+        }
+        else if ($request->get("image", null) != null)
         {
-            if ($article->image != null){
-                Storage::disk('public')->delete("images/small/".$article->image);
-                Storage::disk('public')->delete("images/medium/".$article->image);
-                Storage::disk('public')->delete("images/large/".$article->image);
-                Storage::disk('public')->delete("images/thumb/".$article->image);
-            }
+            $this->deleteImage("images",$article->image);
+            $pathImage=$this->storeImage("images",$request->get("image"));
+
             $article->image = $pathImage;
         }
 
         $article->save();
-
         return redirect(route("articles.index"))->with("success", "Article modifié avec succès");
     }
 
     public function destroy(Article $article)
     {
+        $this->deleteImage("images",$article->image);
         Article::destroy($article->id);
 
         return redirect(route("articles.index"))->with("success", "Article supprimé");
     }
 
-    private function storeImage(Request $request)
-    {
-        if ($request->hasFile("image"))
-        {
-            if ($request->file('image')->isValid())
-            {
-                $out = explode(".", $request->file("image")->hashName(), 2)[0].".jpg";
-                $this->resizeImage($request, 800, "images/small/".$out);
-                $this->resizeImage($request, 1280, "images/medium/".$out);
-                $this->resizeImage($request, 1920, "images/large/".$out);
-                $this->resizeImage($request, 128, "images/thumb/".$out, true);
-                return $out;
-            }
-        }
-
-        return null;
-    }
-
-    private function resizeImage(Request $request, $size, $out, $fit = false){
-        $img = Image::make($request->file('image')->path())->orientate();
-
-        if ($fit)
-        {
-            $img->fit($size);
-        }
-        else {
-            $img->widen($size);
-        }
-
-        $img->interlace(true)->encode("jpg", 70);
-        Storage::disk("public")->put($out, $img);
-    }
+    
 }
