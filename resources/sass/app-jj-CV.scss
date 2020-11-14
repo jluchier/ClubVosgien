@@ -1,16 +1,38 @@
+/*Gestion des couleurs*/
+
+:root{
+    --CV-VertFond-Body: hsl(120, 77%, 86%);
+    --CV-VertFond-Titre: hsl(135, 59%, 80%);
+    --CV-Orange-FondCarte: hsl(15, 100%, 70%);
+    --CV-VertFond-Nav: hsl(122, 39%, 30%);
+}
+
+
+body{
+    color: black !important;
+    background-color: var(--CV-VertFond-Body);
+}
+
+.CV-Orange{
+    background-color: var(--CV-Orange-FondCarte);
+}
+
+.CV-Shadow{
+    text-shadow: 1px 1px var(--CV-Orange-FondCarte);
+}
+
 .CV-nav {
-/*
-    background-color: hsl(163, 88%, 56%);*/
     position: fixed;
 }
 
-/* la complementaire => hsl(344, 88%, 56%) => vu sur  https://colorpicker.me/ */
-
 .fond1 {
-    min-height: 200px;
-    max-height: 400px;
+    /*min-height: 200px;*/
+    height: 400px;
     width: 100%;
     background-position: center;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;    */
+    background-size: cover;
 }
 
 
@@ -70,11 +92,7 @@
     top: 60px;
     left: 10px;
 }
-.CV-flex-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+
 .CV-flex-gallery{
     width:300px;
     height: 300px;
@@ -85,7 +103,7 @@
     margin-top: 10px;
 }
 .corpusConstruction {
-    height: 90%;
+    min-height: 800px;
     background-image: url('images/fonds/Medium/medium1_007.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -108,36 +126,48 @@
     box-sizing:border-box;
     width:100%;
     display: flex; 
-    min-height:100%; 
 }
 .sidebar{
-    
-  
 }
 
-.CV-container{
-    padding: 0 10px;
-    display: flex;
-}
 
 .CV-fontColorRed {
-    color: hsl(344, 88%, 56%);
+    /*color: hsl(344, 88%, 56%);*/
+    color:var(--CV-Orange-FondCarte);
 }
+
+/*Concerne la page d'accueil HomePage*/
 
 .CV-TopContainerHome{
     margin-left:auto;
     margin-right:auto;
 }
-.CV-flex-container{
+
+/*En mode colonnes*/
+
+.CV-flex-container-Column{
     flex-direction:column;
     align-items:center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    flex:4 1 0;
 }
     
-.CV-flex-container h1{
+.CV-flex-container-Column h1{
     font-size: 40px;
-    background: hsla(130, 50%, 38%, 0.69) !important;
+    /*background-color: : var(--CV-VertFond-Titre) !important;*/
     margin-left:auto;
     margin-right:auto; 
+}
+
+
+/*En mode horizontal*/
+
+.CV-flex-container-Horizontal{
+    padding: 0 10px;
+    display: flex;
 }
 
 .tuile-flex-horizontal-HC{
@@ -148,4 +178,10 @@
 }
 .tuile-flex-horizontal-HC div{
     padding:5px;
+}
+
+.CV-Bouton{
+    margin-bottom: 5px;
+    width: max-content;
+
 }

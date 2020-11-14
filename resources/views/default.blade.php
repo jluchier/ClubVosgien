@@ -12,17 +12,17 @@
 
 </head>
 
-<body class="w3-theme-light">
+<body>
 
-<nav id="nav" class="w3-top w3-theme-dark CV-nav">
-    <div class="w3-center w3-large" style="text-shadow : 1px 1px 0 hsl(344, 88%, 56%)"><b>Club Vosgien Rupt Vecoux Ferdrupt</b></div>
+<nav id="nav" class="w3-top CV-nav w3-theme-dark">
+    <div class="w3-center w3-large CV-Shadow"><b>Club Vosgien Rupt Vecoux Ferdrupt</b></div>
     <div class="w3-bar w3-large">
-        <a href="{{ route("actu") }}" class="w3-bar-item w3-button navItem @yield('home')"><i class="fas fa-home"></i>Accueil</a>
-        <a href="{{ route("sentiers") }}" class="w3-bar-item w3-button navItem @yield('sentiers')"><i class="fas fa-image"></i>La fédération</a>        
-        <a href="{{ route("activity") }}" class="w3-bar-item w3-button navItem @yield('activity')"><i class="fas fa-image"></i>Activités</a>
-        <a href="{{ route("sentiers") }}" class="w3-bar-item w3-button navItem @yield('sentiers')"><i class="fas fa-image"></i>Sentiers</a>
-        <a href="{{ route("chalets") }}" class="w3-bar-item w3-button navItem @yield('chalets')"><i class="fas fa-image"></i>Chalets</a>
-        <a href="{{ route("gallery") }}" class="w3-bar-item w3-button navItem @yield('gallery')"><i class="fas fa-image"></i>Galerie</a>
+        <a href="{{ route("actu") }}" class="w3-bar-item w3-button navItem @yield('home')">Accueil</a>
+        <a href="{{ route("sentiers") }}" class="w3-bar-item w3-button navItem @yield('sentiers')">La fédération</a>        
+        <a href="{{ route("activity") }}" class="w3-bar-item w3-button navItem @yield('activity')">Activités</a>
+        <a href="{{ route("sentiers") }}" class="w3-bar-item w3-button navItem @yield('sentiers')">Sentiers</a>
+        <a href="{{ route("chalets") }}" class="w3-bar-item w3-button navItem @yield('chalets')">Chalets</a>
+        <a href="{{ route("gallery") }}" class="w3-bar-item w3-button navItem @yield('gallery')">Galerie</a>
 
         @Auth
             {{ Form::open(["route" => "logout", "method" => "post", "class" => "w3-right navItem"]) }}
@@ -48,12 +48,13 @@
     @yield('content')
 
     <footer class="w3-theme w3-center w3-padding-large CV-footer">
-        <i class="fab fa-2x w3-hover-opacity fa-facebook"></i>
+        <p>Contatez moi ici</p>
+<!--         <i class="fab fa-2x w3-hover-opacity fa-facebook"></i>
         <i class="fab fa-2x w3-hover-opacity fa-instagram"></i>
         <i class="fab fa-2x  w3-hover-opacity fa-snapchat"></i>
         <i class="fab fa-2x  w3-hover-opacity fa-pinterest"></i>
         <i class="fab fa-2x  w3-hover-opacity fa-twitter"></i>
-        <i class="fab fa-2x  w3-hover-opacity fa-linkedin"></i>
+        <i class="fab fa-2x  w3-hover-opacity fa-linkedin"></i> -->
     </footer>
 
 </div>

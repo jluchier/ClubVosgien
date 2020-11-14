@@ -2417,6 +2417,8 @@ a {
           text-decoration-color: #e7ffff !important;
 }
 
+/*$w3-theme-dark: #265728;*/
+
 .w3-theme-l5,
 .w3-hover-theme-l5:hover {
   color: black !important;
@@ -2744,28 +2746,28 @@ a {
 .w3-theme-dark,
 .w3-hover-theme-dark:hover {
   color: white !important;
-  background-color: #265728;
+  background-color: #4eb151;
 }
 
 .w3-text-theme-dark,
 .w3-hover-text-theme-dark:hover {
-  color: #265728 !important;
+  color: #4eb151 !important;
 }
 
 .w3-fill-theme-dark,
 .w3-hover-fill-theme-dark:hover {
-  fill: #265728 !important;
+  fill: #4eb151 !important;
 }
 
 .w3-border-theme-dark,
 .w3-hover-border-theme-dark:hover {
-  border-color: #265728 !important;
+  border-color: #4eb151 !important;
 }
 
 .w3-underline-theme-dark {
   text-decoration: underline;
-  -webkit-text-decoration-color: #265728 !important;
-          text-decoration-color: #265728 !important;
+  -webkit-text-decoration-color: #4eb151 !important;
+          text-decoration-color: #4eb151 !important;
 }
 
 input[type=file] {
