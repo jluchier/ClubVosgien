@@ -4,7 +4,7 @@
 
 @section('content')
 
-<script>
+<!-- <script>
 $(document).ready(function(){
   $("#Privilege").on("keyup", function() {
     var value = $(this).val().toLowerCase();
@@ -13,12 +13,21 @@ $(document).ready(function(){
     });
   });
 });
-</script>
+</script> -->
 
 <div class="w3-container">
     <h3>Etat des inscriptions : liste des membres inscrits et de leur privilège</h3>
-    <p>Affichez les membres en fonction de leur privilège :</p>  
-<input id="Privilege" type="text" placeholder="Privilège...">
+
+    <p>Affichez les membres en fonction de leur privilège :</p> 
+
+{{Form::open(["route"=>"inscriptions", "method"=>'get'])}}
+{{Form::select("privilege", ['A valider'=>'A valider', 'Banni', 'Inscrit', 'Admin'], null, ["class" => "w3-input", "required" => true])}}
+        {{ Form::submit("Enregistrer", ["class" => "w3-button w3-theme-dark"]) }}
+{{Form::close()}}
+
+
+
+<!-- <input id="Privilege" type="text" placeholder="Privilège..."> -->
 <br><br>
 <!--     <div class="w3-dropdown-hover">
         <button class="w3-button w3-theme-dark">Choisir ici <i class="fas fa-chevron-circle-down w3-large"></i></button>
@@ -28,6 +37,9 @@ $(document).ready(function(){
             <a href="{{ route("inscriptions", ["privilege" => "Admin"]) }}" class="w3-bar-item w3-button">Admin</a>
         </div>
     </div> -->
+
+
+
     <table class="w3-table-all w3-margin-top">
         <thead>
         <tr>

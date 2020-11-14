@@ -15,20 +15,20 @@ class AdminController extends Controller
     }
 
     public function editUsers(Request $request){
-        // if ($request->has("privilege"))
-        // {
-        //     $user = User::where("privilege", $request->get("privilege"))->get();
-        //     if ($user = null){
-        //         $user = User::where("privilege", 'Inscrit')->first();
-        //     }
-        //     dd($user);
-        // }
-        // else
-        // {
-        //     $user = User::all();
-        // }
+        if ($request->has("privilege"))
+        {
+            $users = User::where("privilege", $request->get("privilege"))->get();
+            // if ($user = null){
+            //     $user = User::where("privilege", 'Inscrit')->first();
+            // }
+            // dd($user);
+        }
+        else
+        {
+            $users = User::all();
+        }
         //dd($request);
-        $users = User::all();
+        // $users = User::all();
         $url = route("inscriptionsUpdate");
         $method = "get";
 
