@@ -15,6 +15,9 @@ class AdminController extends Controller
     }
 
     public function editUsers(Request $request){
+        
+
+
         if ($request->has("privilege"))
         {
             $users = User::where("privilege", $request->get("privilege"))->get();
