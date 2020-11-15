@@ -11,7 +11,8 @@ $w3-theme-d5: #265728;
 
 $w3-theme-light: #f4faf4;
 $w3-theme: #4caf50;
-$w3-theme-dark: #265728;
+/*$w3-theme-dark: #265728;*/ 
+$w3-theme-dark: hsl(122, 39%, 50%);
 
 @include color('theme-l5', $w3-theme-l5);
 @include color('theme-l4', $w3-theme-l4);

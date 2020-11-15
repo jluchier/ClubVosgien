@@ -31,9 +31,9 @@ Route::middleware("auth.validated")->group(function (){
         Route::resource('articles', "ArticleController", ["except" => "show"]);
         Route::get('inscriptions', 'AdminController@editUsers')->name("inscriptions");
         Route::get('inscriptionsUpdate', 'AdminController@updateUsers')->name("inscriptionsUpdate"); 
-        Route::get('showUsersByPrivilege', 'AdminController@showUsersByPrivilege')->name("showUsersByPrivilege"); 
+        // Route::get('showUsersByPrivilege', 'AdminController@showUsersByPrivilege')->name("showUsersByPrivilege"); 
         Route::resource('galleries','GalleryController',["except"=> ["store","update"]]);
-        Route::resource('compterendus','CompterendusController');
+        Route::resource('compterendus','CompterendusController'); 
     });
 
 });
