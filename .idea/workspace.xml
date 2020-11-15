@@ -2,32 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e78b48ac-3cb9-48de-bd2b-fd2c3906239e" name="Default Changelist" comment="Correctifs">
+      <change beforePath="$PROJECT_DIR$/.idea/template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/template.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Compterendu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Compterendu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompteRendusController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CompterendusController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GuestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GuestController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/AttachmentsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/AttachmentsRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CompteRenduRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CompterenduRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/GalleryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/GalleryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GalleryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GalleryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/GalleryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/GalleryRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app-jj-CV.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app-jj-CV.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/CompteRendus/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/Compterendus/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/CompteRendus/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/Compterendus/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ImageSingle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ImageSingle.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ImageUploadManager.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ImageUploadManager.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Admin/Gallery/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/Gallery/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Admin/Gallery/indexPhotos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/Gallery/indexPhotos.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Admin/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/default.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/compteRendus.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/compterendus.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/default.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -183,6 +183,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="PluginDummyText.Genre" value="latin" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/CloudStation/Developpement_SitesWeb/Tout_OnePage" />
@@ -198,6 +199,18 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="npm.watch">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -318,6 +331,8 @@
       <workItem from="1587408700533" duration="6203000" />
       <workItem from="1587573589913" duration="6699000" />
       <workItem from="1587638738291" duration="252000" />
+      <workItem from="1605385990371" duration="4470000" />
+      <workItem from="1605431500568" duration="11988000" />
     </task>
     <task id="LOCAL-00001" summary="Authentification starts">
       <created>1577465071879</created>
@@ -386,7 +401,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
@@ -399,12 +414,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -559,16 +575,5 @@
     <state x="409" y="153" width="672" height="471" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1581621181245" />
     <state x="1783" y="220" width="672" height="678" key="search.everywhere.popup/1280.0.1680.1050/0.119.1280.1024@1280.0.1680.1050" timestamp="1579455803494" />
     <state x="2449" y="351" width="827" height="680" key="search.everywhere.popup/1920.30.1680.1050/0.0.1920.1040@1920.30.1680.1050" timestamp="1587412064821" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Requests/GalleryRequest.php</url>
-          <line>14</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

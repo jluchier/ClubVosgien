@@ -31,6 +31,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@swup/head-plugin": "^1.0.2",
         "@swup/scroll-plugin": "^1.0.6",
         "swup": "^2.0.5"
     }

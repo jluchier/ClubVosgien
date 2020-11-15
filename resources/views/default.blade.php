@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{{ mix('css/app-jj-CV.css') }}">
     <title>CV Rupt Vecoux Ferdrupt</title>
 
+    <script src="{{ mix('js/script.js') }}" defer></script>
+
 </head>
 
 <body class="w3-theme-light">
@@ -18,7 +20,7 @@
     <div class="w3-center w3-large" style="text-shadow : 1px 1px 0 hsl(344, 88%, 56%)"><b>Club Vosgien Rupt Vecoux Ferdrupt</b></div>
     <div class="w3-bar w3-large">
         <a href="{{ route("actu") }}" class="w3-bar-item w3-button navItem @yield('home')"><i class="fas fa-home"></i>Accueil</a>
-        <a href="{{ route("sentiers") }}" class="w3-bar-item w3-button navItem @yield('sentiers')"><i class="fas fa-image"></i>La fédération</a>        
+        <a href="{{ route("sentiers") }}" class="w3-bar-item w3-button navItem @yield('sentiers')"><i class="fas fa-image"></i>La fédération</a>
         <a href="{{ route("activity") }}" class="w3-bar-item w3-button navItem @yield('activity')"><i class="fas fa-image"></i>Activités</a>
         <a href="{{ route("sentiers") }}" class="w3-bar-item w3-button navItem @yield('sentiers')"><i class="fas fa-image"></i>Sentiers</a>
         <a href="{{ route("chalets") }}" class="w3-bar-item w3-button navItem @yield('chalets')"><i class="fas fa-image"></i>Chalets</a>
@@ -61,6 +63,5 @@
 </body>
 
 <script src="{{ mix('js/app.js') }}"></script>
-<script src="{{ mix('js/script.js') }}"></script>
 
 </html>

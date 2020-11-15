@@ -3,14 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Gallery;
-use Illuminate\Http\Request;
-use App\Http\Requests\GalleryRequest;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
-use Input;
-use Intervention\Image\Facades\Image;
-use function GuzzleHttp\default_ca_bundle;
 
 class GalleryController extends Controller
 {
@@ -18,9 +11,14 @@ class GalleryController extends Controller
     public function index()
     {
         $galleries = Gallery::orderBy("created_at", "desc")->get();
+
+        foreach ($galleries as $gallery)
+        {
+            $gallery->thumbs = sizeof(Storage::disk("public")->allFiles("gallery/{$gallery->title}/thumb"));
+        }
+
         return view('Admin.Gallery.indexPhotos', compact(['galleries']));
     }
-
 
     public function create()
     {
@@ -28,28 +26,26 @@ class GalleryController extends Controller
         $gallery->private = true;
         $url = route("galleries.store");
         $method = "post";
-        return view("Admin.Gallery.edit", compact(["gallery", "url", "method"]));
+        $thumbs = [];
+
+        return view("Admin.Gallery.edit", compact(["gallery", "url", "method", "thumbs"]));
 
     }
-
-  
 
     public function edit(Gallery $gallery)
     {
         $url = route("galleries.update", $gallery->id);
         $method = "put";
 
-        $folders = Storage::disk("public")->allFiles($gallery->folder . "/thumb");
+        $thumbs = Storage::disk("public")->allFiles("gallery/{$gallery->title}/thumb");
 
-        return view("Admin.Gallery.edit", compact(["gallery", "url", "method", "folders"]));
+        return view("Admin.Gallery.edit", compact(["gallery", "url", "method", "thumbs"]));
 
     }
 
-   
-
     public function destroy(Gallery $gallery)
     {
-        Storage::disk("public")->deleteDirectory("gallery\{$gallery->title}");
+        Storage::disk("public")->deleteDirectory("gallery/{$gallery->title}");
         Gallery::destroy($gallery->id);
 
         return redirect(route("galleries.index"))->with("success", "Galerie supprimée");

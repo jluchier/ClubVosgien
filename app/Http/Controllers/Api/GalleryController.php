@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Gallery;
 use App\Http\Controllers\Controller;
+use App\Traits\ImageManager;
 use Illuminate\Http\Request;
 use App\Http\Requests\GalleryRequest;
 use Illuminate\Support\Str;
@@ -11,6 +13,8 @@ use Illuminate\Support\Facades\Storage;
 
 class GalleryController extends Controller
 {
+    use ImageManager;
+
 	public function Image(Request $request)
 	{
 		$image = $request->get("image", null);
@@ -18,29 +22,19 @@ class GalleryController extends Controller
 
 		if ($image != null && $folder != null)
 		{
-			$name = Str::random(40) . ".jpg";
 
-			$original = Image::make($image)
-			->interlace(true)
-			->encode("jpg", 75);
-			Storage::disk("public")->put("gallery/{$folder}/{$name}", $original);
+            $this->storeImage("gallery/{$folder}",$request->get("image"));
 
-			$thumb = Image::make($image)
-			->interlace(true)
-			->fit(300)
-			->encode("jpg", 75);
-			Storage::disk("public")->put("Galerie/Studio/Thumbs/" . $name, $thumb);
-
-			return response()->json(["message" => "Data url saved"], 200);
+			return response()->json(["message" => "Image saved"], 200);
 		}
 		return response()->json(["message" => "no image"], 200);
 	}
 
-public function Store(GalleryRequest $request)
-
+    public function Store(GalleryRequest $request)
     {
         $request->validate([
-            'title' => 'unique:galleries'
+            'title' => 'unique:galleries',
+            'dateSortie' => 'unique:galleries'
         ]);
 
          Gallery::insert([
@@ -48,33 +42,34 @@ public function Store(GalleryRequest $request)
                 "dateSortie"=>$request->get('dateSortie'),
                 "description"=>$request->get('description'),
                 "private"=>$request->get('private', false),
-                "folder"=>$this->storeImageGallery($request),
-                "user_id"=>Auth::id(),
+                "user_id"=>$request->get('user_id')
             ]
         );
-        return redirect(route("galleries.index"))->with("success", "Galerie ajoutée avec succès");
 
+         return response()->json(["folder" => $request->get("title")], 200);
     }
 
- public function Update(GalleryRequest $request, Gallery $gallery)
+    public function Update(GalleryRequest $request, Gallery $gallery)
     {
         $request->validate([
-            'title' => 'unique:galleries,id,'.$gallery->id
+            'title' => 'unique:galleries,id,'.$gallery->id,
+            'dateSortie' => 'unique:galleries,id,'.$gallery->id
         ]);
 
-        $gallery->title = $request->get("title");
+        $newTitle = $request->get("title");
+
+        if ($gallery->title != $newTitle)
+        {
+            Storage::disk("public")->move("gallery/{$gallery->title}", "gallery/{$newTitle}");
+        }
+
+        $gallery->title = $newTitle;
         $gallery->dateSortie = $request->get("dateSortie");
         $gallery->description = $request->get("description");
         $gallery->private = $request->get("private", false);
 
-        //$pathImage=$this->storeImageGallery($request);
-
         $gallery->save();
 
-        return redirect(route("galleries.index"))->with("success", "Galerie modifiée avec succès");
+        return response()->json(["folder" => $request->get("title")], 200);
     }
-
-
-
-
 }

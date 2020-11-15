@@ -24,7 +24,11 @@
                     {{$gallery->description }}
                 </td>
                 <td>
-                    <img src="{{ Storage::url('gallery/thumb/' . $gallery->folder)}}" alt="Pas d'image jointe">
+                    @if($gallery->thumbs > 0)
+                        {{ $gallery->thumbs }} image(s)
+                    @else
+                        Aucune image
+                    @endif
                 </td>
                 <td class="w3-right">
                     <div class="w3-bar">

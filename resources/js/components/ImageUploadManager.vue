@@ -1,6 +1,8 @@
 <template>
-    <div>
-    <slot name="top"></slot>
+    <form v-on:submit.prevent="submitForm" ref="form">
+
+        <p v-for="error in errors">{{ error }}</p>
+
         <div>
             <input type="file" id="files" ref="files" accept="image/*" multiple v-on:change="handleFilesUpload()"/>
         </div>
@@ -11,23 +13,28 @@
         <p>{{ Progress }}</p>
         <button v-on:click.prevent="addFiles()" class="w3-button w3-round w3-blue-gray">Ajouter des images</button>
 
-        <slot name="bottom"></slot>
+        <slot></slot>
 
-        <button v-on:click.prevent="submitFiles()" class="w3-button w3-round w3-green" >Envoyez le msessage</button>
-    </div>
+        <input type="submit" class="w3-button w3-round w3-green" value="Sauvegarder">
+    </form>
 </template>
 
 <script>
     import ImageSingle from "./ImageSingle";
     export default {
         props: {
-            route: {type: String, required: true}
+            route: {type: String, required: true},
+            method: {type: String, required: true},
+            uploadRoute: {type: String, required: true},
+            userId: {type: Number, required: true},
+            redirectRoute: {type: String, required: true},
         },
         data(){
             return {
                 files: [],
                 uploadDone: 0,
-                currentIndex: 0
+                currentIndex: 0,
+                errors: [],
             }
         },
         methods: {
@@ -37,8 +44,65 @@
             removeFile( key ){
                 this.files.splice( key, 1 );
             },
-            submitFiles(){
-                this.$emit("send", this.route);
+            submitForm()
+            {
+                let elements = this.$refs.form.elements;
+                let config = {
+                    method: this.method,
+                    url: this.route,
+                    data: {},
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                };
+
+                for (let i = 0; i < elements.length; ++i)
+                {
+                    let element = elements[i];
+
+                    if (element.type !== "submit" && element.type !== "file")
+                    {
+                        if (element.type === "checkbox")
+                        {
+                            config.data[element.id] = element.checked;
+                        }
+                        else
+                        {
+                            config.data[element.id] = element.value;
+                        }
+                    }
+                }
+                config.data["user_id"] = this.userId;
+
+                this.$axios.request(config)
+                    .then(res => {
+
+                        let emitConfig = {
+                            method: "post",
+                            url: this.uploadRoute,
+                            data: {},
+                            headers: {
+                                "Accept": "application/json"
+                            }
+                        };
+                        emitConfig.data["folder"] = res.data.folder;
+
+                        if (this.files.length === 0)
+                        {
+                            location.href = this.redirectRoute;
+                        }
+
+                        this.$emit("send", emitConfig);
+                    })
+                    .catch(error => {
+                        if (error.response)
+                        {
+                            for( let key in error.response.data.errors)
+                            {
+                                this.errors = this.errors.concat(error.response.data.errors[key]);
+                            }
+                        }
+                    });
             },
             handleFilesUpload(){
                 let uploadedFiles = this.$refs.files.files;
@@ -51,7 +115,7 @@
                 ++this.uploadDone;
                 if (this.uploadDone >= this.files.length)
                 {
-                    location.reload();
+                    location.href = this.redirectRoute;
                 }
             }
         },
