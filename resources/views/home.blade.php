@@ -14,14 +14,14 @@
 
     <div class="CV-flex-container-Column">
         <div class="CV-TopContainerHome">
-            <img src="/images/fonds/Small/small1_009.jpg" alt="Les vosges">
+            <img src="/images/common/small1_009.jpg" alt="Les vosges">
             <!-- <h2 class="w3-xxxlarge w3-center CV-fontColorRed" style="padding-top:5%" >Bienvenue sur le site du club vosgien RVF</h2> -->
         </div>
         <div >
             <div id="actu" class="CV-flex-container-Column">
                 <h1>Les actualités</h1>
-                <div class="tuile-flex-horizontal-HC">           
-                    
+                <div class="tuile-flex-horizontal-HC">
+
                         @foreach($articles as $article)
                         @if($article->category->name == 'Actualité')
                         <div class="w3-card-4 w3-third">
@@ -35,16 +35,16 @@
                                 {{ Storage::url('images/medium/' . $article->image)}} 1280w,
                                 {{ Storage::url('images/large/' . $article->image)}} 1920w"
                                 alt="Là je mets l'image">
-                                <p>{{ $article->content }}</p> 
+                                <p>{{ $article->content }}</p>
                             </div>
                         </div>
                         @endif
                         @endforeach
-                   
+
                 </div>
             </div>
             <div id="agenda" class="CV-flex-container-Column">
-                <h1>Agenda</h1>             
+                <h1>Agenda</h1>
                 <div class="tuile-flex-horizontal-HC">
 
                     @foreach($articles as $article)

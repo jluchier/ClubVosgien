@@ -43,7 +43,7 @@ body {
 }
 
 .no-webp .fond1 {
-  background-image: url("/images/fonds/Small/small1_009.jpg");
+  background-image: url(/images/small1_009.jpg?df47880b987a7881bfae20ec0a10dc5f);
 }
 
 .no-webp .fond2 {
