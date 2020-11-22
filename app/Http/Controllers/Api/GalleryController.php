@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Gallery;
 use App\Http\Controllers\Controller;
+use App\Models\Gallery;
 use App\Traits\ImageManager;
 use Illuminate\Http\Request;
 use App\Http\Requests\GalleryRequest;

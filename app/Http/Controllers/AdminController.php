@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
@@ -50,11 +50,11 @@ class AdminController extends Controller
 
     // public function showUsersByPrivilege(Request $request){
 
- 
+
     //     if (($request->get("value"))=== 'AV') {
     //         $value = "A valider";
     //     }
-    //     else $value = "Inscrit" ;       
+    //     else $value = "Inscrit" ;
 
     //     return view('Admin.inscriptions', compact("value"));;
     //     }

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Article;
-use App\Gallery;
+use App\Models\Article;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -57,5 +57,5 @@ class GuestController extends Controller
         ->get();
         return view("infosFede", compact(['articles']));
         // return redirect(route("construction", ["page" => "infosFede"]));
-    }    
+    }
 }

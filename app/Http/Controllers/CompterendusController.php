@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Attachment;
-use App\Compterendu;
 use App\Http\Requests\AttachmentsRequest;
 use App\Http\Requests\CompterenduRequest;
+use App\Models\Compterendu;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use PhpParser\Node\Stmt\Return_;

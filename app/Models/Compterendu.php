@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,7 +11,7 @@ class Compterendu extends Model
     protected $table = "compterendus";
 
     public function attachments(){
-        return $this->morphMany( 'App\Attachment','attachable');
+        return $this->morphMany( 'App\Models\Attachment','attachable');
     }
 }
 

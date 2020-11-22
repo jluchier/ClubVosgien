@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Article;
-use App\Category;
+;
 use App\Http\Requests\ArticleRequest;
+use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
@@ -86,5 +87,5 @@ class ArticleController extends Controller
         return redirect(route("articles.index"))->with("success", "Article supprimé");
     }
 
-    
+
 }
