@@ -51,4 +51,11 @@ class GuestController extends Controller
         $page = $request->get("page", "");
         return view("construction", compact(["page"]));
     }
+    public function infosFede(){
+        $articles = Article::with( 'category')
+        ->orderBy("created_at", "desc")
+        ->get();
+        return view("infosFede", compact(['articles']));
+        // return redirect(route("construction", ["page" => "infosFede"]));
+    }    
 }

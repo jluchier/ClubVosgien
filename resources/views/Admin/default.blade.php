@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" href="{{ mix('css/admin.css') }}">
-
     <title>Administration du site</title>
 </head>
 
@@ -30,7 +29,7 @@
 </div>
 
 </body>
-
+@yield('js')
 <script src="{{ mix('js/app.js') }}"></script>
 
 </html>

@@ -34,5 +34,11 @@
         "@swup/head-plugin": "^1.0.2",
         "@swup/scroll-plugin": "^1.0.6",
         "swup": "^2.0.5"
-    }
+    },
+    "name": "ClubVosgien",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/jluchier/ClubVosgien.git",
+    "author": "jluchier <jluchier@free.fr>",
+    "license": "MIT"
 }

@@ -20,6 +20,7 @@ Route::get('activity', "GuestController@Activity")->name("activity");
 Route::get('sentiers', "GuestController@sentiers")->name("sentiers");
 Route::get('chalets', "GuestController@chalets")->name("chalets");
 Route::get('construction',"GuestController@construction")->name("construction");
+Route::get('infosFede', "GuestController@infosFede")->name("infosFede");
 
 Route::middleware("auth.validated")->group(function (){
 

@@ -1,27 +1,53 @@
 /*Gestion des couleurs*/
 
 :root {
-  --CV-VertFond-Body: hsl(120, 77%, 86%);
-  --CV-VertFond-Titre: hsl(135, 59%, 80%);
-  --CV-Orange-FondCarte: hsl(15, 100%, 70%);
-  --CV-VertFond-Nav: hsl(122, 39%, 30%);
-}
-
-body {
-  color: black !important;
-  background-color: var(--CV-VertFond-Body);
-}
-
-.CV-Orange {
-  background-color: var(--CV-Orange-FondCarte);
-}
-
-.CV-Shadow {
-  text-shadow: 1px 1px var(--CV-Orange-FondCarte);
+  --CV-Fond-Titre: hsl(135, 59%, 80%);
+  --CV-FondCarte: hsl(17, 26%, 95%);
+  --CV-Fond-Nav: hsl(120, 31%, 14%);
 }
 
 .CV-nav {
   position: fixed;
+  top: 0%;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  margin: 20px;
+  background-color: white;
+}
+
+.CV-top-nav {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  display: flex;
+}
+
+.CV-Top-Nav div:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.CV-Top-Nav div:last-child {
+  text-align: center;
+}
+
+.CV-bottom-nav {
+  background-color: var(--CV-Fond-Nav);
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  color: black !important;
+}
+
+.CV-Orange {
+  background-color: var(--CV-FondCarte);
+}
+
+.CV-Shadow {
+  text-shadow: 1px 1px var(--CV-FondCarte);
 }
 
 .fond1,
@@ -122,21 +148,23 @@ body {
 
 .CV-footer {
   margin-top: auto;
+  background-color: var(--CV-Fond-Nav);
 }
 
 .CV-global {
   box-sizing: border-box;
   width: 100%;
   display: flex;
+  margin-bottom: 10px;
 }
 
 .sidebar {
-  background-color: var(--CV-Orange-FondCarte);
+  background-color: var(---CV-FondCarte);
 }
 
 .CV-fontColorRed {
   /*color: hsl(344, 88%, 56%);*/
-  color: var(--CV-Orange-FondCarte);
+  color: var(---CV-FondCarte);
 }
 
 /*Concerne la page d'accueil HomePage*/
@@ -159,7 +187,7 @@ body {
 
 .CV-flex-container-Column h1 {
   font-size: 40px;
-  /*background-color: var(--CV-VertFond-Titre) !important;*/
+  /*background-color: var(---CV-Fond-Titre) !important;*/
   margin-left: auto;
   margin-right: auto;
 }

@@ -7,14 +7,14 @@
 
 <div class="CV-global">
 
-    <div class="w3-theme-15 w3-bar-block sidebar">
+    {{-- <div class="w3-theme-15 w3-bar-block sidebar">
         <a href="#actu" class="w3-bar-item w3-button scale_CV">Les actualités</a>
         <a href="#agenda" class="w3-bar-item w3-button">Agenda</a>
-    </div>
+    </div> --}}
 
     <div class="CV-flex-container-Column">
         <div class="CV-TopContainerHome">
-            <img src="/images/common/small1_009.jpg" alt="Les vosges">
+            <img src="/images/common/large_000.jpg" alt="Les vosges">
             <!-- <h2 class="w3-xxxlarge w3-center CV-fontColorRed" style="padding-top:5%" >Bienvenue sur le site du club vosgien RVF</h2> -->
         </div>
         <div >

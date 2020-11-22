@@ -34,9 +34,16 @@
     </div>
 
     {{ Form::label("content", "Contenu") }}
-    {{ Form::textArea("content", null, ["class" => "w3-input", "required" => true]) }}
+    {{ Form::textArea("content", null, ["class" => "w3-input", "id" => "contentArea", "required" => true]) }}
 
     {{ Form::submit("Enregistrer", ["class" => "w3-button w3-theme-dark"]) }}
 
-    {{ Form::close() }}
+    {{ Form::close() }} 
+
 @endsection
+    @section('js')
+    <script src="//cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'contentArea' );
+    </script>
+    @endsection
