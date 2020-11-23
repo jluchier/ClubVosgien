@@ -1,39 +1,42 @@
-/*Gestion des couleurs*/
-
-:root{
-    --CV-Fond-Titre: hsl(135, 59%, 80%);
-    --CV-FondCarte: hsl(17, 26%, 95%);
-    --CV-Fond-Nav: hsl(120, 31%, 14%);
-}
-
-$CV-Fond-Body:hsl(120, 100%, 100%);
+@import "variables";
 
 // Top et Barre de navigation
 
-
 .CV-nav {
     position: fixed;
-    top: 0%;
     min-height: fit-content;
-    margin: 20px;
-    background-color:$CV-Fond-Body;
+    padding-top: 10px;
+    width:100%;
+    background-color: white;
 }
 .CV-top-nav {
-    min-height: fit-content;
     display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-.CV-Top-Nav div:first-child{
+.CV-Top-Nav div:first-child {
     display: flex;
     flex-direction: column;
 }
-.CV-Top-Nav div:last-child{
-    text-align: center;
+.CV-Logo {
+    padding-left: 40%;
 }
 
+.CV-Shadow{
+    text-shadow: 1px 1px $CV-Fond-Shadow;
+    align-self: center;
+    text-align: center;
+    flex: 1 1 75%;
+}
 .CV-bottom-nav {
-    background-color: var(--CV-Fond-Nav);
+    background-color: $CV-Fond-Nav;
     width: 100%;
     overflow: hidden;
+}
+
+.CV-bottom-nav a {
+    background-color: $CV-Fond-Nav;
+    color: white;
 }
 
 // corps
@@ -43,11 +46,16 @@ body{
 }
 
 .CV-Orange{
-    background-color: var(--CV-FondCarte);
+    background-color: $CV-Fond-Carte;
 }
 
-.CV-Shadow{
-    text-shadow: 1px 1px var(--CV-FondCarte);
+
+.CV-global{
+    box-sizing:border-box;
+    width:100%;
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 100px;
 }
 
 .fond1, .fondVache1 {
@@ -109,12 +117,19 @@ body{
 .width100{
     width: 100%;
 }
+// Menu fiwes et side bar (tests)
+
 .menuFixe{
     position:fixed;
     z-index: 100;
     top: 60px;
     left: 10px;
 }
+.sidebar{
+    background-color: $CV-Fond-Carte;
+}
+
+// Gestion de l'affichage de la galerie
 
 .CV-flex-gallery{
     width:300px;
@@ -125,6 +140,8 @@ body{
 .marginTopMenu{
     margin-top: 10px;
 }
+
+// Pages de construction
 .corpusConstruction {
     min-height: 800px;
     background-image: url('images/fonds/Medium/medium1_007.jpg');
@@ -140,29 +157,21 @@ body{
     margin-top: 10px;
 }
 
-
+// Footer
 .CV-footer{
     margin-top: auto;
-    background-color: var(--CV-Fond-Nav);
-}
-
-.CV-global{
-    box-sizing:border-box;
-    width:100%;
-    display: flex;
-    margin-bottom: 10px;
-}
-.sidebar{
-    background-color: var(---CV-FondCarte);
+    background-color: $CV-Fond-Nav;
 }
 
 
 .CV-fontColorRed {
     /*color: hsl(344, 88%, 56%);*/
-    color:var(---CV-FondCarte);
+    color: $CV-Fond-Carte;
 }
 
-/*Concerne la page d'accueil HomePage*/
+/*
+    Concerne la page d'accueil HomePage
+*/
 
 .CV-TopContainerHome{
     margin-left:auto;
@@ -177,15 +186,14 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
-    flex:4 1 0;
+    flex: 4 1 0;
 }
 
 .CV-flex-container-Column h1{
     font-size: 40px;
-    /*background-color: var(---CV-Fond-Titre) !important;*/
     margin-left:auto;
     margin-right:auto;
+    flex: 1 1 100px;
 }
 
 /*En mode horizontal*/
@@ -204,6 +212,8 @@ body{
 .tuile-flex-horizontal-HC div{
     padding:5px;
 }
+
+// ***************************
 
 .CV-Bouton{
     margin-bottom: 5px;
