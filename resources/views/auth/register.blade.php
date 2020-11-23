@@ -12,39 +12,48 @@
                 <div class="w3-section">
                     @csrf
 
-                    {{ Form::label('name', "Nom") }}
+                    {{ Form::label('name', __('auth.name')) }}
                     {{ Form::text('name', null, ["class" => "w3-input w3-border w3-round w3-border-green", "required" => true, "placeholder"=>'Entrez votre nom']) }}
+
+                    @error('name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+
+                <div class="w3-section">
 
                     {{ Form::label('email', __('auth.email')) }}
                     {{ Form::email('email', null, ["class" => "w3-input w3-border w3-round w3-border-green", "required" => true, "placeholder"=>'Saisissez ici votre courriel']) }}
 
-
                     @error('email')
                     <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
+                        <strong>{{ $message }}</strong>
+                    </span>
                     @enderror
                 </div>
+
                 <div class="w3-section">
 
                     {{ Form::label('password', __('auth.password')) }}
                     {{ Form::password('password', ["class" => "w3-input w3-border w3-round w3-border-green", "required" => true, "placeholder"=>'Saisissez ici votre mot de passe']) }}
 
-
                     @error('password')
                     <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
+                        <strong>{{ $message }}</strong>
+                    </span>
                     @enderror
                 </div>
+
                 <div class="w3-section">
                     {{ Form::label('password_confirmation', __('auth.pwd_Confirmation')) }}
                     {{ Form::password('password_confirmation', ["class" => "w3-input w3-border w3-round w3-border-green", "required" => true, "placeholder"=>'Confirmez ici votre mot de passe']) }}
 
                     @error('password-confirm')
                     <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
+                        <strong>{{ $message }}</strong>
+                    </span>
                     @enderror
                 </div>
                 <div class="w3-section">

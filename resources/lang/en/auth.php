@@ -18,6 +18,7 @@ return [
     'logout' => 'Logout',
     'login' => 'Login',
     'register' => 'Register',
+    'name' => 'Name',
     'email' => 'Your email',
     'remember' => 'Remember me',
     'send' => 'Send',
