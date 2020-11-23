@@ -8,13 +8,14 @@ const mix = require('laravel-mix');
  | Mix provides a clean, fluent API for defining some Webpack build steps
  | for your Laravel application. By default, we are compiling the Sass
  | file for the application as well as bundling up all the JS files.
- |
+ |  Ajout time line
  */
 
 mix.js(['resources/js/app.js', 'resources/js/modernizr-custom.js'], 'public/js')
     .scripts('resources/js/script.js', 'public/js/script.js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/app-jj-CV.scss','public/css')
+    .sass('resources/sass/app-TimeLine-CV.scss','public/css')
     .sass('resources/sass/admin.scss','public/css')
     .copyDirectory('resources/images/common', 'public/images/common');
 

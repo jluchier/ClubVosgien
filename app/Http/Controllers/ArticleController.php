@@ -87,5 +87,13 @@ class ArticleController extends Controller
         return redirect(route("articles.index"))->with("success", "Article supprimé");
     }
 
+    public function lastOne()
+    {
+        $articles = Article::orderBy("date","asc")->with('category')
+            ->first();
+        $categories = Category::pluck("name", "id");
+
+        return view('home', compact(["articles", "categories"]));
+    }
 
 }

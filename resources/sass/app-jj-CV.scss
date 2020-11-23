@@ -143,6 +143,7 @@ body{
 
 // Pages de construction
 .corpusConstruction {
+    margin-top: 110px;
     min-height: 800px;
     background-image: url('images/fonds/Medium/medium1_007.jpg');
     background-repeat: no-repeat;
@@ -161,6 +162,7 @@ body{
 .CV-footer{
     margin-top: auto;
     background-color: $CV-Fond-Nav;
+    text-align: center;
 }
 
 
@@ -194,6 +196,7 @@ body{
     margin-left:auto;
     margin-right:auto;
     flex: 1 1 100px;
+    padding-top: 20px;
 }
 
 /*En mode horizontal*/

@@ -45,25 +45,42 @@
             </div>
             <div id="agenda" class="CV-flex-container-Column">
                 <h1>Agenda</h1>
-                <div class="tuile-flex-horizontal-HC">
+                {{-- <div class="tuile-flex-horizontal-HC"> --}}
 
                     @foreach($articles as $article)
                     @if($article->category->name == 'Agenda')
-                    <div class="w3-card-4 w3-third ">
+                    {{-- <div class="w3-card-4 w3-third ">
                         <div class="w3-container w3-theme-dark">
                             <h3>{{ $article->title }}</h3>
                         </div>
                         <div class="w3-section CV-Orange">
                             {{ $article->content }}
                         </div>
-                    </div>
+                    </div> --}}
+                    <div class="timeline">
+                        <div class="container left">
+                          <div class="content">
+                            <h2>{{ $article->title }}</h2>
+                            <p>{{ $article->content }}</p>
+                        </div>
+                        </div>
+                        <div class="container right">
+                          <div class="content">
+                            <h2>{{ $article->title }}</h2>
+                            <p>{{ $article->content }}</p>
+                        </div>
+                        </div>
+                      </div>
+
+
+
+
                     @endif
                     @endforeach
 
-                </div>
+                {{-- </div> --}}
             </div>
         </div>
     </div>
 </div>
-
 @endsection
