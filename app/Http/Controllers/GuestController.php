@@ -12,11 +12,17 @@ class GuestController extends Controller
 {
     public function index()
     {
-        $articles = Article::with( 'category')
-            ->orderBy("created_at", "desc")
-            ->get();
+        $actualite = Article::where("category_id", 1)
+        ->orderBy('updated_at',"desc")
+        ->limit('1')
+        ->get();
 
-        return view('home', compact(['articles']));
+        $agenda = Article::where("category_id", 5)
+        ->orderBy('updated_at',"desc")
+        ->limit('5')
+        ->get();
+
+        return view('home', compact(['actualite', 'agenda']));
     }
 
     public function gallery()

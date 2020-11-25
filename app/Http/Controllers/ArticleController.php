@@ -38,7 +38,7 @@ class ArticleController extends Controller
 
     public function store(ArticleRequest $request)
     {
-        Article::insert([
+        Article::create([
             "title" => $request->get("title"),
             "content" => $request->get("content"),
             "category_id" => $request->get("category_id"),

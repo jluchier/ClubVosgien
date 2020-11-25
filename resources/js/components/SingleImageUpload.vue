@@ -32,8 +32,12 @@
                     img.onload = function()
                     {
                         let MAXWidthHeight=1920;
-                        let r=MAXWidthHeight/Math.max(img.width,img.height),
-                            w=Math.round(img.width*r),
+                        let r=1;
+                        if (MAXWidthHeight < Math.max(img.width,img.height))
+                        {
+                          r=MAXWidthHeight/Math.max(img.width,img.height);
+                        }
+                        let w=Math.round(img.width*r),
                             h=Math.round(img.height*r),
                             c=document.createElement("canvas");
                         c.width=w;c.height=h;

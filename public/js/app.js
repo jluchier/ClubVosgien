@@ -2573,8 +2573,13 @@ __webpack_require__.r(__webpack_exports__);
 
           img.onload = function () {
             var MAXWidthHeight = 1920;
-            var r = MAXWidthHeight / Math.max(img.width, img.height),
-                w = Math.round(img.width * r),
+            var r = 1;
+
+            if (MAXWidthHeight < Math.max(img.width, img.height)) {
+              r = MAXWidthHeight / Math.max(img.width, img.height);
+            }
+
+            var w = Math.round(img.width * r),
                 h = Math.round(img.height * r),
                 c = document.createElement("canvas");
             c.width = w;

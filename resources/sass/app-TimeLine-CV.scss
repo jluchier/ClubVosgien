@@ -44,10 +44,10 @@
     position: absolute;
     width: 25px;
     height: 25px;
-    right: -15px;
-    background-color: $CV-Top-Nav;
-    border: 4px solid $CV-Fond-Carte;
-    top: 15px;
+    right: -14px;
+    background-color: $CV-TimeLine-Round;
+    border: 5px solid $CV-TimeLine;
+    top: 20px;
     border-radius: 50%;
     z-index: 1;
   }
@@ -67,11 +67,11 @@
     content: " ";
     height: 0;
     position: absolute;
-    top: 22px;
+    top: 20px;
     width: 0;
     z-index: 1;
     right: 30px;
-    border: medium solid $CV-Fond-Carte;
+    border: medium solid $CV-Top-Nav;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent $CV-Top-Nav;
   }
@@ -92,7 +92,7 @@
 
   /* Fix the circle for containers on the right side */
   .right::after {
-    left: -16px;
+    left: -11px;
   }
 
   /* The actual content */
@@ -120,9 +120,9 @@
     /* Make sure that all arrows are pointing leftwards */
     .container::before {
     left: 60px;
-    border: medium solid $CV-Fond-Carte;
+    border: medium solid $CV-Top-Nav;
     border-width: 10px 10px 10px 0;
-    border-color: transparent $CV-Fond-Carte transparent transparent;
+    border-color: transparent $CV-Top-Nav transparent transparent;
     }
 
     /* Make sure all circles are at the same spot */
