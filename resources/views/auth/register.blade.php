@@ -10,8 +10,6 @@
             <div class="w3-container">
                 {{ Form::open(['route'=>'register', 'method'=>'post' ]) }}
                 <div class="w3-section">
-                    @csrf
-
                     {{ Form::label('name', __('auth.name')) }}
                     {{ Form::text('name', null, ["class" => "w3-input w3-border w3-round w3-border-green", "required" => true, "placeholder"=>'Entrez votre nom']) }}
 
@@ -23,7 +21,6 @@
                 </div>
 
                 <div class="w3-section">
-
                     {{ Form::label('email', __('auth.email')) }}
                     {{ Form::email('email', null, ["class" => "w3-input w3-border w3-round w3-border-green", "required" => true, "placeholder"=>'Saisissez ici votre courriel']) }}
 
@@ -35,7 +32,6 @@
                 </div>
 
                 <div class="w3-section">
-
                     {{ Form::label('password', __('auth.password')) }}
                     {{ Form::password('password', ["class" => "w3-input w3-border w3-round w3-border-green", "required" => true, "placeholder"=>'Saisissez ici votre mot de passe']) }}
 

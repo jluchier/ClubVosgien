@@ -12,4 +12,13 @@ class Article extends Model
     {
         return $this->belongsTo("App\Models\Category");
     }
+
+    public function scopeWhereCategory($query, $name)
+    {
+        return $query->join("categories", function ($join) use ($name)
+        {
+            $join->on("articles.category_id", "=", "categories.id")
+                ->where("categories.name", $name);
+        });
+    }
 }

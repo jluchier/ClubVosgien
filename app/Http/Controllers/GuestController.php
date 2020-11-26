@@ -12,12 +12,12 @@ class GuestController extends Controller
 {
     public function index()
     {
-        $actualite = Article::where("category_id", 1)
+        $actualite = Article::whereCategory("Actualité")
         ->orderBy('updated_at',"desc")
         ->limit('1')
         ->get();
 
-        $agenda = Article::where("category_id", 5)
+        $agenda = Article::whereCategory("Agenda")
         ->orderBy('updated_at',"desc")
         ->limit('5')
         ->get();

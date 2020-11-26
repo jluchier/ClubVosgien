@@ -37,7 +37,7 @@ class GalleryController extends Controller
             'dateSortie' => 'unique:galleries'
         ]);
 
-         Gallery::insert([
+         Gallery::create([
                 "title"=>$request->get('title'),
                 "dateSortie"=>$request->get('dateSortie'),
                 "description"=>$request->get('description'),
