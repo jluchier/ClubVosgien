@@ -21,9 +21,12 @@ h1,h2,h3,h4,h5,h6{
     transition: 0.3s;
     opacity: 1;
     padding-top:70px;
-    margin:0 10px; 
+    margin:0 10px;
 }
 
 html.is-animating .transition-fade {
     opacity: 0;
+}
+ul{
+    list-style: url("/images/common/shoes_search_26x26.ico");
 }

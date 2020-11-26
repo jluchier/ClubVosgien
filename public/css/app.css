@@ -7485,3 +7485,7 @@ html.is-animating .transition-fade {
   opacity: 0;
 }
 
+ul {
+  list-style: url("/images/common/shoes_search_26x26.ico");
+}
+
