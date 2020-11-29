@@ -7,8 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <link rel="stylesheet" href="{{ mix('css/app-jj-CV.css') }}">
-    <link rel="stylesheet" href="{{ mix('css/app-TimeLine-CV.css') }}">
+
 </head>
 
 <body>
@@ -52,14 +51,11 @@
 </nav>
 
 <div id="swup" class="transition-fade">
-
     @yield('content')
-
-
-
 </div>
+
 <footer class="CV-footer">
-    <p>Contatez moi ici</p>
+    <p>Contactez moi ici</p>
 <!--         <i class="fab fa-2x w3-hover-opacity fa-facebook"></i>
     <i class="fab fa-2x w3-hover-opacity fa-instagram"></i>
     <i class="fab fa-2x  w3-hover-opacity fa-snapchat"></i>
@@ -67,8 +63,8 @@
     <i class="fab fa-2x  w3-hover-opacity fa-twitter"></i>
     <i class="fab fa-2x  w3-hover-opacity fa-linkedin"></i> -->
 </footer>
-</body>
 
+</body>
 <script src="{{ mix('js/app.js') }}"></script>
 <script src="{{ mix('js/script.js') }}"></script>
 

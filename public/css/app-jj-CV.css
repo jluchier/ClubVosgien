@@ -1,4 +1,4 @@
-/*Gestion des couleurs du CV*/
+/********** Gestion des couleurs du CV *************/
 
 .CV-nav {
   position: fixed;
@@ -34,13 +34,13 @@
 }
 
 .CV-bottom-nav {
-  background-color: #5bb371;
+  background-color: #278a40;
   width: 100%;
   overflow: hidden;
 }
 
 .CV-bottom-nav a {
-  background-color: #5bb371;
+  background-color: #278a40;
   color: white;
 }
 
@@ -48,22 +48,19 @@
   font-size: 40px;
   padding-top: 20px;
   text-align: center;
+  color: #278a40;
 }
 
 body {
   color: black !important;
 }
 
-.CV-Orange {
-  background-color: #ecfdfa;
+.CV-Fond-Carte {
+  background-color: #eafbe38a;
 }
 
-.CV-global {
-  box-sizing: border-box;
-  width: 100%;
-  display: flex;
-  margin-bottom: 10px;
-  margin-top: 10px;
+.CV-Fond-Nav {
+  background-color: #278a40;
 }
 
 .fond1,
@@ -136,20 +133,46 @@ body {
 }
 
 .sidebar {
-  background-color: #ecfdfa;
-}
-
-.CV-flex-gallery {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  height: 300px;
-  border: solid 2px black;
-  background-color: #87CEEB;
+  background-color: #eafbe38a;
 }
 
 .marginTopMenu {
   margin-top: 10px;
+}
+
+.CV-flex-gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.CV-flex-gallery-column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.CV-flex-gallery-column div {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+
+@media (max-width: 800px) {
+  .CV-flex-gallery-column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+@media (max-width: 600px) {
+  .CV-flex-gallery-column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 
 .corpusConstruction {
@@ -171,17 +194,17 @@ body {
 
 .CV-footer {
   margin-top: auto;
-  background-color: #5bb371;
+  background-color: #278a40;
   text-align: center;
 }
 
 .CV-fontColorRed {
   /*color: hsl(344, 88%, 56%);*/
-  color: #ecfdfa;
+  color: #eafbe38a;
 }
 
 /*
-    Concerne le haut des pages comme par ex la HomePage
+*********** Concerne le haut des pages comme par ex la HomePage ***************
 */
 
 .CV-TopContainerHome {
@@ -207,7 +230,7 @@ body {
   z-index: 1;
 }
 
-/*En mode colonnes*/
+/* ************** En mode colonnes **************/
 
 .CV-flex-container-Column {
   flex-direction: column;
@@ -226,7 +249,47 @@ body {
   padding-top: 20px;
 }
 
-/*En mode horizontal*/
+.CV-flex-container-Column div {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.CV-flex-container-Column-div2 {
+  margin: 20px;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.CV-flex-container-Agenda-Column {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex: 4 1 0;
+}
+
+.CV-flex-container-Agenda-Column h1 {
+  font-size: 40px;
+  color: #278a40;
+  margin-left: auto;
+  margin-right: auto;
+  flex: 1 1 100px;
+  padding-top: 20px;
+}
+
+/*********** En mode horizontal *******************/
+
+.CV-global {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
 
 .CV-flex-container-Horizontal {
   display: flex;
@@ -236,6 +299,26 @@ body {
   flex: none;
   width: 300px;
   align-self: flex-start;
+}
+
+.CV-flex-Horizontal {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  align-content: center;
+}
+
+.CV-flex-Horizontal div {
+  flex: 1 0 50%;
+  align-self: center;
+  margin: 20px;
+}
+
+.CV-flex-Horizontal img {
+  flex: 0 2 20%;
+  padding-block: 10px;
+  padding-right: 10px;
+  margin: 20px;
 }
 
 .tuile-flex-horizontal-HC {
@@ -276,5 +359,15 @@ body {
 .grid-container-right {
   min-width: 50%;
   float: left;
+}
+
+/*************** Gestion des puces de liste ***********************/
+
+.CV-ul-shoes {
+  list-style: url("/images/common/shoes_search_26x26.ico");
+}
+
+.CV-ul-vtt {
+  list-style: url("/images/common/icontexto_VTT_helme_26x26t.ico");
 }
 

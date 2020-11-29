@@ -33,14 +33,15 @@ $dark-red: #8d1007;
 $dark-grey: #4f4f4f;
 $light-grey: #f9f9f9;
 
-/*Gestion des couleurs du CV*/
+/********** Gestion des couleurs du CV *************/
 
 $CV-Fond-Body: hsla(0, 0%, 100%, 1);
 $CV-Fond-Shadow: hsla(19, 40%, 61%, 0.5);
-$CV-Fond-Nav: hsla(135, 37%, 53%, 1);
+$CV-Fond-Nav: rgb(39, 138, 64);
 $CV-Top-Nav:hsla(135, 46%, 22%, 0.6);
 
 $CV-TimeLine:hsla(135, 37%, 53%, 1);
 $CV-TimeLine-Round:hsla(135, 46%, 22%, 1);
 
-$CV-Fond-Carte: hsla(170, 82%, 96%,1);
+$CV-Fond-Carte: #eafbe38a; // #eafbe38a
+$CV-Titre: hsl(133, 41%, 27%);

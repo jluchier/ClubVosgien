@@ -22,18 +22,18 @@
             <a href="#agenda" class="w3-bar-item w3-button">Agenda</a>
         </div> --}}
 
-    <div class="CV-flex-container-Column">
+    <div class="CV-flex-container-Agenda-Column">
 
         <div class="grid-container">
             <div id="actu" class="grid-container-left">
                 <div class="grid-container-center">
-                    <h1>Les actualités</h1>
+                    <p class="CV-titre">Les actualités</p>
                     @foreach ($actualite as $actu)
-                            <div class="w3-card-4">
+                            <div class="CV-Fond-Carte">
                                 <div class="w3-theme-dark">
                                     <h3>{{ $actu->title }}</H3>
                                 </div>
-                                <div class="w3-section CV-Orange">
+                                <div class="w3-section CV-Fond-Carte">
                                     <img style="max-width: 100%" "{{ Storage::url('images/small/' . $actu->image) }}"
                                         srcset="{{ Storage::url('images/small/' . $actu->image) }} 800w,
                                     {{ Storage::url('images/medium/' . $actu->image) }} 1280w,
@@ -55,7 +55,7 @@
                                 <div class="w3-container w3-theme-dark">
                                     <h3>{{ $valeur->title }}</h3>
                                 </div>
-                                <div class="w3-section CV-Orange">
+                                <div class="w3-section CV-Fond-Carte">
                                     {{ $valeur->content }}
                                 </div>
                             </div> --}}

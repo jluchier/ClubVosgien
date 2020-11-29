@@ -15,6 +15,7 @@
         <tr>
             <th>Catégorie</th>
             <th>Titre</th>
+            <th>Date de l'événement</th>
             <th>Image</th>
             <th class="w3-right">Administration</th>
         </tr>
@@ -25,6 +26,9 @@
                 </td>
                 <td>
                     {{ $article->title }}
+                </td>
+                <td>
+                    {{ $article->dateEvent }}
                 </td>
                 <td><img src="{{ Storage::url('images/thumb/' . $article->image)}}" alt="Pas d'image"></td>
                 <td class="w3-right">

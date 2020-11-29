@@ -25,7 +25,7 @@
 <div class="tuile-flex-horizontal-HC">
     <div style="flex: 1 0 25% ; margin-left: 3%">
         <p class="CV-titre">Le code du randonneur</p>
-        <ul>
+        <ul class="CV-ul-shoes">
             <li>Equipe-toi de bonnes chaussures.</li>
             <li>N’oublie pas vêtements chauds et de pluie.</li>
             <li>Emporte boissons et vivres pour la route.</li>
@@ -49,31 +49,35 @@
         </p>
     </div>
     <div class="CV-flex-container-Column">
-        <div id="Rando">
+        <div id="Rando" class="w3-card-4 CV-Fond-Carte" style="padding-left: 4%">
             <p class="CV-titre">Les randonnées</p>
                 <div>
-                    <p>Une sortie hebdomadaire, le mercredi après-midi,  8 à 12 km sur le territoire ou environs proches. Départs depuis le parking de l’école au centre de Rupt sur Moselle généralement à partir de 13h30</p>
-                    <p>Quelques sorties dominicales de journée, avec repas tiré du sac ou restaurant, 15 à 20km suivant le calendrier établi</p>
-                    <p>Une sortie annuelle de 5 à 6 jours en village de vacances, suivant calendrier établi</p>
-                    </p>
+                    <ul class="CV-ul-shoes">
+                        <li>Une sortie hebdomadaire, le mercredi après-midi,  8 à 12 km sur le territoire ou environs proches. Départs depuis le parking de l’école au centre de Rupt sur Moselle généralement à partir de 13h30</li>
+                        <li>Quelques sorties dominicales de journée, avec repas tiré du sac ou restaurant, 15 à 20km suivant le calendrier établi</li>
+                        <li>Une sortie annuelle de 5 à 6 jours en village de vacances, suivant calendrier établi</li>
+                        <li>Marche populaire : mi-juin, sur le secteur de Rupt Sur Moselle, Vecoux ou Ferdrupt suivant les années, marches de 5, 10 ou 20 km, accessible à tous, avec possibilité de ravitaillement sur les parcours.</li>
+                        <li>Sortie raquettes : de janvier à mars, en fonction de l’enneigement, randonnée sur la journée, 10 à 15 km, avec repas en ferme auberge</li>
+                        <li>Rencontres inter-clubs : participation à des sorties organisées par d’autres Club Vosgien</li>
+
                 </div>
         </div>
-        <div id="VTT">
+        <div id="VTT" class="w3-card-4 CV-Fond-Carte"  style="padding-left: 4%">
             <p class="CV-titre">Les sorties VTT</p>
                 <div>
-                    <p>Deux sorties hebdomadaires, le vendredi après-midi et le dimanche matin. Possibilité de participer aux randos VTT du secteur. Information donnée via le site Facebook</p>
+                    <ul class="CV-ul-vtt">
+                        <li>Deux sorties hebdomadaires, le vendredi après-midi et le dimanche matin. Possibilité de participer aux randos VTT du secteur. Information donnée via le site Facebook</li>
+                        <li>Rando VTT : mi-juillet, sur le secteur de Rupt Sur Moselle, Vecoux ou Ferdrupt suivant les années, parcours de 15, 30 ou 45 km, avec ravitaillement sur les parcours.</li>
+                    </ul>
                 </div>
         </div>
-        <div id="VTT-Randos">
-            <p class="CV-titre">Les randos VTT</p>
-                <div>
-                    <p>Mi-juillet, sur le secteur de Rupt Sur Moselle, Vecoux ou Ferdrupt suivant les années, parcours de 15, 30 ou 45 km, avec ravitaillement sur les parcours.</p>
-                </div>
-        </div>
-        <div id="MarcheNordique">
+
+        <div id="MarcheNordique" class="w3-card-4 CV-Fond-Carte" style="width : 100%; padding-left: 4%">
             <p class="CV-titre">Les marches nordiques</p>
                 <div>
-                    <p>Une sortie tous les 15 jours, les dimanches des semaines paires, sur 2 heures environ</p>
+                    <ul class="CV-ul-shoes">
+                        <li>Une sortie tous les 15 jours, les dimanches des semaines paires, sur 2 heures environ</li>
+                    </ul>
                 </div>
         </div>
     </div>

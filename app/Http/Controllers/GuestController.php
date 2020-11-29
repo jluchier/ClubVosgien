@@ -14,7 +14,7 @@ class GuestController extends Controller
     {
         $actualite = Article::whereCategory("Actualité")
         ->orderBy('updated_at',"desc")
-        ->limit('1')
+        ->limit('2')
         ->get();
 
         $agenda = Article::whereCategory("Agenda")

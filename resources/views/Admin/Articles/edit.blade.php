@@ -15,6 +15,10 @@
             {{ Form::text("title", null, ["class" => "w3-input", "required" => true]) }}
         </div>
         <div class="w3-half">
+            {{ Form::label("dateEvent", "Date de l'événement") }}
+            {{ Form::date("dateEvent", $article->dateEvent, ["class" => "w3-input", "required" => true ]) }}
+        </div>
+        <div class="w3-half">
             {{ Form::label("category_id", "Categorie") }}
             {{ Form::select("category_id", $categories, null, ["class" => "w3-input", "required" => true]) }}
             {{ Form::file("image", ["class" => "w3-input", "accept" => "image/*"]) }}
@@ -38,7 +42,7 @@
 
     {{ Form::submit("Enregistrer", ["class" => "w3-button w3-theme-dark"]) }}
 
-    {{ Form::close() }} 
+    {{ Form::close() }}
 
 @endsection
     @section('js')

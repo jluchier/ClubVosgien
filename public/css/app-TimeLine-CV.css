@@ -1,4 +1,4 @@
-/*Gestion des couleurs du CV*/
+/********** Gestion des couleurs du CV *************/
 
 /* The actual timeline (the vertical ruler) */
 
@@ -97,7 +97,7 @@
 
 .content {
   padding: 20px 30px;
-  background-color: #ecfdfa;
+  background-color: #eafbe38a;
   position: relative;
   border-radius: 6px;
 }
