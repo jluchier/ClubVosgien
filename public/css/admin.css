@@ -268,7 +268,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Segoe UI", Verdana, sans-serif;
   font-weight: 400;
   margin: 10px 0;
 }
@@ -2399,7 +2399,7 @@ a {
 
 /********** Gestion des couleurs du CV *************/
 
-/*$w3-theme-dark: #265728;*/
+/********** Gestion des couleurs du CV *************/
 
 .w3-theme-l5,
 .w3-hover-theme-l5:hover {
@@ -2728,28 +2728,28 @@ a {
 .w3-theme-dark,
 .w3-hover-theme-dark:hover {
   color: white !important;
-  background-color: #4eb151;
+  background-color: #278a40;
 }
 
 .w3-text-theme-dark,
 .w3-hover-text-theme-dark:hover {
-  color: #4eb151 !important;
+  color: #278a40 !important;
 }
 
 .w3-fill-theme-dark,
 .w3-hover-fill-theme-dark:hover {
-  fill: #4eb151 !important;
+  fill: #278a40 !important;
 }
 
 .w3-border-theme-dark,
 .w3-hover-border-theme-dark:hover {
-  border-color: #4eb151 !important;
+  border-color: #278a40 !important;
 }
 
 .w3-underline-theme-dark {
   text-decoration: underline;
-  -webkit-text-decoration-color: #4eb151 !important;
-          text-decoration-color: #4eb151 !important;
+  -webkit-text-decoration-color: #278a40 !important;
+          text-decoration-color: #278a40 !important;
 }
 
 input[type=file] {

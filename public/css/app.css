@@ -4873,7 +4873,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Segoe UI", Verdana, sans-serif;
   font-weight: 400;
   margin: 10px 0;
 }
@@ -7002,7 +7002,7 @@ a {
           text-decoration-color: #e7ffff !important;
 }
 
-/*$w3-theme-dark: #265728;*/
+/********** Gestion des couleurs du CV *************/
 
 .w3-theme-l5,
 .w3-hover-theme-l5:hover {
@@ -7331,32 +7331,32 @@ a {
 .w3-theme-dark,
 .w3-hover-theme-dark:hover {
   color: white !important;
-  background-color: #4eb151;
+  background-color: #278a40;
 }
 
 .w3-text-theme-dark,
 .w3-hover-text-theme-dark:hover {
-  color: #4eb151 !important;
+  color: #278a40 !important;
 }
 
 .w3-fill-theme-dark,
 .w3-hover-fill-theme-dark:hover {
-  fill: #4eb151 !important;
+  fill: #278a40 !important;
 }
 
 .w3-border-theme-dark,
 .w3-hover-border-theme-dark:hover {
-  border-color: #4eb151 !important;
+  border-color: #278a40 !important;
 }
 
 .w3-underline-theme-dark {
   text-decoration: underline;
-  -webkit-text-decoration-color: #4eb151 !important;
-          text-decoration-color: #4eb151 !important;
+  -webkit-text-decoration-color: #278a40 !important;
+          text-decoration-color: #278a40 !important;
 }
 
 .navItem {
-  background: linear-gradient(to top, #eafbe38a 10%, #4caf50 6px, transparent 7px) no-repeat;
+  background: linear-gradient(to top, #296135 10%, #4caf50 6px, transparent 7px) no-repeat;
   background-size: 0 100%;
   transition: background-size 0.2s;
 }
@@ -7556,7 +7556,7 @@ body {
 .corpusConstruction {
   margin-top: 110px;
   min-height: 800px;
-  background-image: url(/images/medium1_007.jpg?160730726a7d2ca531f6871c993cab44);
+  background-image: url(/images/large1_012.jpg?2e961b8eaf1506ee327c0d185a528d84);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -7634,11 +7634,12 @@ body {
   margin-bottom: 20px;
 }
 
-.CV-flex-container-Column-div2 {
+.CV-flex-container-column-div2 {
   margin: 20px;
-  max-width: 50%;
+  max-width: 70%;
   margin-left: auto;
   margin-right: auto;
+  padding: 20px;
 }
 
 .CV-flex-container-Agenda-Column {
@@ -7686,7 +7687,7 @@ body {
   align-content: center;
 }
 
-.CV-flex-Horizontal div {
+.CV-flex-Horizontal div:first-child {
   flex: 1 0 50%;
   align-self: center;
   margin: 20px;
@@ -7696,6 +7697,18 @@ body {
   flex: 0 2 20%;
   padding-block: 10px;
   padding-right: 10px;
+  margin: 20px;
+}
+
+.CV-flex-Horizontal-right {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  align-content: center;
+}
+
+.CV-flex-Horizontal-right :nth-child(even) {
+  flex: 1 0 50%;
   margin: 20px;
 }
 
@@ -7737,6 +7750,23 @@ body {
 .grid-container-right {
   min-width: 50%;
   float: left;
+}
+
+.CV-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.CV-column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.CV-column img {
+  margin-top: 8px;
+  vertical-align: middle;
 }
 
 /*************** Gestion des puces de liste ***********************/
@@ -7895,11 +7925,15 @@ body {
 
 /********** Gestion des couleurs du CV *************/
 
+.parallax_6,
+.parallax_5,
+.parallax_4,
+.parallax_3,
+.parallax_2,
 .parallax_1 {
-  /* The image used */
-  background-image: url("/images/common/large_004_1.jpg");
   /* Set a specific height */
   height: 500px;
+  width: 100%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -7910,9 +7944,102 @@ body {
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
 
 @media only screen and (max-device-width: 1366px) {
+  .parallax_6,
+  .parallax_5,
+  .parallax_4,
+  .parallax_3,
+  .parallax_2,
   .parallax_1 {
     background-attachment: scroll;
   }
+}
+
+.parallax_1 {
+  /* The image used */
+  background-image: url("/images/common/parallax_1.jpg");
+}
+
+.parallax_2 {
+  /* The image used */
+  background-image: url("/images/common/large_004_1.jpg");
+}
+
+.parallax_3 {
+  /* The image used */
+  background-image: url("/images/common/parallax_3.jpg");
+}
+
+.parallax_4 {
+  /* The image used */
+  background-image: url("/images/common/parallax_4.jpg");
+}
+
+.parallax_5 {
+  /* The image used */
+  background-image: url("/images/common/large_004_1.jpg");
+}
+
+.parallax_6 {
+  /* The image used */
+  background-image: url("/images/common/large_004_1.jpg");
+}
+
+/********** Gestion des couleurs du CV *************/
+
+html,
+body {
+  height: 100%;
+}
+
+.bgimg {
+  /* Background image */
+  background-image: url("/images/common/large_000.jpg");
+  /* Full-screen */
+  height: 100%;
+  /* Center the background image */
+  background-position: center;
+  /* Scale and zoom in the image */
+  background-size: cover;
+  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+  position: relative;
+  /* Add a white text color to all elements inside the .bgimg container */
+  color: white;
+  /* Add a font */
+  /* Set the font-size to 25 pixels */
+  font-size: 25px;
+}
+
+/* Position text in the top-left corner */
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+/* Position text in the bottom-left corner */
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+/* Position text in the middle */
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the <hr> element */
+
+hr {
+  margin: auto;
+  width: 40%;
 }
 
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */

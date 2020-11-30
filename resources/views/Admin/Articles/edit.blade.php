@@ -9,7 +9,7 @@
 
     {{ Form::model($article, ["url" => $url, "method" => $method, "files" => true]) }}
 
-    <div class="w3-row-padding w3-stretch">
+<div class="w3-row-padding w3-stretch">
         <div class="w3-half">
             {{ Form::label("title", "Titre") }}
             {{ Form::text("title", null, ["class" => "w3-input", "required" => true]) }}
@@ -46,7 +46,7 @@
 
 @endsection
     @section('js')
-    <script src="//cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+    <script src="http://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
     <script>
         CKEDITOR.replace( 'contentArea' );
     </script>

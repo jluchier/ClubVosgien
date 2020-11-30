@@ -21,7 +21,6 @@
                 @include('galleryShow')
             @endforeach
         </div>
-
         <div class="CV-flex-gallery-column">
             @foreach($galleriePrivee as $gallery)
                 @include('galleryShow')

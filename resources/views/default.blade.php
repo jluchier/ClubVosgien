@@ -24,12 +24,12 @@
     </div>
 
     <div class="w3-large CV-bottom-nav">
-        <a href="{{ route("actu") }}" class="w3-bar-item w3-button  @yield('home')">Accueil</a>
-        <a href="{{ route("infosFede") }}" class="w3-bar-item w3-button  @yield('infosFede')">La fédération</a>
-        <a href="{{ route("activity") }}" class="w3-bar-item w3-button  @yield('activity')">Activités</a>
-        <a href="{{ route("sentiers") }}" class="w3-bar-item w3-button  @yield('sentiers')">Sentiers</a>
-        <a href="{{ route("chalets") }}" class="w3-bar-item w3-button  @yield('chalets')">Chalets</a>
-        <a href="{{ route("gallery") }}" class="w3-bar-item w3-button  @yield('gallery')">Galerie</a>
+        <a href="{{ route("actu") }}" class="w3-bar-item w3-button navItem  @yield('home')">Accueil</a>
+        <a href="{{ route("infosFede") }}" class="w3-bar-item w3-button navItem   @yield('infosFede')">La fédération</a>
+        <a href="{{ route("activity") }}" class="w3-bar-item w3-button  navItem  @yield('activity')">Activités</a>
+        <a href="{{ route("sentiers") }}" class="w3-bar-item w3-button  navItem  @yield('sentiers')">Sentiers</a>
+        <a href="{{ route("chalets") }}" class="w3-bar-item w3-button   navItem @yield('chalets')">Chalets</a>
+        <a href="{{ route("gallery") }}" class="w3-bar-item w3-button   navItem @yield('gallery')">Galerie</a>
 
         @Auth
             {{ Form::open(["route" => "logout", "method" => "post", "class" => "w3-right "]) }}
@@ -37,15 +37,15 @@
             {{ Form::close() }}
 
             @if(Auth::user()->IsAdmin())
-                <a href="{{ route("galleries.index") }}" class="w3-bar-item w3-button w3-right">Administration</a>
+                <a href="{{ route("galleries.index") }}" class="w3-bar-item w3-button navItem w3-right">Administration</a>
             @endif
 
             @if(Auth::user()->IsValidate())
-                <a href="{{ route("compterendus") }}" class="w3-bar-item w3-button w3-right @yield('compterendus')">Compte rendus</a>
+                <a href="{{ route("compterendus") }}" class="w3-bar-item w3-button navItem w3-right @yield('compterendus')">Compte rendus</a>
             @endif
 
         @else
-            <a href="{{ route("login") }}" class="w3-bar-item w3-button w3-right">Connexion</a>
+            <a href="{{ route("login") }}" class="w3-bar-item w3-button navItem w3-right">Connexion</a>
         @endauth
     </div>
 </nav>
