@@ -5,9 +5,6 @@
         <div>{{ $gallery->description }}</div>
         <div>Sortie du {{ $gallery->dateSortie }}</div>
         <div class="w3-section w3-image">
-            <img style="width: 100%"
-                 src="{{ Storage::url('gallery/small/' . $gallery->folder)}}"
-                 srcset="{{ Storage::url('gallery/small/' . $gallery->folder)}} 800w, {{ Storage::url('gallery/medium/' . $gallery->folder)}} 1280w, {{ Storage::url('gallery/large/' . $gallery->folder)}} 1920w"
-                 alt="folder">
+            <img src="{{ Storage::url($gallery->firstImage) }}" alt="Pas d'image">
         </div>
     </div>

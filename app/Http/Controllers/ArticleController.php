@@ -43,6 +43,7 @@ class ArticleController extends Controller
             "content" => $request->get("content"),
             "category_id" => $request->get("category_id"),
             "image" => $this->storeImage("images",$request->get("image")),
+            "dateEvent" => $request->get("dateEvent")
         ]);
 
         return redirect(route("articles.index"))->with("success", "Article ajouté avec succès");
@@ -62,6 +63,7 @@ class ArticleController extends Controller
         $article->title = $request->get("title");
         $article->content = $request->get("content");
         $article->category_id = $request->get("category_id");
+        $article->dateEvent = $request->get("dateEvent");
 
         if ($request->has("imageDelete")){
            $this->deleteImage("images",$article->image);

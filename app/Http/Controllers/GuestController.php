@@ -7,6 +7,7 @@ use App\Models\Gallery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 
 class GuestController extends Controller
 {
@@ -27,11 +28,24 @@ class GuestController extends Controller
 
     public function gallery()
     {
-
         $galleriePrivee = [];
         $galleriePublic = Gallery::where("private",false)->get();
+
         if ((!is_null(Auth::user()))and(Auth::user()->IsValidate())){
             $galleriePrivee = Gallery::where("private", true)->get();
+        }
+
+        foreach ($galleriePublic as $gallery)
+        {
+            $allImage = Storage::disk("public")->allFiles("gallery/{$gallery->title}/thumb");
+            if (sizeof($allImage) > 0)
+            {
+                $gallery->firstImage = $allImage[0];
+            }
+            else
+            {
+                $gallery->firstImage = "";
+            }
         }
 
         return view("gallery", compact(['galleriePrivee','galleriePublic']));
