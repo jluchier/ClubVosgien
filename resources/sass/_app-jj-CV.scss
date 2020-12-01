@@ -140,20 +140,31 @@ body{
 
 // ************  Gestion de l'affichage de la galerie **********************
 
-.CV-flex-gallery-row{
+.CV-flex-gallery-row {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 4px;
+    padding: 0 10px;
 }
 .CV-flex-gallery-column {
     flex: 25%;
     max-width: 25%;
-    padding: 0 4px;
+    padding: 10px;
 }
 .CV-flex-gallery-column div {
     margin-top: 8px;
-    vertical-align: middle;
+    padding-left: 0px;
 }
+.CV-flex-gallery-column div > div{
+    padding-left: 20px;
+}
+.CV-flex-gallery-column img, p {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media (max-width: 800px) {
     .CV-flex-gallery-column {

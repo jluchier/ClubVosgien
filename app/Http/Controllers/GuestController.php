@@ -78,4 +78,10 @@ class GuestController extends Controller
         return view("infosFede", compact(['articles']));
         // return redirect(route("construction", ["page" => "infosFede"]));
     }
+    public function galleryDetail(Request $request) {
+        // dd($request);
+        $galerie = Gallery::where("title", $request->title)->get();
+
+        return view("galleryDetail", compact(['galerie']));
+    }
 }
