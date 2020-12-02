@@ -7,26 +7,33 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <link rel="stylesheet" href="{{ mix('css/app-jj-CV.css') }}">
-    <title>CV Rupt Vecoux Ferdrupt</title>
 
 </head>
 
 <body>
 
-<nav id="nav" class="w3-top CV-nav w3-theme-dark">
-    <div class="w3-center w3-large CV-Shadow"><b>Club Vosgien Rupt Vecoux Ferdrupt</b></div>
-    <div class="w3-bar w3-large">
-        <a href="{{ route("actu") }}" class="w3-bar-item w3-button navItem @yield('home')">Accueil</a>
-        <a href="{{ route("sentiers") }}" class="w3-bar-item w3-button navItem @yield('sentiers')">La fédération</a>        
-        <a href="{{ route("activity") }}" class="w3-bar-item w3-button navItem @yield('activity')">Activités</a>
-        <a href="{{ route("sentiers") }}" class="w3-bar-item w3-button navItem @yield('sentiers')">Sentiers</a>
-        <a href="{{ route("chalets") }}" class="w3-bar-item w3-button navItem @yield('chalets')">Chalets</a>
-        <a href="{{ route("gallery") }}" class="w3-bar-item w3-button navItem @yield('gallery')">Galerie</a>
+<nav id="nav" class="CV-nav">
+    {{-- <nav class="CV-nav"> --}}
+    <div class="CV-top-nav">
+        <div>
+        <p class="CV-Logo"><img src="/images/common/LogoCV.jpg" alt="Logo du Club Vosgien"></p>
+        {{-- <p>Notre fierté, ce sont nos sentiers... Leur balisage, c'est notre image</p> --}}
+        <p>Notre devise : 1 jour de sentiers, 8 jours de santé</p>
+        </div>
+        <div class="w3-large CV-Shadow"><b>Club Vosgien Rupt Vecoux Ferdrupt</b></div>
+    </div>
+
+    <div class="w3-large CV-bottom-nav">
+        <a href="{{ route("actu") }}" class="w3-bar-item w3-button navItem  @yield('home')">Accueil</a>
+        <a href="{{ route("infosFede") }}" class="w3-bar-item w3-button navItem   @yield('infosFede')">La fédération</a>
+        <a href="{{ route("activity") }}" class="w3-bar-item w3-button  navItem  @yield('activity')">Activités</a>
+        <a href="{{ route("sentiers") }}" class="w3-bar-item w3-button  navItem  @yield('sentiers')">Sentiers</a>
+        <a href="{{ route("chalets") }}" class="w3-bar-item w3-button   navItem @yield('chalets')">Chalets</a>
+        <a href="{{ route("gallery") }}" class="w3-bar-item w3-button   navItem @yield('gallery')">Galerie</a>
 
         @Auth
-            {{ Form::open(["route" => "logout", "method" => "post", "class" => "w3-right navItem"]) }}
-            {{ Form::submit("Deconnexion", ["class" => "w3-button w3-theme-dark navBtnlogout"]) }}
+            {{ Form::open(["route" => "logout", "method" => "post", "class" => "w3-right "]) }}
+            {{ Form::submit("Deconnexion", ["class" => "w3-button  navBtnlogout"]) }}
             {{ Form::close() }}
 
             @if(Auth::user()->IsAdmin())
@@ -44,23 +51,20 @@
 </nav>
 
 <div id="swup" class="transition-fade">
-
     @yield('content')
-
-    <footer class="w3-theme w3-center w3-padding-large CV-footer">
-        <p>Contatez moi ici</p>
-<!--         <i class="fab fa-2x w3-hover-opacity fa-facebook"></i>
-        <i class="fab fa-2x w3-hover-opacity fa-instagram"></i>
-        <i class="fab fa-2x  w3-hover-opacity fa-snapchat"></i>
-        <i class="fab fa-2x  w3-hover-opacity fa-pinterest"></i>
-        <i class="fab fa-2x  w3-hover-opacity fa-twitter"></i>
-        <i class="fab fa-2x  w3-hover-opacity fa-linkedin"></i> -->
-    </footer>
-
 </div>
 
-</body>
+<footer class="CV-footer">
+    <p>Contactez moi ici</p>
+<!--         <i class="fab fa-2x w3-hover-opacity fa-facebook"></i>
+    <i class="fab fa-2x w3-hover-opacity fa-instagram"></i>
+    <i class="fab fa-2x  w3-hover-opacity fa-snapchat"></i>
+    <i class="fab fa-2x  w3-hover-opacity fa-pinterest"></i>
+    <i class="fab fa-2x  w3-hover-opacity fa-twitter"></i>
+    <i class="fab fa-2x  w3-hover-opacity fa-linkedin"></i> -->
+</footer>
 
+</body>
 <script src="{{ mix('js/app.js') }}"></script>
 <script src="{{ mix('js/script.js') }}"></script>
 

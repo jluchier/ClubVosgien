@@ -15,7 +15,7 @@ class AttachmentsTable extends Migration
     public function up()
     {
         Schema::create('attachements', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('name');
             $table->string('attachage_type');
             $table->integer('attachage_id')->unsigned();

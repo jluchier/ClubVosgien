@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Traits;
 use Illuminate\Support\Str;
@@ -29,10 +29,15 @@ trait ImageManager
 
 		if ($fit)
 		{
-			$img->fit($size);
+			$img->fit($size, $size, function ($constraint) {
+                $constraint->upsize();
+            });
 		}
 		else {
-			$img->widen($size);
+			$img->resize($size, $size, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            });
 		}
 
 		$img->interlace(true)->encode("jpg", 75);
@@ -51,13 +56,13 @@ trait ImageManager
 					"{$folder}/large/{$image}",
 					"{$folder}/thumb/{$image}",
 				]);
-				return true;   
+				return true;
 			}
 		}
 		else
 		{
 			return false;
 		}
-		
+
 	}
 }

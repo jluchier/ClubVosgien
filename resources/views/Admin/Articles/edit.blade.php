@@ -9,10 +9,14 @@
 
     {{ Form::model($article, ["url" => $url, "method" => $method, "files" => true]) }}
 
-    <div class="w3-row-padding w3-stretch">
+<div class="w3-row-padding w3-stretch">
         <div class="w3-half">
             {{ Form::label("title", "Titre") }}
             {{ Form::text("title", null, ["class" => "w3-input", "required" => true]) }}
+        </div>
+        <div class="w3-half">
+            {{ Form::label("dateEvent", "Date de l'événement") }}
+            {{ Form::date("dateEvent", $article->dateEvent, ["class" => "w3-input", "required" => true ]) }}
         </div>
         <div class="w3-half">
             {{ Form::label("category_id", "Categorie") }}
@@ -34,9 +38,16 @@
     </div>
 
     {{ Form::label("content", "Contenu") }}
-    {{ Form::textArea("content", null, ["class" => "w3-input", "required" => true]) }}
+    {{ Form::textArea("content", null, ["class" => "w3-input", "id" => "contentArea", "required" => true]) }}
 
     {{ Form::submit("Enregistrer", ["class" => "w3-button w3-theme-dark"]) }}
 
     {{ Form::close() }}
+
 @endsection
+    @section('js')
+    <script src="http://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'contentArea' );
+    </script>
+    @endsection

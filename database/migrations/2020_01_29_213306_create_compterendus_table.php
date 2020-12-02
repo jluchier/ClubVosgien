@@ -14,7 +14,7 @@ class CreateCompterendusTable extends Migration
     public function up()
     {
         Schema::create('compterendus', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('title');
             $table->longText('content');
             $table->timestamps();

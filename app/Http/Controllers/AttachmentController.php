@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Attachment;
 use App\Http\Requests\AttachmentsRequest;
+use App\Models\Attachment;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 

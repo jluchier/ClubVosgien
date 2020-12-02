@@ -17,6 +17,7 @@ return [
     'logout' => 'Déconnexion',
     'login' => 'Connexion',
     'register' => 'Créer un compte',
+    'name' => 'Nom',
     'email' => 'Votre courriel',
     'remember' => 'Se souvenir de moi',
     'send' => 'Envoyer',

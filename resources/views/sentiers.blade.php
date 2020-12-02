@@ -10,5 +10,4 @@
         <a href="#entretien" class="w3-bar-item w3-button">Entretien</a>
     </div>
 
-
 @endsection

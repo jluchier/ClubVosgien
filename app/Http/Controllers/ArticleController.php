@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Article;
-use App\Category;
+;
 use App\Http\Requests\ArticleRequest;
+use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
@@ -37,11 +38,12 @@ class ArticleController extends Controller
 
     public function store(ArticleRequest $request)
     {
-        Article::insert([
+        Article::create([
             "title" => $request->get("title"),
             "content" => $request->get("content"),
             "category_id" => $request->get("category_id"),
             "image" => $this->storeImage("images",$request->get("image")),
+            "dateEvent" => $request->get("dateEvent")
         ]);
 
         return redirect(route("articles.index"))->with("success", "Article ajouté avec succès");
@@ -61,6 +63,7 @@ class ArticleController extends Controller
         $article->title = $request->get("title");
         $article->content = $request->get("content");
         $article->category_id = $request->get("category_id");
+        $article->dateEvent = $request->get("dateEvent");
 
         if ($request->has("imageDelete")){
            $this->deleteImage("images",$article->image);
@@ -86,5 +89,13 @@ class ArticleController extends Controller
         return redirect(route("articles.index"))->with("success", "Article supprimé");
     }
 
-    
+    public function lastOne()
+    {
+        $articles = Article::orderBy("date","asc")->with('category')
+            ->first();
+        $categories = Category::pluck("name", "id");
+
+        return view('home', compact(["articles", "categories"]));
+    }
+
 }

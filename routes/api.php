@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::resource('galleries','Api\GalleryController',["only" => ["update","store"]]);
+Route::post("imageUpload", "Api\GalleryController@image")->name("imageUpload");

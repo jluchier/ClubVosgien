@@ -2,30 +2,50 @@
 
 namespace App\Http\Controllers;
 
-use App\Article;
-use App\Gallery;
+use App\Models\Article;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 
 class GuestController extends Controller
 {
     public function index()
     {
-        $articles = Article::with( 'category')
-            ->orderBy("created_at", "desc")
-            ->get();
+        $actualite = Article::whereCategory("Actualité")
+        ->orderBy('updated_at',"desc")
+        ->limit('2')
+        ->get();
 
-        return view('home', compact(['articles']));
+        $agenda = Article::whereCategory("Agenda")
+        ->orderBy('updated_at',"desc")
+        ->limit('5')
+        ->get();
+
+        return view('home', compact(['actualite', 'agenda']));
     }
 
     public function gallery()
     {
-
         $galleriePrivee = [];
         $galleriePublic = Gallery::where("private",false)->get();
+
         if ((!is_null(Auth::user()))and(Auth::user()->IsValidate())){
             $galleriePrivee = Gallery::where("private", true)->get();
+        }
+
+        foreach ($galleriePublic as $gallery)
+        {
+            $allImage = Storage::disk("public")->allFiles("gallery/{$gallery->title}/thumb");
+            if (sizeof($allImage) > 0)
+            {
+                $gallery->firstImage = $allImage[0];
+            }
+            else
+            {
+                $gallery->firstImage = "";
+            }
         }
 
         return view("gallery", compact(['galleriePrivee','galleriePublic']));
@@ -50,5 +70,18 @@ class GuestController extends Controller
     public function construction(Request $request){
         $page = $request->get("page", "");
         return view("construction", compact(["page"]));
+    }
+    public function infosFede(){
+        $articles = Article::with( 'category')
+        ->orderBy("created_at", "desc")
+        ->get();
+        return view("infosFede", compact(['articles']));
+        // return redirect(route("construction", ["page" => "infosFede"]));
+    }
+    public function galleryDetail(Request $request) {
+        // dd($request);
+        $galerie = Gallery::where("title", $request->title)->get();
+
+        return view("galleryDetail", compact(['galerie']));
     }
 }

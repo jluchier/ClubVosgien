@@ -28,7 +28,8 @@ class ArticleRequest extends FormRequest
             'content'=>'required|string',
             'category_id'=>'required|integer',
             "image" => "string|nullable",
-            "imageDelete" => 'boolean'
+            "imageDelete" => 'boolean',
+            'dateEvent' => 'required|date'
         ];
     }
 }

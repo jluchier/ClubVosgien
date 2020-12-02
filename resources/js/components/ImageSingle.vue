@@ -24,19 +24,17 @@
             }
         },
         methods: {
-            send(route) {
+            send(configBase) {
+                let config = JSON.parse(JSON.stringify(configBase));
                 this.upload = true;
-                let formData = new FormData();
-                formData.append("image", this.$refs.image.src);
-                this.$axios.post(route,
-                    formData,
-                    {
-                        headers: { 'Content-Type': 'multipart/form-data' },
-                        onUploadProgress: function (progressEvent) {
-                            this.progress = Math.round( ( progressEvent.loaded / progressEvent.total ) * 100 );
-                            this.progressStyle.width = this.progress + "%";
-                        }.bind(this)
-                    })
+                config.data["image"] = this.$refs.image.src;
+
+                config.onUploadProgress = function (progressEvent) {
+                    this.progress = Math.round( ( progressEvent.loaded / progressEvent.total ) * 100 );
+                    this.progressStyle.width = this.progress + "%";
+                }.bind(this);
+
+                this.$axios.request(config)
                     .then(resp => {
                         this.$emit("done");
                     })
@@ -51,6 +49,7 @@
         },
         mounted() {
             this.$parent.$on("send", this.send);
+
             if ( /\.(jpe?g|png|gif)$/i.test( this.file.name ) ) {
                 let reader = new FileReader();
                 reader.onloadend = function (e) {
@@ -65,6 +64,7 @@
                         c.width=w;c.height=h;
                         c.getContext("2d").drawImage(img,0,0,w,h);
                         this.$refs.image.src = c.toDataURL("image/jpeg");
+
                     }.bind(this);
                     img.src = e.target.result;
                 }.bind(this);

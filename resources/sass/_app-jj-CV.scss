@@ -1,0 +1,416 @@
+@import "variables";
+
+// Top et Barre de navigation
+
+.CV-nav {
+    position: fixed;
+    min-height: fit-content;
+    padding-top: 10px;
+    width:100%;
+    background-color: white;
+    z-index: 4;
+}
+.CV-top-nav {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.CV-Top-Nav div:first-child {
+    display: flex;
+    flex-direction: column;
+}
+.CV-Logo {
+    padding-left: 40%;
+}
+
+.CV-Shadow{
+    text-shadow: 1px 1px $CV-Fond-Shadow;
+    align-self: center;
+    text-align: center;
+    flex: 1 1 75%;
+}
+.CV-bottom-nav {
+    background-color: $CV-Fond-Nav;
+    width: 100%;
+    overflow: hidden;
+}
+
+.CV-bottom-nav a {
+    background-color: $CV-Fond-Nav;
+    color: white;
+}
+
+.CV-titre {
+    font-size: 40px;
+    padding-top: 20px;
+    text-align: center;
+    color: $CV-Fond-Nav;
+}
+
+
+
+// *********** corps ******************
+
+body{
+    color: black !important;
+}
+
+.CV-Fond-Carte{
+    background-color:$CV-Fond-Carte ;
+}
+
+.CV-Fond-Nav{
+    background-color: $CV-Fond-Nav;
+}
+
+
+.fond1, .fondVache1 {
+    height: 50%;
+    width: 100%;
+    background-position: 50% 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.fond2, .fond3, .fondSentier1{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.no-webp{
+    .fond1{
+        background-image: url("images/fonds/Small/small1_009.jpg");
+    }
+
+    .fond2{
+        background-image: url("images/fonds/Medium/medium1_008.jpg");
+    }
+
+    .fond3{
+        background-image: url("images/fonds/Medium/medium1_007.jpg");
+    }
+    .fondVache1{
+        background-image: url("images/fonds/Small/small1_006.jpg");
+    }
+    .fondSentier1{
+        background-image: url("images/fonds/Medium/medium1_010.jpg");
+    }
+}
+
+.webp{
+    .fond1{
+        background-image: url("images/fonds/Small/small1_009.jpg");
+    }
+
+    .fond2{
+        background-image: url("images/fonds/Medium/medium1_008.jpg");
+    }
+
+    .fond3{
+        background-image: url("images/fonds/Medium/medium1_007.jpg");
+    }
+    .fondVache1{
+        background-image: url("images/fonds/Small/small1_006.jpg");
+    }
+    .fondSentier1{
+        background-image: url("images/fonds/Medium/medium1_010.jpg");
+    }
+}
+
+.width100{
+    width: 100%;
+}
+// ***************  Menu fiwes et side bar (tests) *********************
+
+.menuFixe{
+    position:fixed;
+    z-index: 100;
+    top: 60px;
+    left: 10px;
+}
+.sidebar{
+    background-color: $CV-Fond-Carte;
+}
+.marginTopMenu{
+    margin-top: 10px;
+}
+
+// ************  Gestion de l'affichage de la galerie **********************
+
+.CV-flex-gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+.CV-flex-gallery-column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 10px;
+}
+.CV-flex-gallery-column div {
+    margin-top: 8px;
+    padding-left: 0px;
+}
+.CV-flex-gallery-column div > div{
+    padding-left: 20px;
+}
+.CV-flex-gallery-column img, p {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .CV-flex-gallery-column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .CV-flex-gallery-column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+// ******************* Pages de construction ***********************
+.corpusConstruction {
+    margin-top: 110px;
+    min-height: 800px;
+    background-image: url('images/others/large1_012.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.scale_CV:hover{
+    transform: scale(1.1) translateX(10px) rotate(-10deg);
+    background-color: hsla(322,20%,35%) !important;
+}
+
+.marginTopContainerHome{
+    margin-top: 10px;
+}
+
+// ******************  Footer ******************************
+.CV-footer{
+    margin-top: auto;
+    background-color: $CV-Fond-Nav;
+    text-align: center;
+}
+
+
+.CV-fontColorRed {
+    /*color: hsl(344, 88%, 56%);*/
+    color: $CV-Fond-Carte;
+}
+
+/*
+*********** Concerne le haut des pages comme par ex la HomePage ***************
+*/
+
+.CV-TopContainerHome {
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 100px;
+    position: relative;
+    height: 300px;
+}
+
+.CV-TopContainerHome-ImgTop {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+}
+.CV-TopContainerHome-ImgBottom {
+    position: absolute;
+    bottom: 0px;
+    height: 25%;
+    width: 100%;
+    z-index: 1;
+}
+
+
+/* ************** En mode colonnes **************/
+
+.CV-flex-container-Column{
+    flex-direction:column;
+    align-items:center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex: 4 1 0;
+}
+
+.CV-flex-container-Column h1{
+    font-size: 40px;
+    margin-left:auto;
+    margin-right:auto;
+    flex: 1 1 100px;
+    padding-top: 20px;
+}
+
+.CV-flex-container-Column div{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.CV-flex-container-column-div2 {
+    margin: 20px;
+    max-width: 70%;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 20px;
+}
+
+.CV-flex-container-Agenda-Column{
+    flex-direction:column;
+    align-items:center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex: 4 1 0;
+}
+
+.CV-flex-container-Agenda-Column h1{
+    font-size: 40px;
+    color: $CV-Fond-Nav;
+    margin-left:auto;
+    margin-right:auto;
+    flex: 1 1 100px;
+    padding-top: 20px;
+}
+
+/*********** En mode horizontal *******************/
+
+.CV-global{
+    box-sizing:border-box;
+    width:100%;
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.CV-flex-container-Horizontal{
+    display: flex;
+}
+.CV-flex-container-Horizontal div {
+    flex: none;
+    width: 300px;
+    align-self: flex-start;
+}
+
+.CV-flex-Horizontal {
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    align-content: center;
+}
+
+.CV-flex-Horizontal div:first-child{
+    flex: 1 0 50%;
+    align-self: center;
+    margin: 20px;
+}
+.CV-flex-Horizontal img {
+    flex: 0 2 20%;
+    padding-block: 10px;
+    padding-right: 10px;
+    margin: 20px;
+}
+
+.CV-flex-Horizontal-right {
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    align-content: center;
+}
+
+.CV-flex-Horizontal-right :nth-child(even){
+    flex: 1 0 50%;
+    margin: 20px;
+}
+.tuile-flex-horizontal-HC{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    margin-top: 10px;
+}
+.tuile-flex-horizontal-HC div{
+    padding:5px;
+}
+
+// ***************************
+
+.CV-Bouton{
+    margin-bottom: 5px;
+    width: max-content;
+
+}
+
+// ********************
+// grid container
+
+.grid-container {
+    width: 90%;;
+}
+
+.grid-container-left {
+    min-width: 50%;
+    float: left;
+}
+
+.grid-container-center {
+    text-align: center;
+}
+
+// .grid-container-center h1 {
+//     text-align: center;
+// }
+
+.grid-container-left:first-child {
+    margin-left: 0%;
+}
+
+.grid-container-right {
+    min-width: 50%;
+    float: left;
+}
+
+.CV-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.CV-column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.CV-column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+
+/*************** Gestion des puces de liste ***********************/
+
+.CV-ul-shoes {
+    list-style: url("/images/common/shoes_search_26x26.ico");
+  }
+  .CV-ul-vtt {
+    list-style: url("/images/common/icontexto_VTT_helme_26x26t.ico");
+  }
+
+

@@ -20,6 +20,8 @@ Route::get('activity', "GuestController@Activity")->name("activity");
 Route::get('sentiers', "GuestController@sentiers")->name("sentiers");
 Route::get('chalets', "GuestController@chalets")->name("chalets");
 Route::get('construction',"GuestController@construction")->name("construction");
+Route::get('infosFede', "GuestController@infosFede")->name("infosFede");
+Route::get('galleryDetail', "GuestController@galleryDetail")->name("galleryDetail");
 
 Route::middleware("auth.validated")->group(function (){
 
@@ -30,8 +32,8 @@ Route::middleware("auth.validated")->group(function (){
         Route::get("/", "AdminController@Index")->name("admin");
         Route::resource('articles', "ArticleController", ["except" => "show"]);
         Route::get('inscriptions', 'AdminController@editUsers')->name("inscriptions");
-        Route::get('inscriptionsUpdate', 'AdminController@updateUsers')->name("inscriptionsUpdate"); 
-        // Route::get('showUsersByPrivilege', 'AdminController@showUsersByPrivilege')->name("showUsersByPrivilege"); 
+        Route::get('inscriptionsUpdate', 'AdminController@updateUsers')->name("inscriptionsUpdate");
+        // Route::get('showUsersByPrivilege', 'AdminController@showUsersByPrivilege')->name("showUsersByPrivilege");
         Route::resource('galleries','GalleryController',["except"=> ["store","update"]]);
         Route::resource('compterendus','CompterendusController');
     });
