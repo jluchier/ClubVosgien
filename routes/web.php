@@ -21,7 +21,7 @@ Route::get('sentiers', "GuestController@sentiers")->name("sentiers");
 Route::get('chalets', "GuestController@chalets")->name("chalets");
 Route::get('construction',"GuestController@construction")->name("construction");
 Route::get('infosFede', "GuestController@infosFede")->name("infosFede");
-Route::get('galleryDetail', "GuestController@galleryDetail")->name("galleryDetail");
+Route::get('galleryDetail/{id}', "GuestController@galleryDetail")->name("galleryDetail");
 
 Route::middleware("auth.validated")->group(function (){
 

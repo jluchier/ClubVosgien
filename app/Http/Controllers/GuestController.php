@@ -47,7 +47,6 @@ class GuestController extends Controller
                 $gallery->firstImage = "";
             }
         }
-
         return view("gallery", compact(['galleriePrivee','galleriePublic']));
     }
 
@@ -78,10 +77,20 @@ class GuestController extends Controller
         return view("infosFede", compact(['articles']));
         // return redirect(route("construction", ["page" => "infosFede"]));
     }
-    public function galleryDetail(Request $request) {
-        // dd($request);
-        $galerie = Gallery::where("title", $request->title)->get();
-
-        return view("galleryDetail", compact(['galerie']));
+    public function galleryDetail($id) {
+        $gallery=Gallery::findorfail($id);
+        $allImage = Storage::disk("public")->files("gallery/{$gallery->title}/small");
+        $allColumn = [[],[],[],[]];
+        $CurrentColumn = 0;
+        foreach ($allImage as $image){
+            $tempImg = explode('/',$image);
+            $lastIndex = array_key_last($tempImg);
+            $allColumn[$CurrentColumn][] = $tempImg[$lastIndex];
+            $CurrentColumn++;
+            if ($CurrentColumn > 3) {
+                $CurrentColumn = 0;
+            }
+        }
+        return view('galleryDetail', compact(['allColumn', 'gallery']));
     }
 }
