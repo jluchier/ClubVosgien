@@ -26,7 +26,7 @@ Route::get('galleryDetail/{id}', "GuestController@galleryDetail")->name("gallery
 Route::middleware("auth.validated")->group(function (){
 
     Route::get("compterendus", "GuestController@compterendus")->name("compterendus");
-    Route::resource('galleries','GalleryController', ["except" => ["update","delete","store"]]);
+    Route::resource('galleries','GalleryController', ["only" => ["index"]]);
 
     Route::prefix("admin")->middleware("auth.admin")->group(function () {
         Route::get("/", "AdminController@Index")->name("admin");
@@ -34,7 +34,7 @@ Route::middleware("auth.validated")->group(function (){
         Route::get('inscriptions', 'AdminController@editUsers')->name("inscriptions");
         Route::get('inscriptionsUpdate', 'AdminController@updateUsers')->name("inscriptionsUpdate");
         // Route::get('showUsersByPrivilege', 'AdminController@showUsersByPrivilege')->name("showUsersByPrivilege");
-        Route::resource('galleries','GalleryController',["except"=> ["store","update"]]);
+        Route::resource('galleries','GalleryController',["except"=> ["store","update","index"]]);
         Route::resource('compterendus','CompterendusController');
     });
 
