@@ -5,6 +5,6 @@
         <div>{{ $gallery->description }}</div>
         <div>Sortie du {{ $gallery->dateSortie }}</div>
         <div>
-            <a href={{route("galleryDetail", compact['galerie'=>$gallery->title])}}, 'galleryDetail'])"><img src="{{ Storage::url($gallery->firstImage) }}" alt="Pas d'image"></a>
+            <a href="{{route('galleryDetail',$gallery->id)}}"><img src="{{ Storage::url($gallery->firstImage) }}" alt="Pas d'image"></a>
         </div>
     </div>
