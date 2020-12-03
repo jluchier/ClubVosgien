@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 
+// setlocale(LC_TIME, 'fr_FR.utf8');
+
 class GuestController extends Controller
 {
     public function index()
