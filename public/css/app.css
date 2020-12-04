@@ -7569,7 +7569,7 @@ p {
 .corpusConstruction {
   margin-top: 110px;
   min-height: 800px;
-  background-image: url(/images/large1_012.jpg?2e961b8eaf1506ee327c0d185a528d84);
+  background-image: url(/images/CV_other12.jpg?d8780621f10d1f34213fc216df5757b9);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -7969,12 +7969,12 @@ p {
 
 .parallax_1 {
   /* The image used */
-  background-image: url(/images/parallax_1.jpg?9694dbf3d64843c693d766bea109e63a);
+  background-image: url(/images/parallax_1.jpg?00481b724b881e359c1cf16ba6e566b1);
 }
 
 .parallax_2 {
   /* The image used */
-  background-image: url(/images/large_004_1.jpg?def19555e5d25ef18bd11fd7388b316d);
+  background-image: url(/images/parallax_2.jpg?049da89cc717efa397b0bca3139a9cc8);
 }
 
 .parallax_3 {
@@ -7989,12 +7989,12 @@ p {
 
 .parallax_5 {
   /* The image used */
-  background-image: url(/images/large_004_1.jpg?def19555e5d25ef18bd11fd7388b316d);
+  background-image: url(/images/parallax_5.jpg?e9b9d85f16a93c9332c21f3861f46899);
 }
 
 .parallax_6 {
   /* The image used */
-  background-image: url(/images/large_004_1.jpg?def19555e5d25ef18bd11fd7388b316d);
+  background-image: url(/images/parallax_6.jpg?a1978e34fc4231d81bd2ce8b9f67986a);
 }
 
 /********** Gestion des couleurs du CV *************/
@@ -8006,7 +8006,7 @@ body {
 
 .bgimg {
   /* Background image */
-  background-image: url(/images/large_000.jpg?d6ebe54a2595e5543810496a05ff0624);
+  background-image: url(/images/CV_other12.jpg?d8780621f10d1f34213fc216df5757b9);
   /* Full-screen */
   height: 100%;
   /* Center the background image */

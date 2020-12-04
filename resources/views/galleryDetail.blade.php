@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 
-<body style="background-color: #90ad699a">
+<body style="background-color: rgba(219, 226, 208, 0.61)">
     <div class="CV-global">
         <div style="flex-basis: 40%" >
             <div style="margin-top: 50px" >
@@ -25,8 +25,8 @@
         <div style="flex-basis : 45% ; flex-direction:column ; display:flex ; margin-top: 50px  " >
             <div class="w3-card w3-padding w3-theme-light" >
                 <p class="w3-large">{{ $gallery->title }}</p>
-                <div>{{ $gallery->description }}</br>
-                    Sortie du {{ $gallery->dateSortie }}
+                <p class="w3-left-align">{{ $gallery->description }}</p>
+                <p class="w3-right-align">Sortie du {{ $gallery->dateSortie }}</p>
                 </div>
             </div>
         </div>
