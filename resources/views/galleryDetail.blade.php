@@ -12,21 +12,18 @@
 
 <body style="background-color: rgba(219, 226, 208, 0.61)">
     <div class="CV-global">
-        <div style="flex-basis: 40%" >
+        <div style="flex-basis: 20%" >
             <div style="margin-top: 50px" >
                 <p>
-                    <a href="{{ route("gallery") }}"><img src="/images/common/iconfinder_menu-alt_134216.png" alt="Retour galerie"></a>
+                    <a href="{{ route("gallery") }}"><img src="/images/common/home.ico" alt="Retour galerie"></a>
                 </p>
-                {{-- <p>Notre fierté, ce sont nos sentiers... Leur balisage, c'est notre image
-                </p> --}}
-                {{-- <p>Notre devise : 1 jour de sentiers, 8 jours de santé</p> --}}
+                <p>Retour galerie</p>
             </div>
         </div>
-        <div style="flex-basis : 45% ; flex-direction:column ; display:flex ; margin-top: 50px  " >
+        <div style="flex-basis : 70% ; flex-direction:column ; display:flex ; margin-top: 50px  " >
             <div class="w3-card w3-padding w3-theme-light" >
                 <p class="w3-large">{{ $gallery->title }}</p>
                 <p class="w3-left-align">{{ $gallery->description }}</p>
-
                 @if ($gallery->display_date)
                   <p class="w3-right-align">{{ $gallery->dateSortie }}</p>
                 @endif
