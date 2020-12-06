@@ -63,63 +63,6 @@ body{
     background-color: $CV-Fond-Nav;
 }
 
-
-.fond1, .fondVache1 {
-    height: 50%;
-    width: 100%;
-    background-position: 50% 25%;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-.fond2, .fond3, .fondSentier1{
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.no-webp{
-    .fond1{
-        background-image: url("images/fonds/Small/small1_009.jpg");
-    }
-
-    .fond2{
-        background-image: url("images/fonds/Medium/medium1_008.jpg");
-    }
-
-    .fond3{
-        background-image: url("images/fonds/Medium/medium1_007.jpg");
-    }
-    .fondVache1{
-        background-image: url("images/fonds/Small/small1_006.jpg");
-    }
-    .fondSentier1{
-        background-image: url("images/fonds/Medium/medium1_010.jpg");
-    }
-}
-
-.webp{
-    .fond1{
-        background-image: url("images/fonds/Small/small1_009.jpg");
-    }
-
-    .fond2{
-        background-image: url("images/fonds/Medium/medium1_008.jpg");
-    }
-
-    .fond3{
-        background-image: url("images/fonds/Medium/medium1_007.jpg");
-    }
-    .fondVache1{
-        background-image: url("images/fonds/Small/small1_006.jpg");
-    }
-    .fondSentier1{
-        background-image: url("images/fonds/Medium/medium1_010.jpg");
-    }
-}
-
 .width100{
     width: 100%;
 }
@@ -218,25 +161,44 @@ body{
 */
 
 .CV-TopContainerHome {
-    margin-left:auto;
-    margin-right:auto;
     margin-top: 100px;
     position: relative;
     height: 300px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    img{
+      position: absolute;
+      bottom: 0px;
+      height: 25%;
+      width: 100%;
+    }
 }
 
-.CV-TopContainerHome-ImgTop {
-    position: absolute;
-    top: 0px;
-    height: 100%;
-    width: 100%;
+.no-webp{
+  .CV-Bg1
+  {
+    background-image: url("images/others/large1_009_1.jpg");
+  }
+
+  .CV-Bg2
+  {
+    background-image: url("images/others/large_000_1.jpg");
+  }
 }
-.CV-TopContainerHome-ImgBottom {
-    position: absolute;
-    bottom: 0px;
-    height: 25%;
-    width: 100%;
-    z-index: 1;
+
+.webp{
+  .CV-Bg1
+  {
+    background-image: url("images/others/large1_009_1.webp");
+  }
+
+  .CV-Bg2
+  {
+    background-image: url("images/others/large_000_1.webp");
+  }
 }
 
 
@@ -413,5 +375,3 @@ body{
   .CV-ul-vtt {
     list-style: url("/images/common/icontexto_VTT_helme_26x26t.ico");
   }
-
-
