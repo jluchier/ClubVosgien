@@ -8,7 +8,7 @@
     <img src="/images/common/wave_white.svg">
 </div>
 
-    {{-- <div class="CV-global"> --}}
+     <!-- <div class="CV-global"> -->
 
         {{-- <div class="w3-theme-15 w3-bar-block sidebar">
             <a href="#actu" class="w3-bar-item w3-button scale_CV">Les actualités</a>
@@ -26,9 +26,9 @@
                                 <div class="w3-theme-dark">
                                     <h3>{{ $actu->title }}</H3>
                                 </div>
+                                <p style="padding-top: 10px ; padding-bottom: 10px ; text-align: left" >{!!$actu->content!!}</p>
                                 <div class="w3-section CV-Fond-Carte">
-                                    <img style="max-width: 100%" src="{{ Storage::url('images/small/' . $actu->image) }}" alt="Là je mets l'image">
-                                    <p>{!! $actu->content !!}</p>
+                                    <img style="max-width: 100%" src="{{ Storage::url('images/small/' . $actu->image) }}" alt="">
                                 </div>
                             </div>
                     @endforeach

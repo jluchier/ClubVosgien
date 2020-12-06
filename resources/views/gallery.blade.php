@@ -3,7 +3,7 @@
 @section('gallery', 'navActive')
 
 @section('content')
-<div class="CV-TopContainerHome CV-Bg1">
+<div class="CV-TopContainerHome CV-Bg3">
     <img src="/images/common/wave_white.svg">
 </div>
 

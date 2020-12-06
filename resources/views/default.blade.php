@@ -14,12 +14,13 @@
 <nav id="nav" class="CV-nav">
     {{-- <nav class="CV-nav"> --}}
     <div class="CV-top-nav">
-        <div>
-        <p class="CV-Logo"><img src="/images/common/LogoCV.jpg" alt="Logo du Club Vosgien"></p>
-        {{-- <p>Notre fierté, ce sont nos sentiers... Leur balisage, c'est notre image</p> --}}
-        <p>Notre devise : 1 jour de sentiers, 8 jours de santé</p>
+        <div class="CV-Logo">
+            <img src="/images/common/LogoCV_T.png" alt="Logo du Club Vosgien">
+            <p>
+              Notre devise : 1 jour de sentiers, 8 jours de santé
+          </p>
         </div>
-        <div class="w3-large CV-Shadow"><b>Club Vosgien Rupt Vecoux Ferdrupt</b></div>
+        <div class="w3-xxxlarge CV-Shadow">Club Vosgien Rupt Vecoux Ferdrupt</div>
     </div>
 
     <div class="w3-large CV-bottom-nav">

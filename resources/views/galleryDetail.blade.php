@@ -15,7 +15,7 @@
         <div style="flex-basis: 20%" >
             <div style="margin-top: 50px" >
                 <p>
-                    <a href="{{ route("gallery") }}"><img src="/images/common/home.ico" alt="Retour galerie"></a>
+                    <a href="{{ route("gallery") }}"><i class="fas fa-home"></i></a>
                 </p>
                 <p>Retour galerie</p>
             </div>

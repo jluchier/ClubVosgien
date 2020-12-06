@@ -14,20 +14,27 @@
     display: flex;
     margin-left: 10px;
     margin-right: 10px;
+    justify-content: flex-start;
 }
 .CV-Top-Nav div:first-child {
     display: flex;
     flex-direction: column;
 }
 .CV-Logo {
-    padding-left: 40%;
+    flex: 2 1 25%;
+}
+.CV-Logo img {
+  margin-left: 50%;
+}
+.CV-Logo p {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .CV-Shadow{
-    text-shadow: 1px 1px $CV-Fond-Shadow;
+    text-shadow: 3px 3px $CV-Fond-Nav;
     align-self: center;
-    text-align: center;
-    flex: 1 1 75%;
+    flex: 1 1 55%;
 }
 .CV-bottom-nav {
     background-color: $CV-Fond-Nav;
@@ -182,10 +189,13 @@ body{
   {
     background-image: url("images/others/large1_009_1.jpg");
   }
-
   .CV-Bg2
   {
     background-image: url("images/others/large_000_1.jpg");
+  }
+  .CV-Bg3
+  {
+    background-image: url("images/others/CV_fond-8.jpg");
   }
 }
 
@@ -194,10 +204,13 @@ body{
   {
     background-image: url("images/others/large1_009_1.webp");
   }
-
   .CV-Bg2
   {
     background-image: url("images/others/large_000_1.webp");
+  }
+  .CV-Bg3
+  {
+    background-image: url("images/others/CV_fond-8.webp");
   }
 }
 
@@ -329,7 +342,6 @@ body{
 }
 
 .grid-container-left {
-    min-width: 50%;
     float: left;
 }
 
@@ -346,7 +358,7 @@ body{
 }
 
 .grid-container-right {
-    min-width: 50%;
+    min-width: 45%;
     float: left;
 }
 
