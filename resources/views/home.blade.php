@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="CV-TopContainerHome">
-    <img class="CV-TopContainerHome-ImgTop" src="/images/common/large_000_1.jpg" alt="Les vosges">
+    <img class="CV-TopContainerHome-ImgTop" src="/images/common/large1_009_1.jpg" alt="Les vosges">
     {{-- <picture>
         <source media="(min-width:650px)" srcset="/images/common/medium_000.jpg">
         <source media="(min-width:465px)" srcset="/images/common/small_000.jpg">
@@ -48,8 +48,6 @@
             <div id="agenda" class="grid-container-right">
                 <div class="grid-container-center">
                 <h1>Agenda</h1>
-                {{-- <div class="tuile-flex-horizontal-HC">
-                    --}}
                     @foreach ($agenda as $key => $valeur)
                             {{-- <div class="w3-card-4 w3-third ">
                                 <div class="w3-container w3-theme-dark">
@@ -64,14 +62,14 @@
                                 <div class="container left">
                                     <div class="content">
                                         <h2>{{ $valeur->title }}</h2>
-                                        <p>{{ $valeur->updated_at }}</p>
+                                        <p>{{ $valeur->dateEvent }}</p>
                                     </div>
                                 </div>
                             @else
                                 <div class="container right">
                                     <div class="content">
                                         <h2>{{ $valeur->title }}</h2>
-                                        <p>{{ $valeur->updated_at }}</p>
+                                        <p>{{ $valeur->dateEvent }}</p>
                                     </div>
                                 </div>
                             </div>

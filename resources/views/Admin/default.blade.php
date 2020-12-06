@@ -8,7 +8,7 @@
     <title>Administration du site</title>
 </head>
 
-<body class="w3-theme-light">
+<body class="w3-theme-light marginTopContainerHome" >
 
 <nav id="nav" class="w3-top w3-theme-dark">
     <div class="w3-center w3-large" style="text-shadow : 1px 1px 0 #d33"><b>Club Vosgien Rupt Vecoux Ferdrupt</b></div>
@@ -22,7 +22,7 @@
     </div>
 </nav>
 
-<div id="swup" class="transition-fade">
+<div id="swup" class="transition-fade" style="margin-left: 10px ; margin-right: 10px">
 
     @yield('content')
 

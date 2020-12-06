@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
 
 class GuestController extends Controller
 {
@@ -19,24 +20,35 @@ class GuestController extends Controller
         ->get();
 
         $agenda = Article::whereCategory("Agenda")
-        ->orderBy('updated_at',"desc")
+        ->orderBy('dateEvent',"desc")
         ->limit('5')
         ->get();
+
+        foreach ($agenda as $value){
+              $value->dateEvent = new Carbon($value->dateEvent);
+              $value->dateEvent->locale();
+              $value->dateEvent = $value->dateEvent->isoFormat("dddd Do MMMM YYYY");
+        }
 
         return view('home', compact(['actualite', 'agenda']));
     }
 
     public function gallery()
     {
-        $galleriePrivee = [];
-        $galleriePublic = Gallery::where("private",false)->get();
+      $galleries = [];
+      if ((!is_null(Auth::user()))and(Auth::user()->IsValidate())){
+          $galleries = Gallery::orderBy("dateSortie", "desc")
+            ->orderBy("private", "desc")
+            ->get();
+      }
+      else {
+        $galleries = Gallery::where("private",false)->orderBy("dateSortie", "desc")->get();
+      }
 
-        if ((!is_null(Auth::user()))and(Auth::user()->IsValidate())){
-            $galleriePrivee = Gallery::where("private", true)->get();
-        }
+      $galleryColumn = [[], [], [], []];
+      $currentColumn = 0;
+      foreach ($galleries as $gallery){
 
-        foreach ($galleriePublic as $gallery)
-        {
             $allImage = Storage::disk("public")->allFiles("gallery/{$gallery->title}/thumb");
             if (sizeof($allImage) > 0)
             {
@@ -46,8 +58,19 @@ class GuestController extends Controller
             {
                 $gallery->firstImage = "";
             }
-        }
-        return view("gallery", compact(['galleriePrivee','galleriePublic']));
+            $gallery->dateSortie = new Carbon($gallery->dateSortie);
+            $gallery->dateSortie->locale();
+            $gallery->dateSortie = $gallery->dateSortie->isoFormat("dddd Do MMMM YYYY");
+
+
+          $galleryColumn[$currentColumn][] = $gallery;
+          $currentColumn++;
+          if ($currentColumn > 3) {
+              $currentColumn = 0;
+          }
+      }
+
+      return view("gallery", compact(['galleryColumn']));
     }
 
     public function activity(){
@@ -70,6 +93,7 @@ class GuestController extends Controller
         $page = $request->get("page", "");
         return view("construction", compact(["page"]));
     }
+
     public function infosFede(){
         $articles = Article::with( 'category')
         ->orderBy("created_at", "desc")
@@ -77,8 +101,14 @@ class GuestController extends Controller
         return view("infosFede", compact(['articles']));
         // return redirect(route("construction", ["page" => "infosFede"]));
     }
+
     public function galleryDetail($id) {
         $gallery=Gallery::findorfail($id);
+
+        $gallery->dateSortie = new Carbon($gallery->dateSortie);
+        $gallery->dateSortie->locale();
+        $gallery->dateSortie = $gallery->dateSortie->isoFormat("dddd Do MMMM YYYY");
+
         $allImage = Storage::disk("public")->files("gallery/{$gallery->title}/small");
         $allColumn = [[],[],[],[]];
         $CurrentColumn = 0;

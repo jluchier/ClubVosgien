@@ -26,6 +26,8 @@
                 {{ Form::date("dateSortie", $gallery->dateSortie, ["class" => "w3-input", "required" => true]) }}
                 {{ Form::label('private','Gallerie privée ? ') }}
                 {{ Form::checkbox("private", 1, null, ["class" => "w3-check", "checked" => $gallery->private === 0 ? false : true]) }}
+                {{ Form::label('display_date','Affichage de la date de sortie ? ') }}
+                {{ Form::checkbox("display_date", 1, null, ["class" => "w3-check", "checked" => $gallery->display_date === 0 ? false : true]) }}
             </div>
         </div>
 

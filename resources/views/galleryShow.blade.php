@@ -3,7 +3,9 @@
             <h3>{{ $gallery->title }}</h3>
         </div>
         <div>{{ $gallery->description }}</div>
-        <div>Sortie du {{ $gallery->dateSortie }}</div>
+        @if ($gallery->display_date)
+          <div>Sortie du {{ $gallery->dateSortie}}</div>
+        @endif
         <div>
             <a href="{{route('galleryDetail',$gallery->id)}}"><img src="{{ Storage::url($gallery->firstImage) }}" alt="Pas d'image"></a>
         </div>
