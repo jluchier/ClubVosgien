@@ -13,6 +13,8 @@
             <th>Titre</th>
             <th>Description</th>
             <th>Galerie</th>
+            <th>Statut</th>
+            <th>Affichage de la date</th>
             <th class="w3-right">Administration</th>
         </tr>
         @foreach($galleries as $gallery)
@@ -28,6 +30,20 @@
                         {{ $gallery->thumbs }} image(s)
                     @else
                         Aucune image
+                    @endif
+                </td>
+                <td>
+                    @if($gallery->private == 1)
+                        privé
+                    @else
+                        public
+                    @endif
+                </td>
+                <td>
+                    @if($gallery->display_date == 1)
+                        Visible
+                    @else
+                        Masquée
                     @endif
                 </td>
                 <td class="w3-right">

@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 use App\Traits\ImageManager;
+use Carbon\Carbon;
 
 class ArticleController extends Controller
 {
@@ -22,6 +23,12 @@ class ArticleController extends Controller
             ->orderBy("category_id")
             ->get();
         $categories = Category::pluck("name", "id");
+
+        foreach ($articles as $value){
+              $value->dateEvent = new Carbon($value->dateEvent);
+              $value->dateEvent->locale();
+              $value->dateEvent = $value->dateEvent->isoFormat("dddd Do MMMM YYYY");
+        }
 
         return view('Admin.Articles.index', compact(["articles", "categories"]));
     }

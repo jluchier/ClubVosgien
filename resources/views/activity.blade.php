@@ -22,7 +22,7 @@
     <img src="/images/common/wave_white.svg " class="CV-TopContainerHome-ImgBottom">
 </div>
 
-<div class="tuile-flex-horizontal-HC">
+<div class="CV-global">
     <div style="flex: 1 0 25% ; margin-left: 3%">
         <p class="CV-titre">Le code du randonneur</p>
         <ul class="CV-ul-shoes">
@@ -44,9 +44,8 @@
             <li>Remporte tes déchets.</li>
             <li>Un jour de sentier = huit jours de santé. […]</li<>
         </ul>
-        <p style="margin-top: 10px; color: green; ">Paul Keller</br>
-            Initiateur de la formation des guides de randonnée pédestre (GRP) du Club vosgien
-        </p>
+        <p style=" color: green; margin-top: 20px ">Paul Keller</p>
+        <p style=" color: green; text-align: left">Initiateur de la formation des guides de randonnée pédestre (GRP) du Club vosgien</p>
     </div>
     <div class="CV-flex-container-Column">
         <div id="Rando" class="w3-card-4 CV-Fond-Carte" style="padding-left: 4%">

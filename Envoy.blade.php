@@ -1,21 +1,14 @@
-@servers(['web' => 'pi@192.168.1.22 -p 222'])
+@servers(['web' => 'pi@dyn.raspberrydemontbeliard.ovh -p 2222'])
 {{--@servers(['web' => 'pi@dyn.raspberrydemontbeliard.ovh -p 222'])--}}
 
 @setup
-    $dir="/home/pi/w3Template";
+    $dir="/home/pi/ClubVosgien";
 @endsetup
 
 @task('deploy')
     cd {{$dir}};
     git pull;
-    {{--php artisan migrate;--}}
+    composer install --no-dev --no-progress;
+    php artisan migrate --force;
+    php artisan optimize;
 @endtask
-
-@task('composer')
-    composer update --no-dev --no-progress;
-@endtask
-
-@macro('deploy-update')
-    deploy
-    composer
-@endmacro

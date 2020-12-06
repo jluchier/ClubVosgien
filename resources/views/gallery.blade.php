@@ -14,18 +14,15 @@
     <img src="/images/common/wave_white.svg " class="CV-TopContainerHome-ImgBottom">
 </div>
 
-    <div class="CV-flex-gallery-row">
 
-        <div class="CV-flex-gallery-column">
-            @foreach($galleriePublic as $gallery)
-                @include('galleryShow')
-            @endforeach
-        </div>
-        <div class="CV-flex-gallery-column">
-            @foreach($galleriePrivee as $gallery)
-                @include('galleryShow')
-            @endforeach
-        </div>
+    <div class="CV-flex-gallery-row">
+        @foreach ($galleryColumn as $column)
+            <div class="CV-flex-gallery-column">
+                @foreach ($column as $gallery)
+                    @include('galleryShow')
+                @endforeach
+            </div>
+        @endforeach
     </div>
 
 @endsection

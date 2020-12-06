@@ -26,7 +26,10 @@
             <div class="w3-card w3-padding w3-theme-light" >
                 <p class="w3-large">{{ $gallery->title }}</p>
                 <p class="w3-left-align">{{ $gallery->description }}</p>
-                <p class="w3-right-align">Sortie du {{ $gallery->dateSortie }}</p>
+
+                @if ($gallery->display_date)
+                  <p class="w3-right-align">{{ $gallery->dateSortie }}</p>
+                @endif
                 </div>
             </div>
         </div>

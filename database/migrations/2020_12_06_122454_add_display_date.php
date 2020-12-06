@@ -3,9 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Carbon\Carbon;
 
-class AddEventsDatesToArticlesTable extends Migration
+class AddDisplayDate extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +13,8 @@ class AddEventsDatesToArticlesTable extends Migration
      */
     public function up()
     {
-        Schema::table('articles', function (Blueprint $table) {
-            $table->date("dateEvent")->default(Carbon::now());
+        Schema::table('galleries', function (Blueprint $table) {
+            $table->boolean("display_date")->default(true);
         });
     }
 
@@ -26,8 +25,8 @@ class AddEventsDatesToArticlesTable extends Migration
      */
     public function down()
     {
-        Schema::table('articles', function (Blueprint $table) {
-            $table->dropColumn("dateEvent");
+        Schema::table('galleries', function (Blueprint $table) {
+            $table->dropColumn("display_date");
         });
     }
 }

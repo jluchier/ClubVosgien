@@ -342,11 +342,12 @@ body{
 }
 .tuile-flex-horizontal-HC{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-content: space-around;
     margin-top: 10px;
 }
 .tuile-flex-horizontal-HC div{
+    flex: 1 0 40%;
     padding:5px;
 }
 

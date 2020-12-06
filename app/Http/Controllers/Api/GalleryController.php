@@ -42,7 +42,8 @@ class GalleryController extends Controller
                 "dateSortie"=>$request->get('dateSortie'),
                 "description"=>$request->get('description'),
                 "private"=>$request->get('private', false),
-                "user_id"=>$request->get('user_id')
+                "user_id"=>$request->get('user_id'),
+                "display_date"=>$request->get('display_date')
             ]
         );
 
@@ -67,6 +68,8 @@ class GalleryController extends Controller
         $gallery->dateSortie = $request->get("dateSortie");
         $gallery->description = $request->get("description");
         $gallery->private = $request->get("private", false);
+        $gallery->display_date = $request->get("display_date");
+
 
         $gallery->save();
 

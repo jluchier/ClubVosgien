@@ -28,7 +28,8 @@ class GalleryRequest extends FormRequest
             'dateSortie'=>'required|date',
             'description'=>'string|min:2',
             'private'=>'boolean',
-            "user_id" => 'required|numeric'
+            "user_id" => 'required|numeric',
+            'display_date' => "boolean"
         ];
     }
 }
