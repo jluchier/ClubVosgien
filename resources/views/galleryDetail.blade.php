@@ -13,11 +13,8 @@
 <body style="background-color: rgba(219, 226, 208, 0.61)">
     <div class="CV-global">
         <div style="flex-basis: 20%" >
-            <div style="margin-top: 50px" >
-                <p>
-                    <a href="{{ route("gallery") }}"><i class="fas fa-home"></i></a>
-                </p>
-                <p>Retour galerie</p>
+            <div style="margin-top: 50px" class="w3-center">
+                <a href="{{ route("gallery") }}"><i class="fas fa-home fa-5x"></i><br/>Retour galerie</a>
             </div>
         </div>
         <div style="flex-basis : 70% ; flex-direction:column ; display:flex ; margin-top: 50px  " >

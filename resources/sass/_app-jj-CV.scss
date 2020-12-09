@@ -5,7 +5,6 @@
 .CV-nav {
     position: fixed;
     min-height: fit-content;
-    padding-top: 10px;
     width:100%;
     background-color: white;
     z-index: 4;
@@ -15,7 +14,10 @@
     margin-left: 10px;
     margin-right: 10px;
     justify-content: flex-start;
+    padding-top: 10px;
 }
+
+
 .CV-Top-Nav div:first-child {
     display: flex;
     flex-direction: column;
@@ -121,6 +123,10 @@ body{
         flex: 50%;
         max-width: 50%;
     }
+
+    .CV-top-nav {
+        display: none;
+    }
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -168,7 +174,6 @@ body{
 */
 
 .CV-TopContainerHome {
-    margin-top: 100px;
     position: relative;
     height: 300px;
 
@@ -224,22 +229,16 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
     flex: 4 1 0;
+
+    h1{
+        font-size: 40px;
+        margin-left:auto;
+        margin-right:auto;
+        flex: 1 1 100px;
+        padding-top: 20px;
+    }
 }
 
-.CV-flex-container-Column h1{
-    font-size: 40px;
-    margin-left:auto;
-    margin-right:auto;
-    flex: 1 1 100px;
-    padding-top: 20px;
-}
-
-.CV-flex-container-Column div{
-    margin-left:auto;
-    margin-right:auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
 
 .CV-flex-container-column-div2 {
     margin: 20px;
