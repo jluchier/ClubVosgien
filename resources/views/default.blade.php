@@ -12,48 +12,43 @@
 
 <body>
 <div id="page">
-  <nav id="nav" class="CV-nav">
-      {{-- <nav class="CV-nav"> --}}
-      <div class="CV-top-nav">
-          <div class="CV-Logo">
-              <img src="/images/common/LogoCV_T.png" alt="Logo du Club Vosgien">
-              <p>
-                Notre devise : 1 jour de sentiers, 8 jours de santé
-            </p>
-          </div>
-          <div class="w3-xxxlarge CV-Shadow">Club Vosgien Rupt Vecoux Ferdrupt</div>
+
+<nav id="nav" class="CV-nav">
+
+<div class="w3-hide-medium w3-hide-small w3-white CV-top-nav">
+  <div class="w3-row w3-white">
+      <div class="CV-Logo w3-center w3-col s5">
+          <img src="/images/common/LogoCV_T.png" alt="Logo du Club Vosgien">
+          <p class="w3-padding">
+            Notre devise : 1 jour de sentiers, 8 jours de santé
+        </p>
       </div>
-
-      <div class="w3-large CV-bottom-nav">
-          <a href="{{ route("actu") }}" class="w3-bar-item w3-button navItem  @yield('home')">Accueil</a>
-          <a href="{{ route("infosFede") }}" class="w3-bar-item w3-button navItem   @yield('infosFede')">La fédération</a>
-          <a href="{{ route("activity") }}" class="w3-bar-item w3-button  navItem  @yield('activity')">Activités</a>
-          <a href="{{ route("sentiers") }}" class="w3-bar-item w3-button  navItem  @yield('sentiers')">Sentiers</a>
-          <a href="{{ route("chalets") }}" class="w3-bar-item w3-button   navItem @yield('chalets')">Chalets</a>
-          <a href="{{ route("gallery") }}" class="w3-bar-item w3-button   navItem @yield('gallery')">Galerie</a>
-
-          @Auth
-              {{ Form::open(["route" => "logout", "method" => "post", "class" => "w3-right "]) }}
-              {{ Form::submit("Deconnexion", ["class" => "w3-button  navBtnlogout"]) }}
-              {{ Form::close() }}
-
-              @if(Auth::user()->IsAdmin())
-                  <a href="{{ route("galleries.index") }}" class="w3-bar-item w3-button navItem w3-right">Administration</a>
-              @endif
-
-              @if(Auth::user()->IsValidate())
-                  <a href="{{ route("compterendus") }}" class="w3-bar-item w3-button navItem w3-right @yield('compterendus')">Compte rendus</a>
-              @endif
-
-          @else
-              <a href="{{ route("login") }}" class="w3-bar-item w3-button navItem w3-right">Connexion</a>
-          @endauth
+      <div class="w3-col s7 w3-display-container" style="height: 100%">
+        <h1 class="w3-xxlarge w3-display-left">Club Vosgien Rupt Vecoux Ferdrupt</h1>
       </div>
-  </nav>
-
-  <div id="swup" class="transition-fade">
-      @yield('content')
   </div>
+
+  <div class="w3-large CV-bottom-nav">
+    @include('Includes/liensNavigation')
+  </div>
+</div>
+
+
+  <div class="w3-hide-large">
+    <div class="w3-theme-dark w3-padding CV-Menu-Top">
+      <h2 style="flex:1 0 70% ">Club Vosgien Rupt Vecoux Ferdrupt</h2>
+
+      <a id="humburger" onclick="return toogleMenu()" href="#"><i class="fas fa-bars w3-right fa-2x"></i></a>
+    </div>
+    <div id="menuColumnMobile" class="CV-Menu-Column">
+      @include('Includes/liensNavigation')
+    </div>
+  </div>
+</nav>
+
+<div id="swup" class="transition-fade">
+    @yield('content')
+</div>
 
   <footer class="CV-footer">
       <p>Contactez moi ici</p>

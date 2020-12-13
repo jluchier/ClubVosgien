@@ -5,20 +5,32 @@
 @import "mixin";
 @import 'w3';
 @import "w3-theme-green";
-@import "header";
+
+@import "app-Fonts-CV";
 
 @import "app-jj-CV";
 @import "app-TimeLine-CV";
 @import "app-Parallax-CV";
 @import "app-BuildSheet";
+@import "app-Menu-CV";
 
 
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}td:not([align]),th:not([align]){text-align:left}
 
 h1,h2,h3,h4,h5,h6{
-	font-family: Verdana, sans-serif;
+	font-family: lobster, sans-serif;
 }
+h1{
+	font-size: 1.7em;
+}
+h2{
+	font-size: 1.5em;
+}
+h3{
+	font-size: 1.3em;
+}
+
 .transition-fade {
     transition: 0.3s;
     opacity: 1;
@@ -26,6 +38,7 @@ h1,h2,h3,h4,h5,h6{
 
 #page
 {
+	font-family: roboto;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -34,13 +47,13 @@ h1,h2,h3,h4,h5,h6{
 #swup
 {
   flex: 1;
-	padding-top:170px;
+	padding-top: $cv-hauteurMenu;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 992px) {
 	#swup
 	{
-		padding-top:80px;
+		padding-top: $cv-hauteurMenuMobile;
 	}
 }
 

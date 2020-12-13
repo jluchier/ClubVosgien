@@ -12,7 +12,7 @@
         @foreach ($galleryColumn as $column)
             <div class="CV-flex-gallery-column">
                 @foreach ($column as $gallery)
-                    @include('galleryShow')
+                    @include('Includes/galleryShow')
                 @endforeach
             </div>
         @endforeach

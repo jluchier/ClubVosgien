@@ -44,7 +44,7 @@
     position: absolute;
     width: 25px;
     height: 25px;
-    right: -14px;
+    right: -12.5px;
     background-color: $CV-TimeLine-Round;
     border: 5px solid $CV-TimeLine;
     top: 20px;
@@ -92,7 +92,7 @@
 
   /* Fix the circle for containers on the right side */
   .right::after {
-    left: -11px;
+    left: -12.5px;
   }
 
   /* The actual content */

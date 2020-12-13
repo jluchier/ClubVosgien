@@ -6,3 +6,15 @@ function myFunction(id) {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+
+function toogleMenu()
+{
+  var x = document.getElementById("menuColumnMobile");
+  if (x.className.indexOf("cv-show-menuMobile") === -1) {
+      x.className += " cv-show-menuMobile";
+  } else {
+      x.className = x.className.replace(" cv-show-menuMobile", "");
+  }
+
+  return false;
+}

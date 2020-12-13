@@ -1,0 +1,123 @@
+@import "variables";
+
+// Concerne les menus
+
+/******* Top et Barre de navigation éléments communs aux petits et grands écrans ****/
+
+.CV-nav {
+  position: fixed;
+  min-height: fit-content;
+  width:100%;
+  z-index: 4;
+
+  a {
+    font-family: lobster;
+    // font-size: 1.3em;
+  }
+}
+
+/********** Grands écrans *******/
+
+.CV-top-nav {
+  display: flex;
+  flex-direction: column;
+  height: $cv-hauteurMenu;
+
+  .w3-row{
+    flex: 1 0 25%;
+    padding-top: 5px;
+  }
+}
+
+.CV-bottom-nav {
+  background-color: $CV-Fond-Nav;
+  width: 100%;
+  overflow: hidden;
+  a {
+  background-color: $CV-Fond-Nav;
+  color: white;
+  }
+}
+
+.CV-titre {
+  padding-top: 20px;
+  text-align: center;
+  color: $CV-Fond-Nav;
+}
+
+/**** Menu pour petits écrans ****/
+
+.CV-Menu-Top {
+  display: flex;
+  align-items: center;
+  height: $cv-hauteurMenuMobile;
+  width: 100%;
+  position: absolute;
+}
+
+.CV-Menu-Column{
+  background-color: $CV-Fond-Nav;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: $cv-largeurMenuMobile;
+  position: absolute;
+  top: $cv-hauteurMenuMobile;
+  right: -$cv-largeurMenuMobile;
+  transition: all 0.3s;
+
+  a {
+    font-size: 1.3em;
+    text-align: right;
+    background-color: $CV-Fond-Nav;
+    color: white;
+    width: 100%;
+  }
+}
+
+.cv-show-menuMobile
+{
+  right: 0;
+}
+
+.CV-logoutForm{
+    text-align: right;
+}
+@media (max-width: 992px) {
+  .CV-logoutForm{
+      width: 100%;
+      font-size: 1.3em;
+  }
+}
+
+
+/********* boutons de navigation *******/
+
+.navItem{
+  background: linear-gradient(to top, $w3-theme-d4 10%, $w3-theme-d4 6px, transparent 7px) no-repeat;
+  background-size: 0 100%;
+  transition: background-size 0.2s;
+  display: inline-block;
+}
+
+.navItem:hover{
+  background-color: transparent !important;
+  color: white !important;
+  background-size: 100% 100%;
+}
+
+.navActive{
+  background-size: 100% 100%;
+}
+
+.navBtnlogout
+{
+  color: white;
+  font-family: lobster;
+}
+
+.navBtnlogout:hover
+{
+    background-color: transparent !important;
+    color: white !important;
+}

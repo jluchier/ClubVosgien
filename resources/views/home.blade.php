@@ -7,25 +7,17 @@
 <div class="CV-TopContainerHome CV-Bg1">
   <img src="/images/common/wave_white.svg">
 </div>
-
-<!-- <div class="CV-global"> -->
-
-{{-- <div class="w3-theme-15 w3-bar-block sidebar">
-  <a href="#actu" class="w3-bar-item w3-button scale_CV">Les actualités</a>
-  <a href="#agenda" class="w3-bar-item w3-button">Agenda</a>
-</div> --}}
-
 <div class="CV-flex-container-Agenda-Column">
 
   <div class="grid-container">
     <div id="actu" class="grid-container-left">
       <div class="grid-container-center">
-        <p class="CV-titre">Les actualités</p>
+        <h1>Les actualités</h1>
 
         @foreach ($actualite as $actu)
         <div class="CV-Fond-Carte">
           <div class="w3-theme-dark">
-            <h3>{{ $actu->title }}</h3>
+            <h2>{{ $actu->title }}</h2>
           </div>
           <p style="padding-top: 10px ; padding-bottom: 10px ; text-align: left" >{!!$actu->content!!}</p>
           <div class="w3-section CV-Fond-Carte">
