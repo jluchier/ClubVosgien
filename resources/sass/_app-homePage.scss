@@ -1,0 +1,26 @@
+@import "variables";
+
+// *********** home page ******************
+
+/************ Concerne le haut des pages comme par ex la HomePage ***************
+*/
+
+.CV-TopContainerHome {
+    position: relative;
+    height: 300px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    img{
+      position: absolute;
+      bottom: 0px;
+      height: 25%;
+      width: 100%;
+    }
+}
+
+.marginTopContainerHome{
+    margin-top: 10px;
+}

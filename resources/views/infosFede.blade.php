@@ -28,7 +28,7 @@
     <div class="CV-flex-Horizontal">
 
         <div class="CV-Fond-Carte w3-card-4" style="padding: 20px">
-            <p class="CV-titre">Le comité</p>
+            <h1>Le comité</h1>
             <p>
                 Faire apparaitre les noms des membres du comité et le bureau avec la fonction de chacun.
             </p>
@@ -49,7 +49,7 @@
 
             <div style="margin-left: 20px "><img src="/images/common/large_000_1.jpg" style="max-width: 90%" alt="Les vosges"></div>
             <div class="CV-Fond-Carte w3-card-4" style="padding: 20px">
-                <p class="CV-titre">Les formations</p>
+                <h1>Les formations</h1>
                 <p>
                     Etre membre d’une association Club Vosgien, c’est aussi avoir la possibilité de s’impliquer dans la vie de l’association. Ceux qui le souhaitent peuvent se former dans plusieurs domaines et devenir baliseur sur les sentiers ou encore guide de randonnée pédestre.</br>N’hésitez pas à vous renseigner auprès de nous.
                 </p>
@@ -63,7 +63,7 @@
         <div class="CV-flex-Horizontal">
 
             <div class="CV-Fond-Carte w3-card-4" style="padding: 20px">
-                <p class="CV-titre">Les adhésions</p>
+                <h1>Les adhésions</h1>
                 <p>
                     Faire apparaitre les noms des membres du comité et le bureau avec la fonction de chacun.
                 </p>
@@ -91,7 +91,7 @@
 
                 </div>
                 <div class="CV-Fond-Carte w3-card-4" style="padding: 20px">
-                    <p class="CV-titre">Les partenaires et avantages</p>
+                    <h1>Les partenaires et avantages</h1>
                     <p>
                         La Fédération du Club Vosgien :  https://www.club-vosgien.eu/
                         La Fédération Française des Sports Populaires (FFSP) :  https://www.ffsp.fr/
