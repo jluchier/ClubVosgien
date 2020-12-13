@@ -12,7 +12,7 @@
         <img src="/images/common/large_000.jpg" alt="Les vosges" style="width:auto;">
     </picture> --}}
     {{-- <img src="/images/common/wave_white.svg " class="CV-TopContainerHome-ImgBottom"> --}}
-{{-- </div> --}} --}}
+{{-- </div> --}}
 
 
 

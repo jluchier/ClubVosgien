@@ -3,7 +3,7 @@
 @section('gallery', 'navActive')
 
 @section('content')
-<div class="CV-TopContainerHome CV-Bg1">
+<div class="CV-TopContainerHome CV-Bg3">
     <img src="/images/common/wave_white.svg">
 </div>
 
@@ -12,7 +12,7 @@
         @foreach ($galleryColumn as $column)
             <div class="CV-flex-gallery-column">
                 @foreach ($column as $gallery)
-                    @include('galleryShow')
+                    @include('Includes/galleryShow')
                 @endforeach
             </div>
         @endforeach

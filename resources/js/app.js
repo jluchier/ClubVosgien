@@ -17,6 +17,7 @@ const swup = new Swup({
 import Vue from 'vue';
 import ImageUpload from "./components/ImageUploadManager";
 import SingleImage from "./components/SingleImageUpload";
+import TimeRestCounter from "./components/TimeRestCounter";
 
 import axios from "axios";
 
@@ -27,7 +28,7 @@ let app;
 function mount() {
     app = new Vue({
         el: '#vuejs',
-        components: {ImageUpload, SingleImage}
+        components: {ImageUpload, SingleImage, TimeRestCounter}
     });
 }
 

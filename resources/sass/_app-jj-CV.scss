@@ -1,54 +1,5 @@
 @import "variables";
 
-// Top et Barre de navigation
-
-.CV-nav {
-    position: fixed;
-    min-height: fit-content;
-    padding-top: 10px;
-    width:100%;
-    background-color: white;
-    z-index: 4;
-}
-.CV-top-nav {
-    display: flex;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-.CV-Top-Nav div:first-child {
-    display: flex;
-    flex-direction: column;
-}
-.CV-Logo {
-    padding-left: 40%;
-}
-
-.CV-Shadow{
-    text-shadow: 1px 1px $CV-Fond-Shadow;
-    align-self: center;
-    text-align: center;
-    flex: 1 1 75%;
-}
-.CV-bottom-nav {
-    background-color: $CV-Fond-Nav;
-    width: 100%;
-    overflow: hidden;
-}
-
-.CV-bottom-nav a {
-    background-color: $CV-Fond-Nav;
-    color: white;
-}
-
-.CV-titre {
-    font-size: 40px;
-    padding-top: 20px;
-    text-align: center;
-    color: $CV-Fond-Nav;
-}
-
-
-
 // *********** corps ******************
 
 body{
@@ -66,7 +17,7 @@ body{
 .width100{
     width: 100%;
 }
-// ***************  Menu fiwes et side bar (tests) *********************
+// ***************  Menu fixes et side bar (tests) *********************
 
 .menuFixe{
     position:fixed;
@@ -113,6 +64,10 @@ body{
     .CV-flex-gallery-column {
         flex: 50%;
         max-width: 50%;
+    }
+
+    .CV-top-nav {
+        display: none;
     }
 }
 
@@ -161,7 +116,6 @@ body{
 */
 
 .CV-TopContainerHome {
-    margin-top: 100px;
     position: relative;
     height: 300px;
 
@@ -182,10 +136,13 @@ body{
   {
     background-image: url("images/others/large1_009_1.jpg");
   }
-
   .CV-Bg2
   {
     background-image: url("images/others/large_000_1.jpg");
+  }
+  .CV-Bg3
+  {
+    background-image: url("images/others/CV_fond-8.jpg");
   }
 }
 
@@ -194,10 +151,13 @@ body{
   {
     background-image: url("images/others/large1_009_1.webp");
   }
-
   .CV-Bg2
   {
     background-image: url("images/others/large_000_1.webp");
+  }
+  .CV-Bg3
+  {
+    background-image: url("images/others/CV_fond-8.webp");
   }
 }
 
@@ -211,22 +171,16 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
     flex: 4 1 0;
+
+    h1{
+        font-size: 40px;
+        margin-left:auto;
+        margin-right:auto;
+        flex: 1 1 100px;
+        padding-top: 20px;
+    }
 }
 
-.CV-flex-container-Column h1{
-    font-size: 40px;
-    margin-left:auto;
-    margin-right:auto;
-    flex: 1 1 100px;
-    padding-top: 20px;
-}
-
-.CV-flex-container-Column div{
-    margin-left:auto;
-    margin-right:auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
 
 .CV-flex-container-column-div2 {
     margin: 20px;
@@ -270,6 +224,10 @@ body{
     flex: none;
     width: 300px;
     align-self: flex-start;
+}
+
+.CV-flex-right{
+  align-self: flex-end;
 }
 
 .CV-flex-Horizontal {
@@ -329,7 +287,6 @@ body{
 }
 
 .grid-container-left {
-    min-width: 50%;
     float: left;
 }
 
@@ -346,7 +303,7 @@ body{
 }
 
 .grid-container-right {
-    min-width: 50%;
+    min-width: 45%;
     float: left;
 }
 

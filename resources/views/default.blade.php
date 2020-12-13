@@ -7,63 +7,61 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    @yield('otherCss')
 </head>
 
 <body>
+<div id="page">
 
 <nav id="nav" class="CV-nav">
-    {{-- <nav class="CV-nav"> --}}
-    <div class="CV-top-nav">
-        <div>
-        <p class="CV-Logo"><img src="/images/common/LogoCV.jpg" alt="Logo du Club Vosgien"></p>
-        {{-- <p>Notre fierté, ce sont nos sentiers... Leur balisage, c'est notre image</p> --}}
-        <p>Notre devise : 1 jour de sentiers, 8 jours de santé</p>
-        </div>
-        <div class="w3-large CV-Shadow"><b>Club Vosgien Rupt Vecoux Ferdrupt</b></div>
+
+<div class="w3-hide-medium w3-hide-small w3-white CV-top-nav">
+  <div class="w3-row w3-white">
+      <div class="CV-Logo w3-center w3-col s5">
+          <img src="/images/common/LogoCV_T.png" alt="Logo du Club Vosgien">
+          <p class="w3-padding">
+            Notre devise : 1 jour de sentiers, 8 jours de santé
+        </p>
+      </div>
+      <div class="w3-col s7 w3-display-container" style="height: 100%">
+        <h1 class="w3-xxlarge w3-display-left">Club Vosgien Rupt Vecoux Ferdrupt</h1>
+      </div>
+  </div>
+
+  <div class="w3-large CV-bottom-nav">
+    @include('Includes/liensNavigation')
+  </div>
+</div>
+
+
+  <div class="w3-hide-large">
+    <div class="w3-theme-dark w3-padding CV-Menu-Top">
+      <h2 style="flex:1 0 70% ">Club Vosgien Rupt Vecoux Ferdrupt</h2>
+
+      <a id="humburger" onclick="return toogleMenu()" href="#"><i class="fas fa-bars w3-right fa-2x"></i></a>
     </div>
-
-    <div class="w3-large CV-bottom-nav">
-        <a href="{{ route("actu") }}" class="w3-bar-item w3-button navItem  @yield('home')">Accueil</a>
-        <a href="{{ route("infosFede") }}" class="w3-bar-item w3-button navItem   @yield('infosFede')">La fédération</a>
-        <a href="{{ route("activity") }}" class="w3-bar-item w3-button  navItem  @yield('activity')">Activités</a>
-        <a href="{{ route("sentiers") }}" class="w3-bar-item w3-button  navItem  @yield('sentiers')">Sentiers</a>
-        <a href="{{ route("chalets") }}" class="w3-bar-item w3-button   navItem @yield('chalets')">Chalets</a>
-        <a href="{{ route("gallery") }}" class="w3-bar-item w3-button   navItem @yield('gallery')">Galerie</a>
-
-        @Auth
-            {{ Form::open(["route" => "logout", "method" => "post", "class" => "w3-right "]) }}
-            {{ Form::submit("Deconnexion", ["class" => "w3-button  navBtnlogout"]) }}
-            {{ Form::close() }}
-
-            @if(Auth::user()->IsAdmin())
-                <a href="{{ route("galleries.index") }}" class="w3-bar-item w3-button navItem w3-right">Administration</a>
-            @endif
-
-            @if(Auth::user()->IsValidate())
-                <a href="{{ route("compterendus") }}" class="w3-bar-item w3-button navItem w3-right @yield('compterendus')">Compte rendus</a>
-            @endif
-
-        @else
-            <a href="{{ route("login") }}" class="w3-bar-item w3-button navItem w3-right">Connexion</a>
-        @endauth
+    <div id="menuColumnMobile" class="CV-Menu-Column">
+      @include('Includes/liensNavigation')
     </div>
+  </div>
 </nav>
 
 <div id="swup" class="transition-fade">
     @yield('content')
 </div>
 
-<footer class="CV-footer">
-    <p>Contactez moi ici</p>
-<!--         <i class="fab fa-2x w3-hover-opacity fa-facebook"></i>
-    <i class="fab fa-2x w3-hover-opacity fa-instagram"></i>
-    <i class="fab fa-2x  w3-hover-opacity fa-snapchat"></i>
-    <i class="fab fa-2x  w3-hover-opacity fa-pinterest"></i>
-    <i class="fab fa-2x  w3-hover-opacity fa-twitter"></i>
-    <i class="fab fa-2x  w3-hover-opacity fa-linkedin"></i> -->
-</footer>
-
+  <footer class="CV-footer">
+      <p>Contactez moi ici</p>
+  <!--         <i class="fab fa-2x w3-hover-opacity fa-facebook"></i>
+      <i class="fab fa-2x w3-hover-opacity fa-instagram"></i>
+      <i class="fab fa-2x  w3-hover-opacity fa-snapchat"></i>
+      <i class="fab fa-2x  w3-hover-opacity fa-pinterest"></i>
+      <i class="fab fa-2x  w3-hover-opacity fa-twitter"></i>
+      <i class="fab fa-2x  w3-hover-opacity fa-linkedin"></i> -->
+  </footer>
+</div>
 </body>
+
 <script src="{{ mix('js/app.js') }}"></script>
 <script src="{{ mix('js/script.js') }}"></script>
 

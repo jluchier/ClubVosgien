@@ -1,1 +1,1 @@
-function myFunction(e){var s=document.getElementById(e);-1===s.className.indexOf("w3-show")?s.className+=" w3-show":s.className=s.className.replace(" w3-show","")}
+function myFunction(e){var s=document.getElementById(e);-1===s.className.indexOf("w3-show")?s.className+=" w3-show":s.className=s.className.replace(" w3-show","")}function toogleMenu(){var e=document.getElementById("menuColumnMobile");return-1===e.className.indexOf("cv-show-menuMobile")?e.className+=" cv-show-menuMobile":e.className=e.className.replace(" cv-show-menuMobile",""),!1}
