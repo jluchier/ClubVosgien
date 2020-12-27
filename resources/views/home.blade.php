@@ -19,8 +19,8 @@
             <h2>{{ $actu->title }}</h2>
           </div>
           <p style="padding-top: 10px ; padding-bottom: 10px ; text-align: left" >{!!$actu->content!!}</p>
-          <div class="w3-section CV-Fond-Carte zoom">
-            <img style="max-width: 50%" src="{{ Storage::url('images/medium/' . $actu->image) }}" alt="">
+          <div class="w3-section CV-Fond-Carte">
+            <img class="zoom" style="max-width: 50%" src="{{ Storage::url('images/medium/' . $actu->image) }}" alt="">
           </div>
         </div>
         @endforeach

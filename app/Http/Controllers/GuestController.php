@@ -98,7 +98,19 @@ class GuestController extends Controller
         $articles = Article::with( 'category')
         ->orderBy("created_at", "desc")
         ->get();
-        return view("infosFede", compact(['articles']));
+        $comite = Article::whereCategory("Comité")
+        ->orderBy('category_id')
+        ->get();
+        $formations = Article::whereCategory("Formations")
+        ->orderBy('category_id')
+        ->get();
+        $adhesions = Article::whereCategory("Adhésions")
+        ->orderBy('category_id')
+        ->get();
+        $partenaires = Article::whereCategory("Partenaires")
+        ->orderBy('category_id')
+        ->get();
+        return view("infosFede", compact(['articles', 'comite', 'formations', 'adhesions', 'partenaires']));
         // return redirect(route("construction", ["page" => "infosFede"]));
     }
 

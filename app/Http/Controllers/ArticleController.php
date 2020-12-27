@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-;
 use App\Http\Requests\ArticleRequest;
 use App\Models\Article;
 use App\Models\Category;
@@ -47,7 +46,7 @@ class ArticleController extends Controller
     {
         Article::create([
             "title" => $request->get("title"),
-            "content" => $request->get("content"),
+            "content" => $request->get("content", ""),
             "category_id" => $request->get("category_id"),
             "image" => $this->storeImage("images",$request->get("image")),
             "dateEvent" => $request->get("dateEvent")
@@ -68,7 +67,7 @@ class ArticleController extends Controller
     public function update(ArticleRequest $request, Article $article)
     {
         $article->title = $request->get("title");
-        $article->content = $request->get("content");
+        $article->content = $request->get("content", "");
         $article->category_id = $request->get("category_id");
         $article->dateEvent = $request->get("dateEvent");
 
