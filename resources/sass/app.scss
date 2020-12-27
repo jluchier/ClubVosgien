@@ -13,6 +13,9 @@
 @import "app-Parallax-CV";
 @import "app-BuildSheet";
 @import "app-Menu-CV";
+@import "app-homePage";
+@import "app-Zoom-CV";
+
 
 
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
@@ -23,6 +26,7 @@ h1,h2,h3,h4,h5,h6{
 }
 h1{
 	font-size: 1.7em;
+	color: $w3-theme-dark;
 }
 h2{
 	font-size: 1.5em;

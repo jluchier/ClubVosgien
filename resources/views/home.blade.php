@@ -7,10 +7,9 @@
 <div class="CV-TopContainerHome CV-Bg1">
   <img src="/images/common/wave_white.svg">
 </div>
-<div class="CV-flex-container-Agenda-Column">
 
-  <div class="grid-container">
-    <div id="actu" class="grid-container-left">
+  <div class="w3-row w3-padding">
+    <div id="actu" class="grid-container-left w3-center w3-col s7">
       <div class="grid-container-center">
         <h1>Les actualités</h1>
 
@@ -21,30 +20,19 @@
           </div>
           <p style="padding-top: 10px ; padding-bottom: 10px ; text-align: left" >{!!$actu->content!!}</p>
           <div class="w3-section CV-Fond-Carte">
-            <img style="max-width: 100%" src="{{ Storage::url('images/small/' . $actu->image) }}" alt="">
+            <img class="zoom" style="max-width: 50%" src="{{ Storage::url('images/medium/' . $actu->image) }}" alt="">
           </div>
         </div>
         @endforeach
-
       </div>
     </div>
 
-    <div id="agenda" class="grid-container-right">
+    <div id="agenda" class="grid-container-right w3-col s5 w3-display-container">
       <div class="grid-container-center">
         <h1>Agenda</h1>
 
         @foreach ($agenda as $key => $valeur)
-        {{-- <div class="w3-card-4 w3-third ">
-          <div class="w3-container w3-theme-dark">
-            <h3>{{ $valeur->title }}</h3>
-          </div>
-          <div class="w3-section CV-Fond-Carte">
-            {{ $valeur->content }}
-          </div>
-        </div> --}}
-
         <div class="timeline">
-
           @if ($key % 2 == 0)
           <div class="container left">
             <div class="content">
@@ -67,6 +55,6 @@
 
       </div>
     </div>
-  </div>
+
 </div>
 @endsection

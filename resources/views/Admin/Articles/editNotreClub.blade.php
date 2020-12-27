@@ -1,22 +1,13 @@
-@extends('default')
+@extends('Admin.default')
 
-@section('infosFede', 'navActive')
+@section('notreClub', 'navActive')
 
 @section('content')
+    @include('Admin.messages')
 
-{{-- <div class="CV-TopContainerHome">
-    <img class="CV-TopContainerHome-ImgTop" src="/images/common/large_004_1.jpg" alt="Les vosges">
-    {{-- <picture>
-        <source media="(min-width:650px)" srcset="/images/common/medium_000.jpg">
-        <source media="(min-width:465px)" srcset="/images/common/small_000.jpg">
-        <img src="/images/common/large_000.jpg" alt="Les vosges" style="width:auto;">
-    </picture> --}}
-    {{-- <img src="/images/common/wave_white.svg " class="CV-TopContainerHome-ImgBottom"> --}}
-{{-- </div> --}}
+<div class="CV-flex-container-Column">
 
-
-
-    <div class="parallax_1"></div>
+<div class="parallax_1"></div>
 <div class="w3-row-padding w3-container">
     <div class="w3-card-4 CV-Fond-Carte w3-container w3-section w3-content">
         <p style="text-align:justify">
@@ -25,28 +16,34 @@
     </div>
 </div>
 <div class="w3-row-padding w3-container w3-margin">
-    @foreach($comite as $key => $cmt)
+  <a href="{{ route('articles.index') }}" class="w3-button w3-theme-dark w3-round">Ajouter</a>
+    @foreach($articlesComite as $key => $cmt)
     @if ($key %2 == 0)
     <div class="w3-row-padding w3-container w3-margin">
         <div class="CV-Fond-Carte w3-card-4 w3-half w3-padding">
-          <h1>Le comité</h1>
-            <p>
-                {!!$cmt->content!!}
-            </p>
-        </div>
-        <div class="w3-rest w3-center">
-          @if (!is_null($cmt->image) )
-            <img class="zoom" style="max-width: 50%" src="{{ Storage::url('images/medium/' . $cmt->image) }}" alt="">
-            @else
-          <img src="/images/common/large_000_1.jpg" style="max-width: 50%" alt="Les vosges">
-          @endif
-        </div>
+    <h1>Le comité</h1>
+    <p>{{ $cmt->content }}</p>
+    <div class="w3-padding">
+  <a href="{{ route("articles.edit", $cmt->id) }}" class="w3-button w3-theme-dark w3-round">Modifer</a>
+  {{ Form::open(["route" => ["articles.destroy", $cmt->id], "method" => "delete", "style" => "display: inline-block"]) }}
+  {{ Form::submit("Supprimer", ["class" => "w3-button w3-red"]) }}
+  {{ Form::close() }}
+  </div>
     </div>
+
+          <div class="w3-rest w3-center">
+            @if (!is_null($cmt->image) )
+              <img class="zoom" style="max-width: 50%" src="{{ Storage::url('images/medium/' . $cmt->image) }}" alt="">
+              @else
+            <img src="/images/common/large_000_1.jpg" style="max-width: 50%" alt="Les vosges">
+            @endif
+          </div>
+      </div>
       @else
       <div class="w3-row-padding w3-container w3-margin">
           <div class="w3-half w3-center">
             @if (!is_null($cmt->image) )
-              <img class="zoom" style="max-width: 50%" src="{{ Storage::url('images/medium/' . $cmt->image) }}" alt="">
+              <img style="max-width: 50%" src="{{ Storage::url('images/medium/' . $cmt->image) }}" alt="">
               @else
             <img src="/images/common/large_000_1.jpg" style="max-width: 50%" alt="Les vosges">
             @endif
@@ -56,20 +53,33 @@
           <p>
             {!!$cmt->content!!}
           </p>
+          <div class="w3-padding">
+        <a href="{{ route("articles.edit", $cmt->id) }}" class="w3-button w3-theme-dark w3-round">Modifer</a>
+        {{ Form::open(["route" => ["articles.destroy", $cmt->id], "method" => "delete", "style" => "display: inline-block"]) }}
+        {{ Form::submit("Supprimer", ["class" => "w3-button w3-red"]) }}
+        {{ Form::close() }}
+        </div>
         </div>
       </div>
         @endif
-    @endforeach
+        @endforeach
 </div>
-    <div class="parallax_2"></div>
 
+    <div class="parallax_2"></div>
     <div class="w3-row-padding w3-container w3-margin">
-        @foreach($formations as $key => $cmt)
+      <a href="{{ route('articles.index') }}" class="w3-button w3-theme-dark w3-round">Ajouter</a>
+        @foreach($articlesFormations as $key => $cmt)
         @if ($key %2 == 0)
         <div class="w3-row-padding w3-container w3-margin">
             <div class="CV-Fond-Carte w3-card-4 w3-half w3-padding">
         <h1>Les formations</h1>
         <p>{{ $cmt->content }}</p>
+        <div class="w3-padding">
+      <a href="{{ route("articles.edit", $cmt->id) }}" class="w3-button w3-theme-dark w3-round">Modifer</a>
+      {{ Form::open(["route" => ["articles.destroy", $cmt->id], "method" => "delete", "style" => "display: inline-block"]) }}
+      {{ Form::submit("Supprimer", ["class" => "w3-button w3-red"]) }}
+      {{ Form::close() }}
+      </div>
         </div>
 
               <div class="w3-rest w3-center">
@@ -94,20 +104,33 @@
               <p>
                 {!!$cmt->content!!}
               </p>
+              <div class="w3-padding">
+            <a href="{{ route("articles.edit", $cmt->id) }}" class="w3-button w3-theme-dark w3-round">Modifer</a>
+            {{ Form::open(["route" => ["articles.destroy", $cmt->id], "method" => "delete", "style" => "display: inline-block"]) }}
+            {{ Form::submit("Supprimer", ["class" => "w3-button w3-red"]) }}
+            {{ Form::close() }}
+            </div>
             </div>
           </div>
             @endif
             @endforeach
     </div>
-
 <div class="parallax_3"></div>
+
 <div class="w3-row-padding w3-container w3-margin">
-    @foreach($adhesions as $key => $cmt)
+  <a href="{{ route('articles.index') }}" class="w3-button w3-theme-dark w3-round">Ajouter</a>
+    @foreach($articlesAdhesions as $key => $cmt)
     @if ($key %2 == 0)
     <div class="w3-row-padding w3-container w3-margin">
         <div class="CV-Fond-Carte w3-card-4 w3-half w3-padding">
     <h1>Les adhésions</h1>
     <p>{{ $cmt->content }}</p>
+    <div class="w3-padding">
+  <a href="{{ route("articles.edit", $cmt->id) }}" class="w3-button w3-theme-dark w3-round">Modifer</a>
+  {{ Form::open(["route" => ["articles.destroy", $cmt->id], "method" => "delete", "style" => "display: inline-block"]) }}
+  {{ Form::submit("Supprimer", ["class" => "w3-button w3-red"]) }}
+  {{ Form::close() }}
+  </div>
     </div>
 
           <div class="w3-rest w3-center">
@@ -132,6 +155,12 @@
           <p>
             {!!$cmt->content!!}
           </p>
+          <div class="w3-padding">
+        <a href="{{ route("articles.edit", $cmt->id) }}" class="w3-button w3-theme-dark w3-round">Modifer</a>
+        {{ Form::open(["route" => ["articles.destroy", $cmt->id], "method" => "delete", "style" => "display: inline-block"]) }}
+        {{ Form::submit("Supprimer", ["class" => "w3-button w3-red"]) }}
+        {{ Form::close() }}
+        </div>
         </div>
       </div>
         @endif
@@ -140,12 +169,19 @@
 <div class="parallax_4"></div>
 
         <div class="w3-row-padding w3-container w3-margin">
-            @foreach($partenaires as $key => $cmt)
+          <a href="{{ route('articles.index') }}" class="w3-button w3-theme-dark w3-round">Ajouter</a>
+            @foreach($articlesPartenaires as $key => $cmt)
             @if ($key %2 == 0)
             <div class="w3-row-padding w3-container w3-margin">
                 <div class="CV-Fond-Carte w3-card-4 w3-half w3-padding">
             <h1>Les partenaires</h1>
             <p>{{ $cmt->content }}</p>
+            <div class="w3-padding">
+          <a href="{{ route("articles.edit", $cmt->id) }}" class="w3-button w3-theme-dark w3-round">Modifer</a>
+          {{ Form::open(["route" => ["articles.destroy", $cmt->id], "method" => "delete", "style" => "display: inline-block"]) }}
+          {{ Form::submit("Supprimer", ["class" => "w3-button w3-red"]) }}
+          {{ Form::close() }}
+          </div>
             </div>
 
                   <div class="w3-rest w3-center">
@@ -170,10 +206,19 @@
                   <p>
                     {!!$cmt->content!!}
                   </p>
+                  <div class="w3-padding">
+                <a href="{{ route("articles.edit", $cmt->id) }}" class="w3-button w3-theme-dark w3-round">Modifer</a>
+                {{ Form::open(["route" => ["articles.destroy", $cmt->id], "method" => "delete", "style" => "display: inline-block"]) }}
+                {{ Form::submit("Supprimer", ["class" => "w3-button w3-red"]) }}
+                {{ Form::close() }}
+                </div>
                 </div>
               </div>
                 @endif
                 @endforeach
         </div>
 <div class="parallax_5"> </div>
+
+
+</div>
 @endsection
