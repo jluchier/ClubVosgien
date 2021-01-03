@@ -3,12 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <link rel="stylesheet" href="{{ mix('css/admin.css') }}">
-    <title>Administration du site</title>
+
+  <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+  <title>Administration du site</title>
+
 </head>
 
-<body class="w3-theme-light marginTopContainerHome" >
+<body>
 
 <nav id="nav" class="w3-top w3-theme-dark">
     <div class="w3-center w3-large" style="text-shadow : 1px 1px 0 #d33"><b>Club Vosgien Rupt Vecoux Ferdrupt</b></div>
@@ -23,9 +24,11 @@
     </div>
 </nav>
 
-<div id="swup" class="transition-fade" style="margin-left: 10px ; margin-right: 10px">
+<div id="swup" class="transition-fade w3-theme-light" style="min-height:100vh; padding-top:70px;">
 
+  <div class="w3-container">
     @yield('content')
+  </div>
 
 </div>
 

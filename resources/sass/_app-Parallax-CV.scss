@@ -5,7 +5,7 @@
 %parallax {
 
     /* Set a specific height */
-    height: 500px;
+    height: 300px;
     width: 100%;
 
     /* Create the parallax scrolling effect */
@@ -21,6 +21,15 @@
         background-attachment: scroll;
     }
 }
+
+
+.parallaxTitle {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/************ */
 
 .parallax_1 {
     @extend %parallax;

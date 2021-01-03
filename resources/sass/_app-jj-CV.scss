@@ -51,12 +51,15 @@ body{
 .CV-flex-gallery-column div > div{
     padding-left: 20px;
 }
-.CV-flex-gallery-column img, p {
+.CV-flex-gallery-column {
+  img, p
+  {
     display: block;
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 10px;
     text-align: center;
+  }
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */

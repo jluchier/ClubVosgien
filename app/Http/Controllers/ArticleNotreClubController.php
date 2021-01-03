@@ -63,7 +63,9 @@ class ArticleNotreClubController extends Controller
             $value->dateEvent = $value->dateEvent->isoFormat("dddd Do MMMM YYYY");
       }
 
-      return view('Admin.Articles.editNotreClub', compact(["articlesComite", "articlesFormations", "articlesAdhesions", "articlesPartenaires"]));
+      $admin=true;
+
+      return view('Admin.Articles.editNotreClub', compact(["articlesComite", "articlesFormations", "articlesAdhesions", "articlesPartenaires", "admin"]));
   }
 
 }
