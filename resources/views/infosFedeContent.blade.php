@@ -29,7 +29,4 @@
 <?php $articlesToDispaly = $articlesPartenaires ?>
 @include('Includes.infoFedeRubrique')
 
-<div class="parallax_5"> </div>
-
-
 </div>

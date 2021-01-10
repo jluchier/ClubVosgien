@@ -7679,6 +7679,22 @@ body {
   width: 90%;
 }
 
+/************** Sentiers résumés parcourts *****************************/
+
+.summary ul {
+  padding-left: 10px;
+  padding: 20px;
+  list-style: circle;
+}
+
+.sentierTexte p {
+  padding: 10px 0;
+}
+
+.sentierTexte ul {
+  padding-left: 10px;
+}
+
 /********** Gestion des couleurs du CV *************/
 
 /********** Gestion des tailles **********/
