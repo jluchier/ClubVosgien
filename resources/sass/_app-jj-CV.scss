@@ -326,17 +326,20 @@ body{
 
 /************** Sentiers résumés parcourts *****************************/
 
-.summary ul{
-  padding-left: 10px;
-  padding: 20px;
-  list-style: circle;
+.summary {
+  ul{
+    padding-left: 10px;
+    padding: 20px;
+    list-style: circle;
+  }
 }
+
 
 .sentierTexte {
   p {
     padding: 10px 0;
   }
   ul {
-    padding-left: 10px;  
+    padding-left: 10px;
   }
 }
