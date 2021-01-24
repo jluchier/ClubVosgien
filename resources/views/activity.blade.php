@@ -16,8 +16,8 @@
 </div>
 
 <div class="CV-global">
-    <div style="flex: 1 0 25% ; margin-left: 3%">
-        <p class="CV-titre">Le code du randonneur</p>
+    <div class="w3-card-4 CV-Fond-Carte CV-cadreCard" style="flex: 1 0 25%">
+        <h1>Le code du randonneur</h1>
         <ul class="CV-ul-shoes">
             <li>Equipe-toi de bonnes chaussures.</li>
             <li>N’oublie pas vêtements chauds et de pluie.</li>
@@ -37,12 +37,12 @@
             <li>Remporte tes déchets.</li>
             <li>Un jour de sentier = huit jours de santé. […]</li<>
         </ul>
-        <p style=" color: green; margin-top: 20px ">Paul Keller</p>
+        <p style=" color: green; margin-top: 20px">Paul Keller</p>
         <p style=" color: green; text-align: left">Initiateur de la formation des guides de randonnée pédestre (GRP) du Club vosgien</p>
     </div>
     <div class="CV-flex-container-Column">
-        <div id="Rando" class="w3-card-4 CV-Fond-Carte" style="padding-left: 4%">
-            <p class="CV-titre">Les randonnées</p>
+        <div id="Rando" class="w3-card-4 CV-Fond-Carte CV-cadreCard">
+            <h1>Les randonnées</h1>
                 <div>
                     <ul class="CV-ul-shoes">
                         <li>Une sortie hebdomadaire, le mercredi après-midi,  8 à 12 km sur le territoire ou environs proches. Départs depuis le parking de l’école au centre de Rupt sur Moselle généralement à partir de 13h30</li>
@@ -54,8 +54,8 @@
 
                 </div>
         </div>
-        <div id="VTT" class="w3-card-4 CV-Fond-Carte"  style="padding-left: 4%">
-            <p class="CV-titre">Les sorties VTT</p>
+        <div id="VTT" class="w3-card-4 CV-Fond-Carte CV-cadreCard">
+            <h1>Les sorties VTT</h1>
                 <div>
                     <ul class="CV-ul-vtt">
                         <li>Deux sorties hebdomadaires, le vendredi après-midi et le dimanche matin. Possibilité de participer aux randos VTT du secteur. Information donnée via le site Facebook</li>
@@ -64,8 +64,8 @@
                 </div>
         </div>
 
-        <div id="MarcheNordique" class="w3-card-4 CV-Fond-Carte" style="width : 100%; padding-left: 4%">
-            <p class="CV-titre">Les marches nordiques</p>
+        <div id="MarcheNordique" class="w3-card-4 CV-Fond-Carte CV-cadreCard">
+            <h1>Les marches nordiques</h1>
                 <div>
                     <ul class="CV-ul-shoes">
                         <li>Une sortie tous les 15 jours, les dimanches des semaines paires, sur 2 heures environ</li>

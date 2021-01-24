@@ -31,6 +31,14 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@ckeditor/ckeditor5-basic-styles": "^24.0.0",
+        "@ckeditor/ckeditor5-build-classic": "^24.0.0",
+        "@ckeditor/ckeditor5-editor-classic": "^24.0.0",
+        "@ckeditor/ckeditor5-essentials": "^24.0.0",
+        "@ckeditor/ckeditor5-link": "^24.0.0",
+        "@ckeditor/ckeditor5-paragraph": "^24.0.0",
+        "@ckeditor/ckeditor5-theme-lark": "^24.0.0",
+        "@ckeditor/ckeditor5-vue2": "^1.0.5",
         "@swup/head-plugin": "^1.0.2",
         "@swup/scroll-plugin": "^1.0.6",
         "swup": "^2.0.5"

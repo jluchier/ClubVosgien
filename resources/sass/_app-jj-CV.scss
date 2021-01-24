@@ -51,12 +51,15 @@ body{
 .CV-flex-gallery-column div > div{
     padding-left: 20px;
 }
-.CV-flex-gallery-column img, p {
+.CV-flex-gallery-column {
+  img, p
+  {
     display: block;
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 10px;
     text-align: center;
+  }
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -94,9 +97,6 @@ body{
     background-color: hsla(322,20%,35%) !important;
 }
 
-.marginTopContainerHome{
-    margin-top: 10px;
-}
 
 // ******************  Footer ******************************
 .CV-footer{
@@ -111,26 +111,7 @@ body{
     color: $CV-Fond-Carte;
 }
 
-/*
-*********** Concerne le haut des pages comme par ex la HomePage ***************
-*/
-
-.CV-TopContainerHome {
-    position: relative;
-    height: 300px;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    img{
-      position: absolute;
-      bottom: 0px;
-      height: 25%;
-      width: 100%;
-    }
-}
-
+/******************** les images backgrounds  *************/
 .no-webp{
   .CV-Bg1
   {
@@ -169,16 +150,16 @@ body{
     align-items:center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    // justify-content: space-around;
     flex: 4 1 0;
 
-    h1{
-        font-size: 40px;
-        margin-left:auto;
-        margin-right:auto;
-        flex: 1 1 100px;
-        padding-top: 20px;
-    }
+    // h1{
+    //     font-size: 40px;
+    //     margin-left:auto;
+    //     margin-right:auto;
+    //     flex: 1 1 100px;
+    //     padding-top: 20px;
+    // }
 }
 
 
@@ -190,23 +171,26 @@ body{
     padding: 20px;
 }
 
-.CV-flex-container-Agenda-Column{
-    flex-direction:column;
-    align-items:center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex: 4 1 0;
-}
+// .flex-container-home-Column{
+//     display: flex;
+//     flex-direction:column;
+//     align-items:center;
+//     flex-wrap: wrap;
+//     justify-content: space-around;
+//
+// }
+// .flex-container-home-Column div:first-child {
+//         flex: 0 1 25%;
+// }
 
-.CV-flex-container-Agenda-Column h1{
-    font-size: 40px;
-    color: $CV-Fond-Nav;
-    margin-left:auto;
-    margin-right:auto;
-    flex: 1 1 100px;
-    padding-top: 20px;
-}
+// .CV-flex-container-Agenda-Column h1{
+//     font-size: 40px;
+//     color: $CV-Fond-Nav;
+//     margin-left:auto;
+//     margin-right:auto;
+//     flex: 1 1 100px;
+//     padding-top: 20px;
+// }
 
 /*********** En mode horizontal *******************/
 
@@ -279,12 +263,12 @@ body{
 
 }
 
-// ********************
+/******************** utlise pour la home page  *************/
 // grid container
 
-.grid-container {
-    width: 90%;;
-}
+// .grid-container {
+//     width: 90%;;
+// }
 
 .grid-container-left {
     float: left;
@@ -303,7 +287,6 @@ body{
 }
 
 .grid-container-right {
-    min-width: 45%;
     float: left;
 }
 
@@ -317,12 +300,12 @@ body{
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
-}
 
-.CV-column img {
+    img {
     margin-top: 8px;
     vertical-align: middle;
-  }
+    }
+}
 
 /*************** Gestion des puces de liste ***********************/
 
@@ -332,3 +315,49 @@ body{
   .CV-ul-vtt {
     list-style: url("/images/common/icontexto_VTT_helme_26x26t.ico");
   }
+
+/************** Cadres pages activity **********************************/
+
+.CV-cadreCard {
+  padding: 10px 50px;
+  margin: 10px 15px;
+  width: 90%;
+}
+
+/************** Sentiers résumés parcourts *****************************/
+
+.summary {
+  ul{
+    padding-left: 10px;
+    padding: 20px;
+    list-style: circle;
+  }
+}
+
+
+.sentierTexte {
+  p {
+    padding: 10px 0;
+  }
+  ul {
+    padding-left: 10px;
+  }
+}
+
+/****************** Pagination links *********************************/
+.pagination a {
+ color: black;
+ float: left;
+ padding: 8px 16px;
+ text-decoration: none;
+ transition: background-color .3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+ background-color: dodgerblue;
+ color: white;
+}
+
+/************* Add a grey background color on mouse-over ******************/
+.pagination a:hover:not(.active) {background-color: #ddd;}

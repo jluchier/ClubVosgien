@@ -4,8 +4,16 @@ https://yarnpkg.com/en/docs/install#debian-stable
 
 pour lancer le site en mode dev / consultation
 
-Depuis le répertoire du site clubVosgien 
+Depuis le répertoire du site clubVosgien
 
 utiliser la commande => yarn run watch
 
-	
+=> déploiement du site en production
+
+1)	arrêter le moteur yarn run watch s'il fonctionne et fermer les fichiers ouverts du projet
+2)	si besoin mettre à jour la version Dev du dépôt GitHub
+3) 	Faire un merge de la branche Dev sur master
+			git merge Dev
+4) 	compiler la version de production => yarn run prod
+5) 	Envoyer la nouvelle version en production
+			envoy run deploy

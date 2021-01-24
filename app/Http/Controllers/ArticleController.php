@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-;
 use App\Http\Requests\ArticleRequest;
 use App\Models\Article;
 use App\Models\Category;
@@ -17,12 +16,25 @@ class ArticleController extends Controller
 {
     use ImageManager;
 
-    public function index()
+    public function __invoke()
     {
-        $articles = Article::with('category')
-            ->orderBy("category_id")
-            ->get();
-        $categories = Category::pluck("name", "id");
+        // ...
+    }
+
+    public function index(Request $request)
+    {
+      $articleRequest = Article::with('category')->orderBy("category_id");
+      $currentCategory = $request->get("category", -1);
+      if ( $currentCategory == -1)
+      {
+          $articles = $articleRequest->paginate(10);
+      }
+      else
+      {
+          $articles = $articleRequest->where("category_id", $currentCategory)->paginate(10);
+      }
+
+        $categories = [-1 => "Tous"] + Category::pluck("name", "id")->toArray();
 
         foreach ($articles as $value){
               $value->dateEvent = new Carbon($value->dateEvent);
@@ -30,7 +42,7 @@ class ArticleController extends Controller
               $value->dateEvent = $value->dateEvent->isoFormat("dddd Do MMMM YYYY");
         }
 
-        return view('Admin.Articles.index', compact(["articles", "categories"]));
+        return view('Admin.Articles.index', compact(["articles", "categories", "currentCategory"]));
     }
 
     public function create()
@@ -47,7 +59,7 @@ class ArticleController extends Controller
     {
         Article::create([
             "title" => $request->get("title"),
-            "content" => $request->get("content"),
+            "content" => $request->get("content", ""),
             "category_id" => $request->get("category_id"),
             "image" => $this->storeImage("images",$request->get("image")),
             "dateEvent" => $request->get("dateEvent")
@@ -62,13 +74,15 @@ class ArticleController extends Controller
         $method = "put";
         $categories = Category::pluck("name", "id");
 
+        $article->content = preg_replace('/\s\s+/', '', $article->content);
+
         return view("Admin.Articles.edit", compact(["article", "url", "method", "categories"]));
     }
 
     public function update(ArticleRequest $request, Article $article)
     {
         $article->title = $request->get("title");
-        $article->content = $request->get("content");
+        $article->content = $request->get("content", "");
         $article->category_id = $request->get("category_id");
         $article->dateEvent = $request->get("dateEvent");
 
@@ -104,5 +118,4 @@ class ArticleController extends Controller
 
         return view('home', compact(["articles", "categories"]));
     }
-
 }

@@ -25,7 +25,7 @@ class ArticleRequest extends FormRequest
     {
         return [
             'title'=>'required|string|min:2',
-            'content'=>'required|string',
+            'content'=>'string',
             'category_id'=>'required|integer',
             "image" => "string|nullable",
             "imageDelete" => 'boolean',

@@ -77,8 +77,10 @@ class GuestController extends Controller
         return view("activity");
     }
     public function sentiers(){
-//        return view("sentiers");
-        return redirect(route("construction", ["page" => "sentiers"]));
+      $sentiers=Article::whereCategory("sentiers")
+      ->get();
+       return view("sentiers", compact(['sentiers']));
+        // return redirect(route("construction", ["page" => "sentiers"]));
     }
     public function chalets(){
 //        return view("chalets");
@@ -95,11 +97,48 @@ class GuestController extends Controller
     }
 
     public function infosFede(){
-        $articles = Article::with( 'category')
-        ->orderBy("created_at", "desc")
-        ->get();
-        return view("infosFede", compact(['articles']));
-        // return redirect(route("construction", ["page" => "infosFede"]));
+      $articlesComite = Article::select("articles.*")
+          ->whereCategory("Comité")
+          ->orderBy("id")
+          ->get();
+
+      foreach ($articlesComite as $value){
+            $value->dateEvent = new Carbon($value->dateEvent);
+            $value->dateEvent->locale();
+            $value->dateEvent = $value->dateEvent->isoFormat("dddd Do MMMM YYYY");
+      }
+
+      $articlesFormations = Article::select("articles.*")
+          ->whereCategory("Formations")
+          ->orderBy("id")
+          ->get();
+      foreach ($articlesFormations as $value){
+            $value->dateEvent = new Carbon($value->dateEvent);
+            $value->dateEvent->locale();
+            $value->dateEvent = $value->dateEvent->isoFormat("dddd Do MMMM YYYY");
+      }
+      $articlesAdhesions = Article::select("articles.*")
+          ->whereCategory("Adhésions")
+          ->orderBy("id")
+          ->get();
+      foreach ($articlesAdhesions as $value){
+            $value->dateEvent = new Carbon($value->dateEvent);
+            $value->dateEvent->locale();
+            $value->dateEvent = $value->dateEvent->isoFormat("dddd Do MMMM YYYY");
+      }
+      $articlesPartenaires = Article::select("articles.*")
+          ->whereCategory("Partenaires")
+          ->orderBy("id")
+          ->get();
+      foreach ($articlesPartenaires as $value){
+            $value->dateEvent = new Carbon($value->dateEvent);
+            $value->dateEvent->locale();
+            $value->dateEvent = $value->dateEvent->isoFormat("dddd Do MMMM YYYY");
+      }
+
+      $admin=false;
+
+      return view('infosFede', compact(["articlesComite", "articlesFormations", "articlesAdhesions", "articlesPartenaires", "admin"]));
     }
 
     public function galleryDetail($id) {

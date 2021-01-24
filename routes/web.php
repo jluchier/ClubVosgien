@@ -30,10 +30,10 @@ Route::middleware("auth.validated")->group(function (){
 
     Route::prefix("admin")->middleware("auth.admin")->group(function () {
         Route::get("/", "AdminController@Index")->name("admin");
-        Route::resource('articles', "ArticleController", ["except" => "show"]);
+        Route::resource('articles', ArticleController::class, ["except" => "show"]);
+        Route::get('articlesClub', "ArticleNotreClubController@index")->name("notreClub");
         Route::get('inscriptions', 'AdminController@editUsers')->name("inscriptions");
         Route::get('inscriptionsUpdate', 'AdminController@updateUsers')->name("inscriptionsUpdate");
-        // Route::get('showUsersByPrivilege', 'AdminController@showUsersByPrivilege')->name("showUsersByPrivilege");
         Route::resource('galleries','GalleryController',["except"=> ["store","update","index"]]);
         Route::resource('compterendus','CompterendusController');
     });
