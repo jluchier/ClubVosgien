@@ -23,16 +23,15 @@ class ArticleController extends Controller
 
     public function index(Request $request)
     {
-      $articleRequest = Article::with('category')->orderBy("category_id")->limit(10);
-
+      $articleRequest = Article::with('category')->orderBy("category_id");
       $currentCategory = $request->get("category", -1);
       if ( $currentCategory == -1)
       {
-          $articles = $articleRequest->get();
+          $articles = $articleRequest->paginate(10);
       }
       else
       {
-          $articles = $articleRequest->where("category_id", $currentCategory)->get();
+          $articles = $articleRequest->where("category_id", $currentCategory)->paginate(10);
       }
 
         $categories = [-1 => "Tous"] + Category::pluck("name", "id")->toArray();

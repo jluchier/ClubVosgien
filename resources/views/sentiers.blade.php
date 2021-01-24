@@ -9,13 +9,12 @@
 </div>
 
 <div class="w3-row-padding w3-container">
-  <div class="w3-card-4 CV-Fond-Carte w3-container  w3-section w3-content">
+  <div class="w3-card-4 CV-Fond-Carte w3-container  w3-section w3-content w3-padding">
     <p>Le Club Vosgien c’est de nombreux bénévoles qui œuvrent au balisage et à l’entretien de plus de 20 000 km de sentiers, qui gèrent des chalets, refuges et abris pour les randonneurs dans le respect de la protection de la nature et des paysages.
     </p>
+    Accédez au dépliant des Randonnées =>
     <a href="/images/common/depliant_Rando_RuptSurMoselle.pdf" download="depliant_Rando_RuptSurMoselle" target="_blank">
-      <i class="fa fa-file-pdf-o fa-3x" aria-hidden="true"></i>Dépliant des Randonnées
-
-     <!-- <img src="/images/common/depliant_Rando_RuptSurMoselle.pdf" alt=""> -->
+      <img src="/images/common/file-pdf-solid.png" style="max-width: 30px">
    </a>
   </div>
 </div>

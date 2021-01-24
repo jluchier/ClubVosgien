@@ -20,6 +20,15 @@
         {{Form::close()}}
     </div>
 
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Précédente</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Suivante</a></li>
+      </ul>
+    </nav>    
 
     <table class="w3-table-all w3-margin-top">
         <tr>
@@ -52,6 +61,5 @@
                 </td>
             </tr>
         @endforeach
-
     </table>
 @endsection
