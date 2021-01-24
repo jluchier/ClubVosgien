@@ -34,8 +34,6 @@ class AdminController extends Controller
         $url = route("inscriptionsUpdate");
         $method = "get";
 
-        // $urlShowPrivilege = route("showUsersByPrivilege");
-
         return view('Admin.inscriptions', compact(["users", "url", "method"]));
     }
 
@@ -47,20 +45,4 @@ class AdminController extends Controller
         $user->save();
         return redirect(route("inscriptions"));
     }
-
-    // public function showUsersByPrivilege(Request $request){
-
-
-    //     if (($request->get("value"))=== 'AV') {
-    //         $value = "A valider";
-    //     }
-    //     else $value = "Inscrit" ;
-
-    //     return view('Admin.inscriptions', compact("value"));;
-    //     }
-
-
-
-
-
 }

@@ -51,12 +51,15 @@ body{
 .CV-flex-gallery-column div > div{
     padding-left: 20px;
 }
-.CV-flex-gallery-column img, p {
+.CV-flex-gallery-column {
+  img, p
+  {
     display: block;
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 10px;
     text-align: center;
+  }
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -320,3 +323,41 @@ body{
   margin: 10px 15px;
   width: 90%;
 }
+
+/************** Sentiers résumés parcourts *****************************/
+
+.summary {
+  ul{
+    padding-left: 10px;
+    padding: 20px;
+    list-style: circle;
+  }
+}
+
+
+.sentierTexte {
+  p {
+    padding: 10px 0;
+  }
+  ul {
+    padding-left: 10px;
+  }
+}
+
+/****************** Pagination links *********************************/
+.pagination a {
+ color: black;
+ float: left;
+ padding: 8px 16px;
+ text-decoration: none;
+ transition: background-color .3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+ background-color: dodgerblue;
+ color: white;
+}
+
+/************* Add a grey background color on mouse-over ******************/
+.pagination a:hover:not(.active) {background-color: #ddd;}

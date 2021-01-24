@@ -7453,7 +7453,7 @@ body {
 }
 
 .CV-flex-gallery-column img,
-p {
+.CV-flex-gallery-column p {
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -7679,6 +7679,45 @@ p {
   width: 90%;
 }
 
+/************** Sentiers résumés parcourts *****************************/
+
+.summary ul {
+  padding-left: 10px;
+  padding: 20px;
+  list-style: circle;
+}
+
+.sentierTexte p {
+  padding: 10px 0;
+}
+
+.sentierTexte ul {
+  padding-left: 10px;
+}
+
+/****************** Pagination links *********************************/
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+/* Style the active/current link */
+
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/************* Add a grey background color on mouse-over ******************/
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
 /********** Gestion des couleurs du CV *************/
 
 /********** Gestion des tailles **********/
@@ -7836,7 +7875,7 @@ p {
 .parallax_2,
 .parallax_1 {
   /* Set a specific height */
-  height: 500px;
+  height: 300px;
   width: 100%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -7857,6 +7896,14 @@ p {
     background-attachment: scroll;
   }
 }
+
+.parallaxTitle {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/************ */
 
 .no-webp .parallax_1 {
   /* The image used */
@@ -7990,7 +8037,6 @@ hr {
 .CV-bottom-nav {
   background-color: #278a40;
   width: 100%;
-  overflow: hidden;
 }
 
 .CV-bottom-nav a {
@@ -8113,6 +8159,50 @@ hr {
   /* IE 9 */
   /* Safari 3-8 */
   transform: scale(2);
+}
+
+input[type=file] {
+  position: absolute;
+  top: -500px;
+}
+
+.files-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 -5px;
+}
+
+.thumbContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px;
+}
+
+.thumbContainer a {
+  margin: 5px;
+  padding: 0;
+}
+
+.preview {
+  width: 200px;
+  margin: 5px;
+}
+
+.preview button {
+  color: #ffe7e7;
+}
+
+.preview button:hover {
+  color: #f44336 !important;
+  background-color: transparent !important;
+}
+
+.progress {
+  padding: 8px 0;
+  text-align: center;
+  background-color: #4CAF50;
 }
 
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
