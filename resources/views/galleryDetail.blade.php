@@ -26,7 +26,6 @@
                 @endif
                 </div>
             </div>
-        </div>
     </div>
     <div class="CV-flex-gallery-row">
         @foreach ($allColumn as $column)

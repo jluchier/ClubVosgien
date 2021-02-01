@@ -9,7 +9,7 @@
 </div>
 
   <div class="w3-row w3-padding">
-    <div id="actu" class="grid-container-left w3-center w3-col s7">
+    <div id="actu" class="grid-container-left w3-center w3-col s12 m7">
       <div class="grid-container-center">
         <h1>Les actualités</h1>
 
@@ -20,14 +20,14 @@
           </div>
           <div style="padding-top: 10px ; padding-bottom: 10px ; text-align: left" >{!!$actu->content!!}</div>
           <div class="w3-section CV-Fond-Carte">
-            <img class="zoom" style="max-width: 50%" src="{{ Storage::url('images/medium/' . $actu->image) }}" alt="">
+            <img style="max-width: 50%" src="{{ Storage::url('images/medium/' . $actu->image) }}" alt="">
           </div>
         </div>
         @endforeach
       </div>
     </div>
 
-    <div id="agenda" class="grid-container-right w3-col s5 w3-display-container">
+    <div id="agenda" class="grid-container-right w3-col s12 m5 w3-display-container">
       <div class="grid-container-center">
         <h1>Agenda</h1>
 
@@ -36,15 +36,19 @@
           @if ($key % 2 == 0)
           <div class="container left">
             <div class="content">
-              <h2>{{ $valeur->title }}</h2>
-              <p>{{ $valeur->dateEvent }}</p>
+              <a href="{{route('agendaDetail', $key, $agenda)}}">
+                <h2>{{ $valeur->title }}</h2>
+                <p>{{ $valeur->dateEvent }}</p>
+              </a>
             </div>
           </div>
           @else
           <div class="container right">
             <div class="content">
+              <a href="{{route('agendaDetail', $key, $agenda)}}">
               <h2>{{ $valeur->title }}</h2>
               <p>{{ $valeur->dateEvent }}</p>
+            </a>
             </div>
           </div>
           @endif

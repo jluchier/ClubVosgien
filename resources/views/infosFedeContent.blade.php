@@ -9,6 +9,10 @@
     </div>
 </div>
 
+<div class="parallax_6 w3-display-container">
+  <h1 class='parallaxTitle w3-display-middle'>Notre club</h1>
+</div>
+
 <?php $articlesToDispaly = $articlesComite ?>
 @include('Includes.infoFedeRubrique')
 
@@ -16,15 +20,20 @@
 <h1 class='parallaxTitle w3-display-middle'>Les formations</h1>
 </div>
 
+
 <?php $articlesToDispaly = $articlesFormations ?>
 @include('Includes.infoFedeRubrique')
 
-<div class="parallax_3"></div>
+<div class="parallax_3 w3-display-container">
+<h1 class='parallaxTitle w3-display-middle'>Les adhésions</h1>
+</div>
 
 <?php $articlesToDispaly = $articlesAdhesions ?>
 @include('Includes.infoFedeRubrique')
 
-<div class="parallax_4"></div>
+<div class="parallax_4 w3-display-container">
+  <h1 class='parallaxTitle w3-display-middle'>Les partenaires</h1>
+</div>
 
 <?php $articlesToDispaly = $articlesPartenaires ?>
 @include('Includes.infoFedeRubrique')
