@@ -171,4 +171,9 @@ class GuestController extends Controller
     $agendaDetail->dateEvent = $this->dateFormat($agendaDetail->dateEvent);
     return view('agendaDetail', compact(['agendaDetail']));
   }
+
+  public function contact(){
+
+    return view('contact');
+  }
 }

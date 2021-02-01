@@ -51,8 +51,8 @@
     @yield('content')
 </div>
 
-  <footer class="CV-footer">
-      <p>Contactez moi ici</p>
+  <footer class="CV-footer CV-bottom-nav w3-large">
+      <a href="{{ route("contact") }}" class="w3-button navItem @yield('contact')">Contact</a>
   <!--         <i class="fab fa-2x w3-hover-opacity fa-facebook"></i>
       <i class="fab fa-2x w3-hover-opacity fa-instagram"></i>
       <i class="fab fa-2x  w3-hover-opacity fa-snapchat"></i>
