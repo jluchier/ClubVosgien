@@ -7,9 +7,17 @@
 
 <h1>Editer</h1>
 
+<div class="files-container" style="justify-content: left;">
 @foreach($thumbs as $thumb)
-    <img src="{{ Storage::url($thumb)}}" alt="Pas d'image">
+    <div class="preview w3-display-container">
+      <img src="{{ Storage::url($thumb)}}" alt="Pas d'image" style="width: 100%">
+        {{ Form::open(["route" => ["deleteImage", $gallery->id], "method" => "delete", "class" => "w3-display-bottomright"]) }}
+        {{ Form::hidden("image", $thumb) }}
+        {{ Form::button('<i class="fas fa-trash-alt"></i>', ["type" => "submit", "class" => "w3-button"]) }}
+        {{ Form::close() }}
+    </div>
 @endforeach
+</div>
 
 <div id="vuejs">
 

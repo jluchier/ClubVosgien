@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Gallery;
 use Illuminate\Support\Facades\Storage;
+use App\Traits\ImageManager;
+use Illuminate\Http\Request;
 
 class GalleryController extends Controller
 {
+  use ImageManager;
 
     public function index()
     {
@@ -29,7 +32,6 @@ class GalleryController extends Controller
         $thumbs = [];
 
         return view("Admin.Gallery.edit", compact(["gallery", "url", "method", "thumbs"]));
-
     }
 
     public function edit(Gallery $gallery)
@@ -49,5 +51,16 @@ class GalleryController extends Controller
         Gallery::destroy($gallery->id);
 
         return redirect(route("galleries.index"))->with("success", "Galerie supprimée");
+    }
+
+    public function deleteGallerySingleImage(Gallery $gallery, Request $request)
+    {
+      $splitPath = explode("/", $request->get("image"));
+      $imageName = end($splitPath);
+
+      $folder = "gallery/".$gallery->title;
+      $this->deleteImage($folder, $imageName);
+
+      return redirect(route("galleries.edit", $gallery));
     }
 }
