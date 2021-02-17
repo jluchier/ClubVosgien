@@ -1,0 +1,11 @@
+to do list
+
+*** => mise ne place du SMTP et envoi de des mails
+
+*** => " moteur de recherche " ou tri pour afficher les galeries voulues
+
+*** => En tant qu'inscrit, je peux déposer/modifier/supprimer mes galeries
+
+*** => Charger des images webp/jpg pour alimenter le site (page sentiers par ex)
+
+*** => Revoir les puces " baskettes "

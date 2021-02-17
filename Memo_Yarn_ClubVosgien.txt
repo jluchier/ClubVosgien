@@ -12,10 +12,11 @@ utiliser la commande => yarn run watch
 
 1)	arrêter le moteur yarn run watch s'il fonctionne et fermer les fichiers ouverts du projet
 2)	si besoin mettre à jour la version Dev du dépôt GitHub
+4) 	compiler la version de production => yarn run prod
 3) 	Faire un merge de la branche Dev sur master
 			git checkout master
-			git push
 			git merge Dev
-4) 	compiler la version de production => yarn run prod
+			git push
+			Revenir sur dev => git checkout Dev
 5) 	Envoyer la nouvelle version en production
 			envoy run deploy
