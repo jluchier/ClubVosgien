@@ -15,8 +15,9 @@
     <img src="/images/common/wave_white.svg">
 </div>
 
-<div class="CV-global">
-    <div class="w3-card-4 CV-Fond-Carte CV-cadreCard" style="flex: 1 0 25%">
+<div class="w3-row-padding">
+    <div class="w3-col m12 l6">
+      <div class="w3-card-4 CV-Fond-Carte CV-cadreCard">
         <h1>Le code du randonneur</h1>
         <ul class="CV-ul-shoes">
             <li>Equipe-toi de bonnes chaussures.</li>
@@ -39,8 +40,9 @@
         </ul>
         <p style=" color: green; margin-top: 20px">Paul Keller</p>
         <p style=" color: green; text-align: left">Initiateur de la formation des guides de randonnée pédestre (GRP) du Club vosgien</p>
+      </div>
     </div>
-    <div class="CV-flex-container-Column">
+    <div class="w3-col m12 l6">
         <div id="Rando" class="w3-card-4 CV-Fond-Carte CV-cadreCard">
             <h1>Les randonnées</h1>
                 <div>

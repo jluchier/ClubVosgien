@@ -38,6 +38,7 @@ Route::middleware("auth.validated")->group(function (){
         Route::get('inscriptionsUpdate', 'AdminController@updateUsers')->name("inscriptionsUpdate");
         Route::resource('galleries','GalleryController',["except"=> ["store","update","index"]]);
         Route::resource('compterendus','CompterendusController');
+        Route::delete("galleries/{gallery}/deleteImage", "GalleryController@deleteGallerySingleImage")->name("deleteImage");
     });
 
 });
