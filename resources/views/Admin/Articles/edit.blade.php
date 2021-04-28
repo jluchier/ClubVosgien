@@ -39,7 +39,7 @@
 
     {{ Form::label("content", "Contenu") }}
 <div id="vueditor">
-<cv-editor :editor-data="'{!! $article->content !!}'"></cv-editor>
+  <cv-editor :editor-data="{{ json_encode($article->content) }}"></cv-editor>
 </div>
     <!-- {{ Form::textArea("content", null, ["class" => "w3-input", "id" => "contentArea", "required" => true]) }} -->
 

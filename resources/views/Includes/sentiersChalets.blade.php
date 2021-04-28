@@ -1,6 +1,9 @@
   <div class="w3-half w3-center">
     <img style="max-width: 50%" src="images/sentiers/chalet_Vrille.png" alt="Le chalet de la Vrille">
     <p class="legende">Le chalet de la Vrille</p>
+    <div class="" id="mapVrilleId" style="height: 280px">
+    </div>
+
   </div>
   <div class="w3-half CV-Fond-Carte w3-card-4 sentierTexte">
     <div class="w3-theme-dark w3-center w3-padding w3-margin">

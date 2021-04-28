@@ -48,3 +48,11 @@ mount();
 
 swup.on("contentReplaced", mount);
 swup.on("willReplaceContent", unmount);
+
+let mapVrille = L.map('mapVrilleId').setView([51.505, -0.09], 13);
+
+L.tileLayer('//{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+    attribution: 'donn&eacute;es &copy; <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
+    minZoom: 1,
+    maxZoom: 20
+}).addTo(mapVrille);
