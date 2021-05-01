@@ -41,7 +41,9 @@
         "@ckeditor/ckeditor5-vue2": "^1.0.5",
         "@swup/head-plugin": "^1.0.2",
         "@swup/scroll-plugin": "^1.0.6",
-        "swup": "^2.0.5"
+        "leaflet": "^1.7.1",
+        "swup": "^2.0.5",
+        "vue2-leaflet": "^2.7.0"
     },
     "name": "ClubVosgien",
     "version": "1.0.0",

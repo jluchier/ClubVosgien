@@ -1,18 +1,9 @@
 import Swup from 'swup';
 import SwupScrollPlugin from '@swup/scroll-plugin';
-
-
-const swup = new Swup({
-    containers: ['#nav', '#swup'],
-    cache: false,
-    plugins: [
-        new SwupScrollPlugin({
-            animateScroll: true
-        }),
-    ],
-});
-
 import Vue from 'vue';
+import { LMap, LTileLayer, LMarker } from 'vue2-leaflet';
+import 'leaflet/dist/leaflet.css';
+
 import CKEditor from '@ckeditor/ckeditor5-vue2';
 import ImageUpload from "./components/ImageUploadManager";
 import SingleImage from "./components/SingleImageUpload";
@@ -21,11 +12,23 @@ import CvEditor from "./components/CvEditor";
 
 import axios from "axios";
 
+const swup = new Swup({
+  containers: ['#nav', '#swup'],
+  cache: false,
+  plugins: [
+    new SwupScrollPlugin({
+      animateScroll: true
+    }),
+  ],
+});
+
 Vue.prototype.$axios = axios;
 Vue.use( CKEditor );
 
 let app;
 let editor;
+//let mapVrille = L.map('mapVrilleId').setView([51.505, -0.09], 13);
+let leaflet;
 
 function mount() {
     app = new Vue({
@@ -37,22 +40,21 @@ function mount() {
         el: '#vueditor',
         components: {CvEditor}
     });
+
+    leaflet = new Vue({
+        el: '#leaflet',
+        components: {LMap, LTileLayer, LMarker}
+    });
+
 }
 
 function unmount(){
     app.$destroy();
     editor.$destroy();
+    leaflet.$destroy();
 }
 
 mount();
 
 swup.on("contentReplaced", mount);
 swup.on("willReplaceContent", unmount);
-
-let mapVrille = L.map('mapVrilleId').setView([51.505, -0.09], 13);
-
-L.tileLayer('//{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
-    attribution: 'donn&eacute;es &copy; <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
-    minZoom: 1,
-    maxZoom: 20
-}).addTo(mapVrille);
