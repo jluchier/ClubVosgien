@@ -1,5 +1,34 @@
 mémo JJ about Yarn
 
+installation de xampp
+
+puis lien symbolique pour utiliser la même version de php partout
+
+ln -s /opt/lampp/bin/php /usr/local/bin/php
+
+Installation de npm
+
+curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
+sudo chmod +x /usr/local/bin/composer
+source ~/.bashrc (pour réinitialiser la console/le terminal)
+
+si besoin avant installation de yarn
+rm -rf node_modules
+rm package-lock.json yarn.lock
+npm cache clear --force
+
+Installation de yarn
+npm install --global yarn
+puis 
+yarn add cross-env
+yarn install
+
+Si pb de version de npm
+version manager de npm =>
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+source ~/.bashrc
+
 https://yarnpkg.com/en/docs/install#debian-stable
 
 pour lancer le site en mode dev / consultation
