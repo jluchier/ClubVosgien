@@ -2,8 +2,8 @@
     <img style="max-width: 50%" src="images/sentiers/chalet_Vrille.png" alt="Le chalet de la Vrille">
     <p class="legende">Le chalet de la Vrille</p>
     <div id="leaflet">
-      <l-map style="height: 350px" :zoom="18" :center="[47.313220, -1.319482]">
-        <l-tile-layer :url="'https://{s}.tile.openstreetmap.org/${z}/${x}/${y}.png'">
+      <l-map style="height: 350px" :zoom="13" :center="[47.313220, -1.319482]">
+        <l-tile-layer :url="'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'">
         </l-tile-layer>
       </l-map>
     </div>
