@@ -1,10 +1,13 @@
   <div class="w3-half w3-center">
-    <img style="max-width: 50%" src="images/sentiers/chalet_Vrille.png" alt="Le chalet de la Vrille">
-    <p class="legende">Le chalet de la Vrille</p>
+    <img style="max-width: 70% ;margin-bottom: 20px" src="images/sentiers/RUPT_Charmotte.gif" alt="Le chalet de la Vrille">
     <div id="leaflet">
-      <l-map style="height: 350px" :zoom="13" :center="[47.313220, -1.319482]">
-        <l-tile-layer :url="'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'">
+      <l-map style="height: 400px" :zoom="13" :center="[47.95339, 6.69325]" >
+        <l-tile-layer
+        :url="'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'">
+        <!-- :attribution="'&copy <a href='"\."'http://osm.org/copyright'"\."'>OSM</a>contributors'" -->
+
         </l-tile-layer>
+        <l-marker :lat-lng="[47.92768, 6.66096]"></l-marker>
       </l-map>
     </div>
 

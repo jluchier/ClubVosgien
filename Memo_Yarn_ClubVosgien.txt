@@ -1,5 +1,11 @@
 mémo JJ about Yarn
 
+Scripts de lancement => sh yarnRunWatch.sh
+echo "je lance yarn run watch"
+cd Developpements/ClubVosgien/
+yarn run watch
+
+
 installation de xampp
 
 puis lien symbolique pour utiliser la même version de php partout
@@ -20,7 +26,7 @@ npm cache clear --force
 
 Installation de yarn
 npm install --global yarn
-puis 
+puis
 yarn add cross-env
 yarn install
 
