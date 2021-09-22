@@ -8204,6 +8204,10 @@ input[type=file] {
   background-color: #4CAF50;
 }
 
+.map {
+  height: 500px;
+}
+
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 
 html,

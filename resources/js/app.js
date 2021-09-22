@@ -2,15 +2,14 @@ import Swup from 'swup';
 import SwupScrollPlugin from '@swup/scroll-plugin';
 import Vue from 'vue';
 import { LMap, LTileLayer, LMarker, LTooltip } from 'vue2-leaflet';
-import 'leaflet/dist/leaflet.css';
-import { latLng, icon } from "leaflet";
+
 
 import CKEditor from '@ckeditor/ckeditor5-vue2';
 import ImageUpload from "./components/ImageUploadManager";
 import SingleImage from "./components/SingleImageUpload";
 import TimeRestCounter from "./components/TimeRestCounter";
 import CvEditor from "./components/CvEditor";
-import Map from "./components/Map.vue";
+import MapLinqueny from "./components/MapLinqueny.vue";
 
 import axios from "axios";
 
@@ -29,7 +28,7 @@ Vue.use( CKEditor );
 
 let app;
 let editor;
-let map;
+let mapLinqueny;
 let leaflet;
 
 function mount() {
@@ -42,10 +41,10 @@ function mount() {
         el: '#vueditor',
         components: {CvEditor}
     });
-    map = new Vue({
-      el: '#map',
-      template: '<Map/>',
-      components: { Map },
+    mapLinqueny = new Vue({
+      el: '#mapLinqueny',
+      template: '<mapLinqueny/>',
+      components: { MapLinqueny },
     });
 
     leaflet = new Vue({
