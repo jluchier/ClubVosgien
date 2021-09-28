@@ -12,6 +12,9 @@ puis lien symbolique pour utiliser la même version de php partout
 
 ln -s /opt/lampp/bin/php /usr/local/bin/php
 
+pour lancer le service
+sudo /opt/lampp/lampp start
+
 Installation de npm
 
 curl -sS https://getcomposer.org/installer | php
@@ -58,3 +61,6 @@ utiliser la commande => yarn run watch
 
 
 Temp package json dependencies  => "leaflet": "^1.7.1",
+
+Application gpsmaster pour creer/modifier les fichiers gpx de Open Street Map
+jj@jj-portable:~/Applications/gpsmaster$ java -jar GpsMaster_0.64.00-rc0.jar
