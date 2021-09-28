@@ -44,7 +44,7 @@ function mount() {
     mapLinqueny = new Vue({
       el: '#mapLinqueny',
       template: '<mapLinqueny/>',
-      components: { MapLinqueny },
+      components: { MapLinqueny }
     });
 
     leaflet = new Vue({
