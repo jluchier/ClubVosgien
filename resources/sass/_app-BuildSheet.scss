@@ -23,8 +23,19 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    color: white;
+    font-size: 25px;
   }
-
+.construction {
+  margin: auto;
+  width: 100%;
+  background-image: url('images/common/CV_Construction12.jpg');
+  background-position: center;
+  /* Scale and zoom in the image */
+  background-size: cover;
+  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+  position: absolute;
+}
   /* Style the <hr> element */
   hr {
     margin: auto;

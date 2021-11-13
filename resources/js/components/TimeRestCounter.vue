@@ -7,7 +7,7 @@ export default {
 
   data () {
     return {
-      countDownDate: new Date("Jan 5, 2021 15:37:25").getTime(),
+      countDownDate: new Date("Jan 5, 2022 15:37:25").getTime(),
       countdownfunction: null,
     }
   },
