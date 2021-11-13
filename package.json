@@ -43,7 +43,8 @@
         "@swup/scroll-plugin": "^1.0.6",
         "leaflet": "latest",
         "swup": "^2.0.5",
-        "vue2-leaflet": "^2.5.2"
+        "vue2-leaflet": "^2.5.2",
+        "vue2-leaflet-gpx": "^2.1.0"
     },
     "name": "ClubVosgien",
     "version": "1.0.0",

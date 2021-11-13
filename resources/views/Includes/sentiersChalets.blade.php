@@ -8,6 +8,11 @@
 
         </l-tile-layer>
         <l-marker :lat-lng="[47.92768, 6.66096]"></l-marker>
+        <l-gpx :gpx-file="'new.gpx'" :gpx-options="{marker_options: {
+          startIconUrl: 'images/sentiers/marker-icon-start.png',
+          endIconUrl: 'images/sentiers/marker-icon-stop.png',
+          shadowUrl: 'images/sentiers/marker-icon-shadow.png'
+        }}" />
       </l-map>
     </div>
 

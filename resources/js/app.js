@@ -2,6 +2,7 @@ import Swup from 'swup';
 import SwupScrollPlugin from '@swup/scroll-plugin';
 import Vue from 'vue';
 import { LMap, LTileLayer, LMarker, LTooltip } from 'vue2-leaflet';
+import LGpx from 'vue2-leaflet-gpx'
 
 
 import CKEditor from '@ckeditor/ckeditor5-vue2';
@@ -49,7 +50,7 @@ function mount() {
 
     leaflet = new Vue({
         el: '#leaflet',
-        components: {LMap, LTileLayer, LMarker, LTooltip}
+        components: {LMap, LTileLayer, LMarker, LTooltip, LGpx}
     });
 
 }
