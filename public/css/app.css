@@ -7973,14 +7973,6 @@ body {
   left: 16px;
 }
 
-/* Position text in the bottom-left corner */
-
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
-
 /* Position text in the middle */
 
 .middle {
@@ -7989,26 +7981,27 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
   font-size: 25px;
 }
 
-.construction {
-  margin: auto;
+.middle h1,
+div {
+  color: white;
+}
+
+/* Image position */
+
+.building {
+  height: 800px;
   width: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-image: url(/images/CV_Construction12.jpg?d8780621f10d1f34213fc216df5757b9);
   background-position: center;
   /* Scale and zoom in the image */
   background-size: cover;
   /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
   position: absolute;
-}
-
-/* Style the <hr> element */
-
-hr {
-  margin: auto;
-  width: 40%;
 }
 
 /********** Gestion des couleurs du CV *************/

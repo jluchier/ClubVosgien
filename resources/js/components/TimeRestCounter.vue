@@ -25,7 +25,8 @@ export default {
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
       // Output the result in an element with id="demo"
-      this.$refs.time.innerHTML = days + " jours " + hours + " heures " + minutes + " minutes ";
+      //this.$refs.time.innerHTML = days + " jours " + hours + " heures " + minutes + " minutes ";
+      this.$refs.time.innerHTML = "Sortie prévue dans " + days + " jours ";      
     },
   },
 

@@ -2691,8 +2691,9 @@ __webpack_require__.r(__webpack_exports__);
       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
       var hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
       var minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60)); // Output the result in an element with id="demo"
+      //this.$refs.time.innerHTML = days + " jours " + hours + " heures " + minutes + " minutes ";
 
-      this.$refs.time.innerHTML = days + " jours " + hours + " heures " + minutes + " minutes ";
+      this.$refs.time.innerHTML = "Sortie prévue dans " + days + " jours ";
     }
   },
   mounted: function mounted() {
