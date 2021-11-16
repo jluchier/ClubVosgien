@@ -1,6 +1,8 @@
 <div class="CV-flex-container-Column">
 
-<div class="parallax_1"></div>
+<div class="CV-TopContainerHome parallax_1 ">
+  <img src="/images/common/wave_white.svg">
+</div>
 <div class="w3-row-padding w3-container">
     <div class="w3-card-4 CV-Fond-Carte w3-container w3-section w3-content">
         <p style="text-align:justify">

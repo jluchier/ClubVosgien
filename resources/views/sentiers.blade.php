@@ -4,8 +4,9 @@
 
 @section('content')
 
-<div class="parallax_1 w3-display-container">
+<div class="CV-TopContainerHome parallax_1 w3-display-container">
   <h1 class='parallaxTitle w3-display-middle'>Nos sentiers</h1>
+    <img src="/images/common/wave_white.svg">
 </div>
 
 <div class="w3-row-padding w3-container">
