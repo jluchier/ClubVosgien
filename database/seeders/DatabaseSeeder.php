@@ -3,7 +3,6 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Faker\Factory as Faker;
 
 
 class DatabaseSeeder extends Seeder
@@ -47,15 +46,5 @@ class DatabaseSeeder extends Seeder
             "privilege" => "Banni",
             'remember_token' => Str::random(10),
         ]);
-        $faker = Faker::create();
-        $ids = App\Models\Category::select("id")->pluck("id");
-
-        App\Models\User::factory(2)->create();
-
-        for ($i=0; $i < 20; $i++) {
-          App\Models\Article::factory()->create([
-            'category_id'=>$faker->randomElement($ids),
-          ]);
-        }
     }
 }
