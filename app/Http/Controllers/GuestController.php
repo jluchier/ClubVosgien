@@ -31,7 +31,6 @@ class GuestController extends Controller
       $value->dateEvent->locale();
       $value->dateEvent = $value->dateEvent->isoFormat("dddd Do MMMM YYYY");
       $value->dateEvent = ucfirst($value->dateEvent);
-
     }
 
     return view('home', compact(['actualite', 'agenda']));
