@@ -22,7 +22,7 @@ class GuestController extends Controller
     ->get();
 
     $agenda = Article::whereCategory("Agenda")
-    ->orderBy('dateEvent',"desc")
+    ->orderBy('dateEvent',"asc")
     ->limit('5')
     ->get();
 
@@ -30,6 +30,8 @@ class GuestController extends Controller
       $value->dateEvent = new Carbon($value->dateEvent);
       $value->dateEvent->locale();
       $value->dateEvent = $value->dateEvent->isoFormat("dddd Do MMMM YYYY");
+      $value->dateEvent = ucfirst($value->dateEvent);
+
     }
 
     return view('home', compact(['actualite', 'agenda']));
