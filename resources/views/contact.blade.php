@@ -10,7 +10,7 @@
     </div>
     <div class="w3-padding">
       <h1>Adresse</h1>
-      <p>5 rue du Pavé /br 88360 RUPT SUR MOSELLE </p>
+      <p>5 rue du Pavé </br> 88360 RUPT SUR MOSELLE </p>
       <h1>Téléphone</h1>
       <p>Président : 06 70 78 18 77</p>
       <h1>Mail</h1>
