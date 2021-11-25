@@ -17,7 +17,7 @@ class GuestController extends Controller
   public function index()
   {
     $actualite = Article::whereCategory("Actualité")
-    ->orderBy('updated_at',"desc")
+    ->orderBy('updated_at',"asc")
     ->limit('2')
     ->get();
 

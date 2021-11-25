@@ -15,7 +15,7 @@
     </p>
     Accédez au dépliant des Randonnées =>
     <a href="/images/common/depliant_Rando_RuptSurMoselle.pdf" target="_blank">
-      <img src="/images/common/file-pdf-solid.png" style="max-width: 30px">
+      <img src="/images/common/depliant.ico" style="max-width: 300px">
    </a>
   </div>
 </div>
