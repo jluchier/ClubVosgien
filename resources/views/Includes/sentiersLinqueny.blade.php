@@ -53,7 +53,7 @@
     </p>
   </div>
   <div class="w3-rest w3-center">
-    <img class="zoom" style="max-width: 50%" src="images/sentiers/linqueny.png" alt="Étang de Pré Come">
+    <img  style="max-width: 80%" src="images/sentiers/EtangPreCome_1067_800.png" alt="Étang de Pré Come">
     <p class="legende">Étang de Pré Come</p>
-      <div id="mapLinqueny"></div>
+      <!-- <div id="mapLinqueny"></div> -->
   </div>

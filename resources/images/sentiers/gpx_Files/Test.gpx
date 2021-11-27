@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<gpx version="1.1" creator="GpsMaster 0.64.00" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xmlns:gpsm="http://www.gpsmaster.org/schema/gpsm/v1">
+<metadata>
+<name>Test</name>
+<time>2021-09-27T18:17:17Z</time><bounds minlat="47.90408776" minlon="6.64535522" maxlat="47.90912215" maxlon="6.66359425"/>
+</metadata>
+<rte>
+<name>Test</name>
+<extensions>
+<gpsm:color>3d7502ff</gpsm:color>
+</extensions>
+<rtept lat="47.90428915" lon="6.64535522">
+</rtept>
+<rtept lat="47.90454807" lon="6.64672852">
+</rtept>
+<rtept lat="47.90472068" lon="6.64690018">
+</rtept>
+<rtept lat="47.90408776" lon="6.64994717">
+</rtept>
+<rtept lat="47.90411653" lon="6.65290833">
+</rtept>
+<rtept lat="47.90423161" lon="6.65608406">
+</rtept>
+<rtept lat="47.90437545" lon="6.65719986">
+</rtept>
+<rtept lat="47.90431792" lon="6.65805817">
+</rtept>
+<rtept lat="47.90463438" lon="6.65891647">
+</rtept>
+<rtept lat="47.90466314" lon="6.65956020">
+</rtept>
+<rtept lat="47.90449053" lon="6.66020393">
+</rtept>
+<rtept lat="47.90440422" lon="6.66153431">
+</rtept>
+<rtept lat="47.90466314" lon="6.66295052">
+</rtept>
+<rtept lat="47.90598650" lon="6.66359425">
+</rtept>
+<rtept lat="47.90699338" lon="6.65998936">
+</rtept>
+<rtept lat="47.90791394" lon="6.65732861">
+</rtept>
+<rtept lat="47.90912215" lon="6.65616989">
+</rtept>
+<rtept lat="47.90846051" lon="6.65531158">
+</rtept>
+<rtept lat="47.90687831" lon="6.65544033">
+</rtept>
+<rtept lat="47.90607281" lon="6.65586948">
+</rtept>
+<rtept lat="47.90581389" lon="6.65677071">
+</rtept>
+<rtept lat="47.90555498" lon="6.65217876">
+</rtept>
+<rtept lat="47.90615911" lon="6.64913177">
+</rtept>
+<rtept lat="47.90641802" lon="6.64612770">
+</rtept>
+<rtept lat="47.90644679" lon="6.64617062">
+</rtept>
+<rtept lat="47.90552621" lon="6.64668560">
+</rtept>
+<rtept lat="47.90518098" lon="6.64685726">
+</rtept>
+<rtept lat="47.90500837" lon="6.64694309">
+</rtept>
+</rte>
+<extensions>
+<gpsm:color>f7ba0bff</gpsm:color>
+</extensions></gpx>

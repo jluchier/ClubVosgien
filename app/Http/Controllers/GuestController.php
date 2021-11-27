@@ -17,7 +17,7 @@ class GuestController extends Controller
   public function index()
   {
     $actualite = Article::whereCategory("Actualité")
-    ->orderBy('updated_at',"asc")
+    ->orderBy('dateEvent',"asc")
     ->limit('2')
     ->get();
 
@@ -131,7 +131,7 @@ class GuestController extends Controller
     }
     $articlesPartenaires = Article::select("articles.*")
     ->whereCategory("Partenaires")
-    ->orderBy("id")
+    ->orderBy("dateEvent",'asc')
     ->get();
     foreach ($articlesPartenaires as $value){
       $value->dateEvent = new Carbon($value->dateEvent);

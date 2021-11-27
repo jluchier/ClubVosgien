@@ -42,6 +42,6 @@
     </p>
   </div>
   <div class="w3-rest w3-center">
-    <img class="zoom" style="max-width: 50%" src="images/sentiers/chalet_Homant.png" alt="Chalet de l’Hômant">
+    <img style="max-width: 80%" src="images/sentiers/chalet_Homant.png" alt="Chalet de l’Hômant">
     <p class="legende">Chalet de l’Hômant</p>
   </div>

@@ -74,6 +74,17 @@
                     </ul>
                 </div>
         </div>
+        <div id="LesServices" class="w3-card-4 CV-Fond-Carte CV-cadreCard">
+            <h1>Les petits plus</h1>
+              <div>
+                <ul class="CV-ul-shoes">
+                    <li>Location de raquettes de neige</li>
+                    <li>Location de cabanes de kermesse</li>
+                    <li>Location du chalet du ski club</li>
+                  </ul>
+            </div>
+          </div>
     </div>
+  </div>
 </div>
 @endsection

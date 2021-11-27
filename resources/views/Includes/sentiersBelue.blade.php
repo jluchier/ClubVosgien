@@ -1,5 +1,5 @@
   <div class="w3-half w3-center">
-    <img style="max-width: 50%" src="images/sentiers/tableOrientation.png" alt="Table d’orientation et point de vue de Bélué">
+    <img style="max-width: 80%" src="images/sentiers/tableOrientation.png" alt="Table d’orientation et point de vue de Bélué">
     <p class="legende">Table d’orientation et point de vue de Bélué</p>
   </div>
   <div class="w3-half CV-Fond-Carte w3-card-4 sentierTexte">

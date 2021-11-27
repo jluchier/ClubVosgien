@@ -1,5 +1,5 @@
   <div class="w3-half w3-center">
-    <img style="max-width: 50%" src="images/sentiers/source_Thermale.png" alt="Source thermale">
+    <img style="max-width: 80%" src="images/sentiers/source_Thermale.png" alt="Source thermale">
     <p class="legende">Source thermale</p>
   </div>
   <div class="w3-half CV-Fond-Carte w3-card-4 sentierTexte">

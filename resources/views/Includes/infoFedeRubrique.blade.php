@@ -18,7 +18,7 @@
     </div>
     <div class="w3-rest w3-center">
       @if (!is_null($cmt->image) )
-      <img class="zoom" style="max-width: 50%" src="{{ Storage::url('images/medium/' . $cmt->image) }}" alt="">
+      <img style="max-width: 50%" src="{{ Storage::url('images/medium/' . $cmt->image) }}" alt="">
       @else
       <img src="/images/common/large_000_1.jpg" style="max-width: 50%" alt="Les vosges">
       @endif
