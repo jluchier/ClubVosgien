@@ -33,8 +33,8 @@ class GalleryController extends Controller
     public function Store(GalleryRequest $request)
     {
         $request->validate([
-            'title' => 'unique:galleries',
-            'dateSortie' => 'unique:galleries'
+            'title' => 'unique:galleries'
+            // 'dateSortie' => 'unique:galleries'
         ]);
 
          Gallery::create([
@@ -53,8 +53,7 @@ class GalleryController extends Controller
     public function Update(GalleryRequest $request, Gallery $gallery)
     {
         $request->validate([
-            'title' => 'unique:galleries,id,'.$gallery->id,
-            'dateSortie' => 'unique:galleries,id,'.$gallery->id
+            'title' => 'unique:galleries,id,'.$gallery->id
         ]);
 
         $newTitle = $request->get("title");
