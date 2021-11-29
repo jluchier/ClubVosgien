@@ -60,7 +60,7 @@
             <h1>Les sorties VTT</h1>
                 <div>
                     <ul class="CV-ul-vtt">
-                        <li>Deux sorties hebdomadaires, le vendredi après-midi et le dimanche matin. Possibilité de participer aux randos VTT du secteur. Retrouvez nous sur <a href="https://www.facebook.com/federationclubvosgien/" target="_blank"><i class="fab fa-2x w3-hover-opacity fa-facebook"></i></a>.</li>
+                        <li>Deux sorties hebdomadaires, le vendredi après-midi et le dimanche matin. Possibilité de participer aux randos VTT du secteur. Retrouvez nous sur <a href="https://www.facebook.com/groups/ClubRVFVTT" target="_blank" rel="noopener"><i class="fab fa-2x w3-hover-opacity fa-facebook"></i></a>.</li>
                         <li>Rando VTT : mi-juillet, sur le secteur de Rupt Sur Moselle, Vecoux ou Ferdrupt suivant les années, parcours de 15, 30 ou 45 km, avec ravitaillement sur les parcours.</li>
                     </ul>
                 </div>

@@ -1,5 +1,5 @@
   <div class="w3-half w3-center">
-    <img style="max-width: 70% ;margin-bottom: 20px" src="images/sentiers/RUPT_Charmotte.gif" alt="Le chalet de la Vrille">
+    <img style="max-width: 70% ;margin-bottom: 20px" src="images/sentiers/RUPT-Chalets.gif" alt="Le chalet de la Vrille">
     <div id="leaflet">
       <l-map style="height: 400px" :zoom="13" :center="[47.92768, 6.66096]" >
         <l-tile-layer
@@ -8,7 +8,8 @@
 
         </l-tile-layer>
         <l-marker :lat-lng="[47.92768, 6.66096]"></l-marker>
-        <l-gpx :gpx-file="'images/sentiers/gpx_Files/new.gpx'" :gpx-options="{marker_options: {
+        <l-gpx :gpx-file="'images/sentiers/gpx_Files/traceVTT2.gpx'"
+          :gpx-options="{marker_options: {
           startIconUrl: 'images/sentiers/marker-icon-start.png',
           endIconUrl: 'images/sentiers/marker-icon-stop.png',
           shadowUrl: 'images/sentiers/marker-icon-shadow.png'

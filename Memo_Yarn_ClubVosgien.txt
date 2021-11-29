@@ -66,3 +66,6 @@ Temp package json dependencies  => "leaflet": "^1.7.1",
 
 Application gpsmaster pour creer/modifier les fichiers gpx de Open Street Map
 jj@jj-portable:~/Applications/gpsmaster$ java -jar GpsMaster_0.64.00-rc0.jar
+
+
+Convertion des formats video WMV en GIF => j'ai utilisé le convertisseur en ligne https://convertio.co/fr/ qui fonctionne bien

@@ -3,7 +3,7 @@
 <gpx version="1.1" creator="GpsMaster 0.64.00" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xmlns:gpsm="http://www.gpsmaster.org/schema/gpsm/v1">
 <metadata>
 <name>Test</name>
-<time>2021-09-27T18:17:17Z</time><bounds minlat="47.90408776" minlon="6.64535522" maxlat="47.90912215" maxlon="6.66359425"/>
+<time>2021-09-27T18:17:17Z</time><bounds minlat="47.90408776" minlon="6.64535522" maxlat="47.90952488" maxlon="6.66359425"/>
 </metadata>
 <rte>
 <name>Test</name>
@@ -11,60 +11,90 @@
 <gpsm:color>3d7502ff</gpsm:color>
 </extensions>
 <rtept lat="47.90428915" lon="6.64535522">
+<ele>629.67000000</ele>
 </rtept>
 <rtept lat="47.90454807" lon="6.64672852">
+<ele>621.81000000</ele>
 </rtept>
 <rtept lat="47.90472068" lon="6.64690018">
+<ele>617.58000000</ele>
 </rtept>
 <rtept lat="47.90408776" lon="6.64994717">
+<ele>595.75000000</ele>
 </rtept>
 <rtept lat="47.90411653" lon="6.65290833">
+<ele>576.37000000</ele>
 </rtept>
 <rtept lat="47.90423161" lon="6.65608406">
+<ele>565.79000000</ele>
 </rtept>
 <rtept lat="47.90437545" lon="6.65719986">
+<ele>559.36000000</ele>
 </rtept>
 <rtept lat="47.90431792" lon="6.65805817">
+<ele>563.47000000</ele>
 </rtept>
 <rtept lat="47.90463438" lon="6.65891647">
+<ele>553.73000000</ele>
 </rtept>
 <rtept lat="47.90466314" lon="6.65956020">
+<ele>548.54000000</ele>
 </rtept>
 <rtept lat="47.90449053" lon="6.66020393">
+<ele>548.31000000</ele>
 </rtept>
 <rtept lat="47.90440422" lon="6.66153431">
+<ele>550.13000000</ele>
 </rtept>
 <rtept lat="47.90466314" lon="6.66295052">
+<ele>527.08000000</ele>
 </rtept>
 <rtept lat="47.90598650" lon="6.66359425">
+<ele>473.68000000</ele>
 </rtept>
 <rtept lat="47.90699338" lon="6.65998936">
+<ele>458.16000000</ele>
 </rtept>
 <rtept lat="47.90791394" lon="6.65732861">
+<ele>452.64000000</ele>
 </rtept>
 <rtept lat="47.90912215" lon="6.65616989">
+<ele>450.20000000</ele>
 </rtept>
 <rtept lat="47.90846051" lon="6.65531158">
+<ele>462.15000000</ele>
 </rtept>
 <rtept lat="47.90687831" lon="6.65544033">
+<ele>477.34000000</ele>
 </rtept>
 <rtept lat="47.90607281" lon="6.65586948">
+<ele>491.70000000</ele>
 </rtept>
 <rtept lat="47.90581389" lon="6.65677071">
+<ele>493.59000000</ele>
 </rtept>
 <rtept lat="47.90555498" lon="6.65217876">
+<ele>533.69000000</ele>
 </rtept>
 <rtept lat="47.90615911" lon="6.64913177">
+<ele>554.05000000</ele>
+</rtept>
+<rtept lat="47.90952488" lon="6.65211439">
 </rtept>
 <rtept lat="47.90641802" lon="6.64612770">
+<ele>603.21000000</ele>
 </rtept>
 <rtept lat="47.90644679" lon="6.64617062">
+<ele>601.14000000</ele>
 </rtept>
 <rtept lat="47.90552621" lon="6.64668560">
+<ele>610.06000000</ele>
 </rtept>
 <rtept lat="47.90518098" lon="6.64685726">
+<ele>612.24000000</ele>
 </rtept>
 <rtept lat="47.90500837" lon="6.64694309">
+<ele>613.57000000</ele>
 </rtept>
 </rte>
 <extensions>
