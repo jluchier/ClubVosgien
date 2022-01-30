@@ -9,3 +9,5 @@ to do list
 *** => Charger des images webp/jpg pour alimenter le site (page sentiers par ex)
 
 *** => Revoir les puces " baskettes "
+
+*** =>  formulaire d'inscription

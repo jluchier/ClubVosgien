@@ -42,6 +42,6 @@
     </p>
   </div>
   <div class="w3-rest w3-center">
-    <img class="zoom" style="max-width: 80%" src="images/sentiers/point_Vue.png" alt="Table d'orientation et point de vue">
+    <img  style="max-width: 80%" src="images/sentiers/point_Vue.png" alt="Table d'orientation et point de vue">
     <p class="legende">Table d'orientation et point de vue</p>
   </div>
