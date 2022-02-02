@@ -23,5 +23,6 @@ return [
     'remember' => 'Remember me',
     'send' => 'Send',
     'password' => 'Password',
-    'pwd_Request' => 'Forgot your password?'
+    'pwd_Request' => 'Forgot your password?',
+    'pwd_Confirmation' => 'Password confirmation'    
 ];
