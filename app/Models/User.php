@@ -7,6 +7,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Notifications\MyResetPasswordNotification;
 
 use function GuzzleHttp\Psr7\_parse_request_uri;
 
@@ -52,4 +53,7 @@ class User extends Authenticatable
         return ($this->privilege == "Admin");
     }
 
+    public function sendPasswordResetNotification($token){
+        $this->notify(new MyResetPasswordNotification($token));
+    }
 }
