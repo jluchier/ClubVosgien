@@ -57,7 +57,8 @@ utiliser la commande => yarn run watch
 	git merge Dev (Faire un merge de la branche Dev sur master)
 	git push
 	git checkout Dev (Revenir sur dev)
-	envoy run deploy (Envoyer la nouvelle version en production)
+	
+	=> (envoy run deploy (Envoyer la nouvelle version en production)) pas possible avec OVH (pas de connexion ssh)
 
 	git reset --hard pour revenir au commit du depot
 
