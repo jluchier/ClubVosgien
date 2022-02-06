@@ -53,7 +53,6 @@ utiliser la commande => yarn run watch
  	compiler la version de production => yarn run prod
 	Commit et push sur la branche Dev
 	git checkout master
-	git checkout master
 	git merge Dev (Faire un merge de la branche Dev sur master)
 	git push
 	git checkout Dev (Revenir sur dev)
