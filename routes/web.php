@@ -19,16 +19,16 @@ Route::get('gallery', "GuestController@gallery")->name("gallery");
 Route::get('activity', "GuestController@Activity")->name("activity");
 Route::get('sentiers', "GuestController@sentiers")->name("sentiers");
 Route::get('chalets', "GuestController@chalets")->name("chalets");
-Route::get('construction',"GuestController@construction")->name("construction");
+Route::get('construction', "GuestController@construction")->name("construction");
 Route::get('infosFede', "GuestController@infosFede")->name("infosFede");
 Route::get('galleryDetail/{id}', "GuestController@galleryDetail")->name("galleryDetail");
 Route::get('agendaDetail/{id}', "GuestController@agendaDetail")->name("agendaDetail");
 Route::get('contact', "GuestController@contact")->name("contact");
 
-Route::middleware("auth.validated")->group(function (){
+Route::middleware("auth.validated")->group(function ( ){
 
     Route::get("compterendus", "GuestController@compterendus")->name("compterendus");
-    Route::resource('galleries','GalleryController', ["only" => ["index"]]);
+    Route::resource('galleries', 'GalleryController', ["only" => ["index"]]);
 
     Route::prefix("admin")->middleware("auth.admin")->group(function () {
         Route::get("/", "AdminController@Index")->name("admin");
@@ -36,10 +36,10 @@ Route::middleware("auth.validated")->group(function (){
         Route::get('articlesClub', "ArticleNotreClubController@index")->name("notreClub");
         Route::get('inscriptions', 'AdminController@editUsers')->name("inscriptions");
         Route::get('inscriptionsUpdate', 'AdminController@updateUsers')->name("inscriptionsUpdate");
-        Route::resource('galleries','GalleryController',["except"=> ["store","update","index"]]);
-        Route::resource('compterendus','CompterendusController');
+        Route::resource('galleries', 'GalleryController', ["except"=> ["store","update","index"]]);
+        Route::resource('compterendus', 'CompterendusController');
         Route::delete("galleries/{gallery}/deleteImage", "GalleryController@deleteGallerySingleImage")->name("deleteImage");
-        Route::get('optimisation',"AdminOptimizeController@optimisation")->name("optimisation");
+        Route::get('optimisation', "AdminOptimizeController@optimisation")->name("optimisation");
     });
 
 });
