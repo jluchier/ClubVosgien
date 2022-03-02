@@ -90,8 +90,10 @@ class GuestController extends Controller
     return redirect(route("construction", ["page" => "chalets"]));
   }
   public function compterendus(){
-    //        return view("compterendus");
-    return redirect(route("construction", ["page" => "compterendus"]));
+    $compteRendus=Article::whereCategory("compterendu")->get();
+    dd($compteRendus);
+    return view("compterendus", compact(['compterendus']));
+    // return redirect(route("construction", ["page" => "compterendus"]));
   }
 
   public function construction(Request $request){

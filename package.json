@@ -46,7 +46,7 @@
         "vue2-leaflet": "^2.5.2",
         "vue2-leaflet-gpx": "^2.1.0"
     },
-    "name": "ClubVosgien",
+    "name": "clubvosgien",
     "version": "1.0.0",
     "main": "index.js",
     "repository": "https://github.com/jluchier/ClubVosgien.git",
