@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\AttachmentsRequest;
 use App\Http\Requests\CompterenduRequest;
+use App\Models\Attachment;
 use App\Models\Compterendu;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -25,8 +26,7 @@ class CompterendusController extends Controller
         $CR = new Compterendu();
         $url = route("compterendus.store");
         $method = "post";
-        //$Attachment = attachment::pluck("name", "id");
-
+        
         return view('Admin.Compterendus.edit', compact(["CR", "url", "method"]));
     }
 
@@ -45,8 +45,9 @@ class CompterendusController extends Controller
     {
         $CR=Compterendu::findorfail($id);
         $url = route("compterendus.update", $CR->id);
+        $uploadFileUrl = route("uploadAttachment", $CR->id);
         $method = "put";
-        return view('Admin.Compterendus.edit', compact(["CR", "url", "method"]));
+        return view('Admin.Compterendus.edit', compact(["CR", "url", "method", "uploadFileUrl"]));
     }
 
 
@@ -56,6 +57,10 @@ class CompterendusController extends Controller
         //$CR->update($request->all());
         $CR->title = $request->get('title');
         $CR->content = $request->get('content');
+
+        $attachment = new Attachment();
+        $attachment->name = "test";
+        $CR->attachables()->save($attachment);
 
         $CR->save();
         return redirect()->route('compterendus.index')->with('success', 'Compte rendu modifié');

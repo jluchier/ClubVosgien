@@ -10,7 +10,7 @@ class Compterendu extends Model
     public $fillable = ['title','content'];
     protected $table = "compterendus";
 
-    public function attachments(){
+    public function attachables(){
         return $this->morphMany( 'App\Models\Attachment','attachable');
     }
 }
