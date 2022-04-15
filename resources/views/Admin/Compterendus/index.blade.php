@@ -5,15 +5,6 @@
 @section('content')
     @include('Admin.messages')
 
-    @if ($errors->any())
-        <div class="w3-pale-red w3-panel w3-leftbar w3-border-red">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
 
     <h1>Liste des compte rendus</h1>
     <a href="{{ route('compterendus.create') }}" class="w3-button w3-theme-dark w3-round">Ajouter</a>

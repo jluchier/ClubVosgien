@@ -31,7 +31,7 @@ class AttachmentsRequest extends FormRequest
     {
         return [
             'files' => 'required',
-            'files.*' => 'mimes:pdf,doc'
+            'files.*' => 'mimes:pdf'
         ];
     }
 }

@@ -26,6 +26,7 @@ class CompterenduRequest extends FormRequest
         return [
             'title'=>'required|string|min:2',
             'content'=>'required|string',
+            'files.*' => 'mimes:pdf'
         ];
     }
 }

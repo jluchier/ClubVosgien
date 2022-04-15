@@ -8,15 +8,19 @@
       <div class="grid-container-center">
         <h1>Les actualités</h1>
 
-        @foreach ($actualite as $actu)
+        @foreach ($compterendus as $cr)
         <div class="CV-Fond-Carte">
           <div class="w3-theme-dark">
-            <h2>{{ $actu->title }}</h2>
+            <h2>{{ $cr->title }}</h2>
           </div>
-          <div style="padding-top: 10px ; padding-bottom: 10px ; text-align: left" >{!!$actu->content!!}</div>
-          <div class="w3-section CV-Fond-Carte">
-            <img style="max-width: 50%" src="{{ Storage::url('images/medium/' . $actu->image) }}" alt="">
-          </div>
+          <div style="padding-top: 10px ; padding-bottom: 10px ; text-align: left" >{!!$cr->content!!}</div>
+          <div>
+            @foreach ($cr->attachables()->get() as $attachment)
+            <a href="{{ Storage::url("CompteRendusFile/".$attachment->name) }}">{{ $attachment->name }}</a>
+              
+            @endforeach
+        </div>
+
         </div>
         @endforeach
       </div>
