@@ -40,7 +40,7 @@ Route::middleware("auth.validated")->group(function ( ){
         Route::resource('compterendus', 'CompterendusController');
         Route::delete("galleries/{gallery}/deleteImage", "GalleryController@deleteGallerySingleImage")->name("deleteImage");
         Route::get('optimisation', "AdminOptimizeController@optimisation")->name("optimisation");
-        Route::post('uploadAttachment/{id}', 'AttachmentController@store')->name("uploadAttachment");
+        Route::delete('deleteAttachable/{id}',"AttachmentController@Delete" )->name("deleteAttachable");
     });
 
 });

@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use PhpParser\Node\Stmt\Return_;
 use function GuzzleHttp\Promise\all;
+use Illuminate\Support\Facades\Storage;
 
 class CompterendusController extends Controller
 {
@@ -33,10 +34,24 @@ class CompterendusController extends Controller
 
     public function store(CompterenduRequest $request)
     {
-        Compterendu::insert([
+        $CR = Compterendu::create([
             "title" => $request->get("title"),
             "content" => $request->get("content"),
         ]);
+
+        if ($request->has('files'))
+        {
+            foreach($request->file('files') as $file)
+            {
+                $attachment = new Attachment();
+    
+                $storedFile = $file->storePubliclyAs('CompteRendusFile', $file->getClientOriginalName(), 'public');
+                $attachment->name = basename($storedFile);
+    
+                $CR->attachables()->save($attachment);
+            }
+        }
+
         return redirect(route("compterendus.index"))->with("success", "Compte rendu  ajouté avec succès");
     }
 
@@ -45,31 +60,55 @@ class CompterendusController extends Controller
     {
         $CR=Compterendu::findorfail($id);
         $url = route("compterendus.update", $CR->id);
-        $uploadFileUrl = route("uploadAttachment", $CR->id);
         $method = "put";
-        return view('Admin.Compterendus.edit', compact(["CR", "url", "method", "uploadFileUrl"]));
+        return view('Admin.Compterendus.edit', compact(["CR", "url", "method"]));
     }
 
 
     public function update(CompterenduRequest $request, $id)
     {
         $CR=Compterendu::findorfail($id);
-        //$CR->update($request->all());
         $CR->title = $request->get('title');
         $CR->content = $request->get('content');
 
-        $attachment = new Attachment();
-        $attachment->name = "test";
-        $CR->attachables()->save($attachment);
+        $errors = [];
+
+        if ($request->has('files'))
+        {
+            foreach($request->file('files') as $file)
+            {
+                $attachment = new Attachment();
+    
+                
+                $storedFile = $file->storePubliclyAs('CompteRendusFile', $file->getClientOriginalName(), 'public');
+            
+                $attachment->name = basename($storedFile);
+
+                if (Attachment::where('name',$attachment->name)->exists() == false){
+                    $CR->attachables()->save($attachment);
+                }
+                else{
+                    $errors[] = "Le fichier ".$attachment->name." existe déjà";
+                }
+                
+            }
+        }
 
         $CR->save();
-        return redirect()->route('compterendus.index')->with('success', 'Compte rendu modifié');
+
+        return redirect()->route('compterendus.index')->with('success', 'Compte rendu modifié')->withErrors($errors);
     }
 
 
     public function destroy($id)
     {
-        Compterendu::destroy($id);
+        $cr = Compterendu::findOrfail($id);
+        foreach ($cr->attachables()->get() as $attachable)
+        {
+            Storage::disk('public')->delete("CompteRendusFile/".$attachable->name);
+            $attachable->delete();
+        }
+        $cr->delete();
         return redirect(route("compterendus.index"))->with("success", "Compte rendu supprimé");
     }
 
