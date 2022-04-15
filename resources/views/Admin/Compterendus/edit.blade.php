@@ -5,16 +5,6 @@
 @section('content')
     @include('Admin.messages')
 
-    @if ($errors->any())
-        <div class="w3-pale-red w3-panel w3-leftbar w3-border-red">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
     <h1>Editer le compte rendu</h1>
 
     {{ Form::model($CR, ["url" => $url, "method" => $method]) }}
@@ -33,4 +23,10 @@
     {{ Form::submit("Enregistrer", ["class" => "w3-button w3-theme-dark"]) }}
 
     {{ Form::close() }}
+
+    <form method="post" action={{ $uploadFileUrl }} enctype="multipart/form-data">
+        @csrf
+        <input type="file" id="files" name="files[]" accept="application/pdf" style="position: relative; top: 0" multiple required>
+        <input type="submit" value="Ajouter les pièces jointes">
+    </form>
 @endsection

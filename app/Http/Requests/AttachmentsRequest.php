@@ -30,10 +30,8 @@ class AttachmentsRequest extends FormRequest
     public function rules()
     {
         return [
-            'attachable_id' => 'required|int',
-            'attachable_type' => 'required',
-            'name' => 'required|image'
-
+            'files' => 'required',
+            'files.*' => 'mimes:pdf,doc'
         ];
     }
 }
