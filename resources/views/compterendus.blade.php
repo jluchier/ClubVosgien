@@ -3,29 +3,24 @@
 @section('compterendus', 'navActive')
 
 @section('content')
-<div class="w3-row w3-padding">
-    <div id="actu" class="grid-container-left w3-center w3-col s12 m7">
-      <div class="grid-container-center">
-        <h1>Les actualités</h1>
-
-        @foreach ($compterendus as $cr)
-        <div class="CV-Fond-Carte">
-          <div class="w3-theme-dark">
-            <h2>{{ $cr->title }}</h2>
-          </div>
-          <div style="padding-top: 10px ; padding-bottom: 10px ; text-align: left" >{!!$cr->content!!}</div>
-          <div>
-            @foreach ($cr->attachables()->get() as $attachment)
-            <a href="{{ Storage::url("CompteRendusFile/".$attachment->name) }}">{{ $attachment->name }}</a>
-              
-            @endforeach
-        </div>
-
-        </div>
-        @endforeach
-      </div>
-    </div>
+<div class="CV-TopContainerHome parallax_1 w3-display-container">
+  <h1 class='parallaxTitle w3-display-middle'>Comptes-rendus des réunions</h1>
+    <img src="/images/common/wave_white.svg">
 </div>
 
+<div class="w3-row-padding w3-container w3-margin">
+@foreach ($compterendus as $key => $cr)
+@if ($key %3 == 0)
+
+  @include('Includes.compteRenduCard')
+
+  @elseif ($key %3 == 1)
+  @include('Includes.compteRenduCard')
+  @else
+  @include('Includes.compteRenduCard')
+  @endif
+  @endforeach
+  
+</div>  
 
 @endsection
