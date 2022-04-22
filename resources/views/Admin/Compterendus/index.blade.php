@@ -11,21 +11,23 @@
 
     <table class="w3-table-all w3-margin-top">
         <tr>
-            <th>Id</th>
             <th>Titre</th>
             <th>Contenu</th>
+            <th>Fichier(s) pdf</th>
             <th class="w3-right">Administration</th>
         </tr>
         @foreach($compterendus as $CR)
             <tr>
                 <td>
-                    {{ $CR->id }}
-                </td>
-                <td>
                     {{ $CR->title }}
                 </td>
                 <td>
                     {{ $CR->content }}
+                </td>
+                <td>
+                @foreach ($CR->attachables()->get() as $attachment)
+                <p>{{ $attachment->name }}</p>
+                @endforeach
                 </td>
                 <td class="w3-right">
                     <div class="w3-bar">
