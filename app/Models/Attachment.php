@@ -11,7 +11,8 @@ class Attachment extends Model
     public $guarded = [];
     public $appends = ['url'];
 
-    public function attachable(){
+    public function attachable()
+    {
         return $this->morphTo();
     }
 
