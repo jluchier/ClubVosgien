@@ -26,7 +26,6 @@ class CompterendusController extends Controller
         $attachment = new Attachment();
         $CR = new Compterendu();
         $CR = $CR->attachables();
-        dd($CR);
         $attachment = $attachment->attachable();
         $url = route("compterendus.store");
         $method = "post";
