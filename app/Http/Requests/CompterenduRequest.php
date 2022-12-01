@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class CompterenduRequest extends FormRequest
 {
@@ -24,9 +25,9 @@ class CompterenduRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'=>'required|string|min:2',
-            'content'=>'required|string',
-            'files.*' => 'mimes:pdf'
+            'title' => 'required|string|min:2',
+            'content' => 'required|string',
+            'path.*' => 'mimes:pdf | Required'
         ];
     }
 }

@@ -23,23 +23,24 @@ class CompterendusController extends Controller
 
     public function create()
     {
-        $attachment = new Attachment();
         $CR = new Compterendu();
-        $CR = $CR->attachables();
-        $attachment = $attachment->attachable();
         $url = route("compterendus.store");
         $method = "post";
-        return view('Admin.Compterendus.edit', compact(["CR", "url", "method", "attachment"]));
+        return view('Admin.Compterendus.edit', compact(["CR", "url", "method"]));
     }
 
 
     public function store(CompterenduRequest $request)
     {
-        $file = $request->get('files');
-        Compterendu::insert([
-            "title" => $request->get("title"),
-            "content" => $request->get("content"),
-        ]);
+        if ($request->hasfile('compterendus')) {
+            $file = $request->file('compterendus');
+            $title = $file->getClientOriginalName();
+            Compterendu::insert([
+                "title" => $title,
+                "path" => $file->store('public/compterendus'),
+                "content" => $request->get("content"),
+            ]);
+        }
         return redirect(route("compterendus.index"))->with("success", "Compte rendu  ajouté avec succès");
     }
 

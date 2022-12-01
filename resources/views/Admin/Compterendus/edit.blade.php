@@ -34,7 +34,13 @@
     </div>
 </div>
 <div class="w3-margin w3-padding">
-    <input type="file" id="files" names="files[]" accept="application/pdf" style="position: relative; top: 0" multiple>
+
+    <!-- {{ Form::file('compterendus')}} -->
+    <label for="compterendus">Selectionnez les pdf</label>
+    <input type="file" id="compterendus" name="compterendus" accept="application/pdf" style="position: relative; top: 0">
+    @error('compterendus')
+    <div class="alert">{{ $message }}</div>
+    @enderror
 </div>
 <p style="text-align: center;">
     {{ Form::submit("Enregistrer", ["class" => "w3-button w3-theme-dark w3-round"]) }}

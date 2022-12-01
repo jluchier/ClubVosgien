@@ -8,7 +8,7 @@ use PhpParser\Builder\Class_;
 class Compterendu extends Model
 {
 
-    public $fillable = ['title', 'content'];
+    public $fillable = ['title', 'content', 'path'];
     protected $table = "compterendus";
 
     public function attachables()
