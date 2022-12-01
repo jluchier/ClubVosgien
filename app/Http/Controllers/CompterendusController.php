@@ -23,7 +23,11 @@ class CompterendusController extends Controller
 
     public function create()
     {
+        $attachment = new Attachment();
         $CR = new Compterendu();
+        $CR = $CR->attachables();
+        dd($CR);
+        $attachment = $attachment->attachable();
         $url = route("compterendus.store");
         $method = "post";
         return view('Admin.Compterendus.edit', compact(["CR", "url", "method"]));
