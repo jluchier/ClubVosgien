@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\AttachmentsRequest;
 use App\Http\Requests\CompterenduRequest;
 use App\Models\Compterendu;
-use App\Models\Attachment;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use PhpParser\Node\Stmt\Return_;
 use function GuzzleHttp\Promise\all;
+use Illuminate\Support\Facades\Storage;
+
 
 class CompterendusController extends Controller
 {
@@ -23,11 +23,7 @@ class CompterendusController extends Controller
 
     public function create()
     {
-        $attachment = new Attachment();
         $CR = new Compterendu();
-        $CR = $CR->attachables();
-        dd($CR);
-        $attachment = $attachment->attachable();
         $url = route("compterendus.store");
         $method = "post";
         return view('Admin.Compterendus.edit', compact(["CR", "url", "method"]));
@@ -36,15 +32,20 @@ class CompterendusController extends Controller
 
     public function store(CompterenduRequest $request)
     {
-        if ($request->hasfile('compterendus')) {
-            $file = $request->file('compterendus');
-            $title = $file->getClientOriginalName();
-            Compterendu::insert([
-                "title" => $title,
-                "path" => $file->store('public/compterendus'),
-                "content" => $request->get("content"),
-            ]);
-        }
+        $request->validate([
+            'compterendus' => 'required|mimes:pdf'
+        ]);
+
+        $file = $request->file('compterendus');
+
+        $title = $request->get('title');
+        $filename = $file->getClientOriginalName();
+        Compterendu::insert([
+            "title" => $title,
+            "path" => $file->storePubliclyAs('CompteRendusFiles', $filename, ['disk' => 'public']),
+            "content" => $request->get("content"),
+        ]);
+
         return redirect(route("compterendus.index"))->with("success", "Compte rendu  ajouté avec succès");
     }
 
@@ -61,10 +62,12 @@ class CompterendusController extends Controller
     public function update(CompterenduRequest $request, $id)
     {
         $CR = Compterendu::findorfail($id);
+        $file = $request->file('compterendus');
         //$CR->update($request->all());
         $CR->title = $request->get('title');
         $CR->content = $request->get('content');
-
+        $filename = $file->getClientOriginalName();
+        $CR->path = $file->storePubliclyAs('CompteRendusFiles', $filename, ['disk' => 'public']);
         $CR->save();
         return redirect()->route('compterendus.index')->with('success', 'Le compte rendu a bien été modifié');
     }

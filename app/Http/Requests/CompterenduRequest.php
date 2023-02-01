@@ -27,7 +27,7 @@ class CompterenduRequest extends FormRequest
         return [
             'title' => 'required|string|min:2',
             'content' => 'required|string',
-            'path.*' => 'mimes:pdf | Required'
+            'path.*' => 'required|mimes:pdf'
         ];
     }
 }

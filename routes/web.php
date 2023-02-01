@@ -24,8 +24,10 @@ Route::get('infosFede', "GuestController@infosFede")->name("infosFede");
 Route::get('galleryDetail/{id}', "GuestController@galleryDetail")->name("galleryDetail");
 Route::get('agendaDetail/{id}', "GuestController@agendaDetail")->name("agendaDetail");
 Route::get('contact', "GuestController@contact")->name("contact");
+// Affichage des pdf
+Route::get('displayPdf/{id}', "PdfController@index")->name("displayPdf");
 
-Route::middleware("auth.validated")->group(function ( ){
+Route::middleware("auth.validated")->group(function () {
 
     Route::get("compterendus", "GuestController@compterendus")->name("compterendus");
     Route::resource('galleries', 'GalleryController', ["only" => ["index"]]);
@@ -36,13 +38,12 @@ Route::middleware("auth.validated")->group(function ( ){
         Route::get('articlesClub', "ArticleNotreClubController@index")->name("notreClub");
         Route::get('inscriptions', 'AdminController@editUsers')->name("inscriptions");
         Route::get('inscriptionsUpdate', 'AdminController@updateUsers')->name("inscriptionsUpdate");
-        Route::resource('galleries', 'GalleryController', ["except"=> ["store","update","index"]]);
-        Route::resource('compterendus', 'CompterendusController');
+        Route::resource('galleries', 'GalleryController', ["except" => ["store", "update", "index"]]);
+        Route::resource('compterendus', CompterendusController::class);
         Route::delete("galleries/{gallery}/deleteImage", "GalleryController@deleteGallerySingleImage")->name("deleteImage");
         Route::get('optimisation', "AdminOptimizeController@optimisation")->name("optimisation");
-        Route::delete('deleteAttachable/{id}',"AttachmentController@Delete" )->name("deleteAttachable");
+        /* Route::delete('deleteCompterendu/{id}', "deleteCompterendu@Delete")->name("deleteCompterendu"); */
     });
-
 });
 
 Auth::routes();
