@@ -89,12 +89,6 @@ class GuestController extends Controller
     //        return view("chalets");
     return redirect(route("construction", ["page" => "chalets"]));
   }
-  public function compterendus()
-  {
-    $compterendus = Compterendu::all();
-    return view("compterendus", compact(['compterendus']));
-    // return redirect(route("construction", ["page" => "compterendus"]));
-  }
 
   public function construction(Request $request)
   {
@@ -183,5 +177,10 @@ class GuestController extends Controller
   {
 
     return view('contact');
+  }
+  public function crGuestList()
+  {
+    $compterendus = Compterendu::orderBy("created_at", "desc")->get();
+    return view('compterendus', compact(['compterendus']));
   }
 }

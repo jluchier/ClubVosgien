@@ -11,13 +11,11 @@ use Illuminate\Support\Facades\Storage;
 
 class PdfController extends Controller
 {
-    //
     public function index($id)
     {
         $CR = Compterendu::findorfail($id);
-        $file = public_path() . "/storage/" . $CR->path;
-        $response = response()
-            ->file($file);
-        return view('displayPdf', compact(["response"]));
+        $file = "storage/" . $CR->path;
+        $realChemin = '/' . $file;
+        return view('displayPdf', compact(["realChemin", "CR"]));
     }
 }

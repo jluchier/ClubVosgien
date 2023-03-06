@@ -24,12 +24,11 @@ Route::get('infosFede', "GuestController@infosFede")->name("infosFede");
 Route::get('galleryDetail/{id}', "GuestController@galleryDetail")->name("galleryDetail");
 Route::get('agendaDetail/{id}', "GuestController@agendaDetail")->name("agendaDetail");
 Route::get('contact', "GuestController@contact")->name("contact");
-// Affichage des pdf
-Route::get('displayPdf/{id}', "PdfController@index")->name("displayPdf");
 
 Route::middleware("auth.validated")->group(function () {
-
-    Route::get("compterendus", "GuestController@compterendus")->name("compterendus");
+    // Affichage des pdf de compterendus
+    Route::get('displayPdf/{id}', "PdfController@index")->name("displayPdf");
+    Route::get('compterendusList', "GuestController@crGuestList")->name("compterendusList");
     Route::resource('galleries', 'GalleryController', ["only" => ["index"]]);
 
     Route::prefix("admin")->middleware("auth.admin")->group(function () {
@@ -42,7 +41,6 @@ Route::middleware("auth.validated")->group(function () {
         Route::resource('compterendus', CompterendusController::class);
         Route::delete("galleries/{gallery}/deleteImage", "GalleryController@deleteGallerySingleImage")->name("deleteImage");
         Route::get('optimisation', "AdminOptimizeController@optimisation")->name("optimisation");
-        /* Route::delete('deleteCompterendu/{id}', "deleteCompterendu@Delete")->name("deleteCompterendu"); */
     });
 });
 

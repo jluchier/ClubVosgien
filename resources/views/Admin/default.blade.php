@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
   <title>Administration du site</title>
@@ -11,30 +12,32 @@
 
 <body>
 
-<nav id="nav" class="w3-top w3-theme-dark">
+  <nav id="nav" class="w3-top w3-theme-dark">
     <div class="w3-center w3-large" style="text-shadow : 1px 1px 0 #d33"><b>Club Vosgien Rupt Vecoux Ferdrupt</b></div>
     <div class="w3-bar w3-large">
-        <a href="{{ route("articles.index") }}" class="w3-bar-item w3-button navItem @yield('articles')">Articles</a>
-        <a href="{{ route('notreClub') }}" class="w3-bar-item w3-button navItem @yield('notreClub')">Notre club</a>
-        <a href="{{ route("galleries.index") }}" class="w3-bar-item w3-button navItem @yield('photos')">Photos</a>
-        <a href="{{ route("inscriptions")}}" class="w3-bar-item w3-button navItem @yield('inscriptions')">Inscriptions</a>
-        <a href="{{ route("compterendus.index") }}" class="w3-bar-item w3-button navItem @yield('compterendus')">Compte rendus</a>
+      <a href="{{ route("articles.index") }}" class="w3-bar-item w3-button navItem @yield('articles')">Articles</a>
+      <a href="{{ route('notreClub') }}" class="w3-bar-item w3-button navItem @yield('notreClub')">Notre club</a>
+      <a href="{{ route("galleries.index") }}" class="w3-bar-item w3-button navItem @yield('photos')">Photos</a>
+      <a href="{{ route("inscriptions")}}" class="w3-bar-item w3-button navItem @yield('inscriptions')">Inscriptions</a>
+      <a href="{{ route("compterendus.index") }}" class="w3-bar-item w3-button navItem @yield('compterendus')">Compte rendus</a>
 
-        <a href="{{ route("actu") }}" class="w3-bar-item w3-button navItem w3-right @yield('home')">Retour au site</a>
+      <a href="{{ route("actu") }}" class="w3-bar-item w3-button navItem w3-right @yield('home')">Retour au site</a>
     </div>
-</nav>
+  </nav>
 
-<div id="swup" class="transition-fade w3-theme-light" style="min-height:100vh; padding-top:70px;">
+  <div id="swup" class="transition-fade w3-theme-light" style="min-height:100vh; padding-top:70px;">
 
-  <div class="w3-container">
-    @yield('content')
+    <div class="w3-container">
+      @yield('content')
+    </div>
+
   </div>
-
-</div>
 
 </body>
 
 @yield('js')
+<script src="{{ mix('js/pdfobject.js') }}"></script>
 <script src="{{ mix('js/app.js') }}"></script>
+<script src="{{ mix('js/script.js') }}"></script>
 
 </html>

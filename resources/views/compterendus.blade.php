@@ -9,7 +9,7 @@
 </div>
 
 <div class="CV-flex-gallery-row" style="justify-content:center">
-  @foreach ($compterendus as $cr)
+  @foreach ($compterendus as $CR)
   @include('Includes.compteRenduCard')
   @endforeach
 </div>

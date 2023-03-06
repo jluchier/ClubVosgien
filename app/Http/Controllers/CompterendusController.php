@@ -63,11 +63,13 @@ class CompterendusController extends Controller
     {
         $CR = Compterendu::findorfail($id);
         $file = $request->file('compterendus');
-        //$CR->update($request->all());
+        if ($file != NULL) {
+            $this->deletePdf($CR->path);
+            $filename = $file->getClientOriginalName();
+            $CR->path = $file->storePubliclyAs('CompteRendusFiles', $filename, ['disk' => 'public']);
+        }
         $CR->title = $request->get('title');
         $CR->content = $request->get('content');
-        $filename = $file->getClientOriginalName();
-        $CR->path = $file->storePubliclyAs('CompteRendusFiles', $filename, ['disk' => 'public']);
         $CR->save();
         return redirect()->route('compterendus.index')->with('success', 'Le compte rendu a bien été modifié');
     }
@@ -75,7 +77,17 @@ class CompterendusController extends Controller
 
     public function destroy($id)
     {
+        $compterendu = Compterendu::FindOrFail($id);
+        $this->deletePdf($compterendu->path);
         Compterendu::destroy($id);
         return redirect(route("compterendus.index"))->with("success", "Compte rendu supprimé");
+    }
+    private function deletePdf($path)
+    {
+        if (Storage::disk('public')->exists("{$path}")) {
+            Storage::disk('public')->delete(
+                "{$path}"
+            );
+        }
     }
 }
