@@ -23,8 +23,8 @@ class GuestController extends Controller
       ->get();
 
     $agenda = Article::whereCategory("Agenda")
-      ->orderBy('dateEvent', "desc")
-      ->limit('5')
+      ->orderBy('dateEvent', "asc")
+      ->limit('7')
       ->get();
 
     foreach ($agenda as $value) {
@@ -33,7 +33,6 @@ class GuestController extends Controller
       $value->dateEvent = $value->dateEvent->isoFormat("dddd Do MMMM YYYY");
       $value->dateEvent = ucfirst($value->dateEvent);
     }
-
     return view('home', compact(['actualite', 'agenda']));
   }
 
@@ -166,7 +165,7 @@ class GuestController extends Controller
   {
     $agenda = Article::whereCategory("Agenda")
       ->orderBy('dateEvent', "asc")
-      ->limit('5')
+      ->limit('7')
       ->get();
     $agendaDetail = $agenda[$id];
     $agendaDetail->dateEvent = $this->dateFormat($agendaDetail->dateEvent);
