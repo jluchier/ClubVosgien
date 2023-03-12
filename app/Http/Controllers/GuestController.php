@@ -11,21 +11,21 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 use Carbon\Carbon;
 use App\Traits\dateManager;
+use PhpParser\Node\Stmt\StaticVar;
 
 class GuestController extends Controller
 {
   use dateManager;
+  const LIMIT_AGENDA = 7;
+  const LIMIT_ACTU = 3;
+
   public function index()
   {
-    $actualite = Article::whereCategory("Actualité")
-      ->orderBy('dateEvent', "asc")
-      ->limit('3')
-      ->get();
+    $limActu = static::LIMIT_ACTU;
+    $actualite = Article::whereCategory("Actualité")->Filter($limActu)->get();
 
-    $agenda = Article::whereCategory("Agenda")
-      ->orderBy('dateEvent', "asc")
-      ->limit('7')
-      ->get();
+    $limAgenda = static::LIMIT_AGENDA;
+    $agenda = ARTICLE::whereCategory("Agenda")->Filter($limAgenda)->get();
 
     foreach ($agenda as $value) {
       $value->dateEvent = new Carbon($value->dateEvent);
@@ -163,10 +163,9 @@ class GuestController extends Controller
 
   public function agendaDetail($id)
   {
-    $agenda = Article::whereCategory("Agenda")
-      ->orderBy('dateEvent', "asc")
-      ->limit('7')
-      ->get();
+    $limAgenda = static::LIMIT_AGENDA;
+
+    $agenda = Article::whereCategory("Agenda")->Filter($limAgenda)->get();
     $agendaDetail = $agenda[$id];
     $agendaDetail->dateEvent = $this->dateFormat($agendaDetail->dateEvent);
     return view('agendaDetail', compact(['agendaDetail']));
